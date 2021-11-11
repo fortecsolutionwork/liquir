@@ -27,6 +27,7 @@ ul {
 .main_section .list li {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .main_section .title {

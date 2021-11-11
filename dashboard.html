@@ -31,25 +31,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="body">
-    <div class="container">
-      <img
-        data-toggle="tooltip"
-        data-placement="bottom"
-        title="Click to Full Screen"
-        id="expand"
-        style="max-width: 30px"
-        onclick="openFullscreen();"
-        src="images/expand.png"
-        alt=""
-      />
-    </div>
-
     <section class="main_section">
       <div class="container-fluid">
         <h2 class="title">Set ups main menu</h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li>
+            <li id="a">
               <div class="left-side">
                 <h3>A</h3>
               </div>
@@ -57,7 +44,7 @@
                 <h4>check out</h4>
               </div>
             </li>
-            <li>
+            <li id="b">
               <div class="left-side">
                 <h3>b</h3>
               </div>
@@ -99,7 +86,7 @@
                 <h4>reports</h4>
               </div>
             </li>
-            <li>
+            <li id="g">
               <div class="left-side">
                 <h3>g</h3>
               </div>
@@ -135,7 +122,9 @@
         </div>
       </div>
     </section>
-    <div id="enter" style="color: #fff; text-align: center">Hello</div>
+    <div id="enter" style="color: #fff; text-align: center">
+      Type number of your choice
+    </div>
     <section>
       <div class="container-fluid">
         <div class="time_date_wrapper">
@@ -151,19 +140,8 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var elem = document.getElementById("body");
-      function openFullscreen() {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-          elem.msRequestFullscreen();
-        }
-      }
-
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+      $("#g").click(function () {
+        window.location.replace("./file-maintenance.html");
       });
 
       document.addEventListener(
@@ -175,6 +153,7 @@
           if (name == "g" || name == "G") {
             window.location.replace("./file-maintenance.html");
           }
+
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false

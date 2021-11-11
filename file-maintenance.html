@@ -31,19 +31,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="body">
-    <div class="container">
-      <img
-        data-toggle="tooltip"
-        data-placement="bottom"
-        title="Click to Full Screen"
-        id="expand"
-        style="max-width: 30px"
-        onclick="openFullscreen();"
-        src="images/expand.png"
-        alt=""
-      />
-    </div>
-
     <section class="main_section second-page">
       <div class="container-fluid">
         <h2 class="title">file maintenance main menu</h2>
@@ -73,7 +60,7 @@
                 <h4>company files</h4>
               </div>
             </li>
-            <li>
+            <li id="c4">
               <div class="left-side">
                 <h3>4</h3>
               </div>
@@ -96,19 +83,8 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var elem = document.getElementById("body");
-      function openFullscreen() {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-          elem.msRequestFullscreen();
-        }
-      }
-
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+      $("#c4").click(function () {
+        window.location.replace("./dashboard.html");
       });
 
       document.addEventListener(
@@ -117,6 +93,9 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
+          if (name == "4") {
+            window.location.replace("./dashboard.html");
+          }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
