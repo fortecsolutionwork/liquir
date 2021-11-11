@@ -22,7 +22,7 @@ ul {
 
 /* main style */
 .main_section {
-  padding: 100px 0;
+  padding: 100px 0 30px;
 }
 .main_section .list li {
   display: flex;
@@ -31,7 +31,7 @@ ul {
 
 .main_section .title {
   text-align: center;
-  font-size: 4.5em;
+  font-size: 4vw;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 70px;
@@ -49,8 +49,8 @@ ul {
   margin-bottom: 30px;
 }
 .list_wrapper ul {
-  flex: 0 0 48%;
-  max-width: 48%;
+  flex: 0 0 43%;
+  max-width: 43%;
 }
 
 .list li .left-side {
@@ -89,4 +89,68 @@ ul {
   text-transform: uppercase;
   padding-top: 5px;
   font-weight: 600;
+  font-size: 1.25vw;
+}
+
+.container-fluid {
+  padding: 0 5%;
+}
+
+.list-second {
+  direction: rtl;
+}
+.list-second li .left-side {
+  margin-right: 0;
+  margin-left: 20px;
+}
+.time_date_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time_date_wrapper h5 {
+  font-size: 25px;
+  color: #fff;
+}
+
+/* second page */
+section.main_section.second-page .list_wrapper {
+  justify-content: center;
+}
+
+/* media quaries */
+@media (max-width: 768px) {
+  .list li .right-side h4 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+  .list_wrapper {
+    flex-wrap: wrap;
+  }
+  .list_wrapper ul {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .list-second {
+    direction: inherit;
+  }
+  .list-second li .left-side {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .main_section .title {
+    margin-bottom: 45px;
+  }
+  .time_date_wrapper h5 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .main_section {
+    padding: 50px 0 0;
+  }
 }
