@@ -249,7 +249,7 @@ section.main_section.second-page .list_wrapper {
     margin-bottom: 20px;
   }
   .checkout-page .main_section .title {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-size: 30px;
   }
   .checkout-page .list li .left-side {
@@ -271,6 +271,9 @@ section.main_section.second-page .list_wrapper {
   }
   .bottom-options .inner-right {
     height: 3vw;
+  }
+  .checkout-page .list li .left-side h3 {
+    font-size: 15px;
   }
 }
 
