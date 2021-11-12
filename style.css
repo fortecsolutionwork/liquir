@@ -186,6 +186,7 @@ section.main_section.second-page .list_wrapper {
   margin-left: 2vw;
   display: flex;
   justify-content: center;
+  border-radius: 10px;
   align-items: center;
 }
 .bottom-options .inner-right span {
