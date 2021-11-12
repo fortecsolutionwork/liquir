@@ -250,7 +250,10 @@ section.main_section.second-page .list_wrapper {
   }
   .checkout-page .main_section .title {
     margin-bottom: 16px;
-    font-size: 30px;
+    font-size: 28px;
+  }
+  .checkout-page .main_section {
+    padding: 12px 0 0;
   }
   .checkout-page .list li .left-side {
     min-width: 40px;
