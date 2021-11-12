@@ -37,7 +37,7 @@
           <h2 class="title">product entry screen</h2>
           <div class="list_wrapper" style="justify-content: space-between">
             <ul class="list">
-              <li>
+              <li id="a4">
                 <div class="left-side">
                   <h3>A</h3>
                 </div>
@@ -206,8 +206,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#c4").click(function () {
-        window.location.replace("./dashboard.html");
+      //   $("#a").click(function () {
+      //     window.location.replace("./product-list.html");
+      //   });
+      $("#a4").click(function () {
+        window.location.replace("./product-list.html");
       });
 
       document.addEventListener(
@@ -216,6 +219,9 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
+          if (name == "a" || name == "A") {
+            window.location.replace("./product-list.html");
+          }
           if (name == "2") {
             window.location.replace("./dashboard.html");
           }
