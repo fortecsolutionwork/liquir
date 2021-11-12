@@ -134,6 +134,30 @@
       </div>
     </section>
 
+    <!-- modal -->
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button
+              type="button"
+              class="close close-modal"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><img src="images/cancel.png" alt=""
+              /></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Please Enter Valid Key</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -150,9 +174,52 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
+          // if (name !== "g") {
+          //   $(".modal").addClass("show-modal");
+          // }
           if (name == "g" || name == "G") {
             window.location.replace("./file-maintenance.html");
           }
+          if (name == "a" || name == "A") {
+            window.location.replace("./checkout.html");
+          }
+          if (name == "b" || name == "B") {
+            window.location.replace("./keg-reserve.html");
+          }
+          if (name == "c" || name == "C") {
+            window.location.replace("./product-inquiry.html");
+          }
+          if (name == "d" || name == "D") {
+            window.location.replace("./message-minder.html");
+          }
+          if (name == "e" || name == "E") {
+            window.location.replace("./daily-worksheet.html");
+          }
+          if (name == "f" || name == "F") {
+            window.location.replace("./reports.html");
+          }
+          if (name == "g" || name == "G") {
+            window.location.replace("./file-maintenance.html");
+          }
+          if (name == "h" || name == "H") {
+            window.location.replace("./vendor-diskupdate.html");
+          }
+          if (name == "i" || name == "I") {
+            window.location.replace("./misc-program-menu.html");
+          }
+          if (name == "j" || name == "J") {
+            window.location.replace("./end-session.html");
+          } else {
+            $(".modal").addClass("show-modal");
+          }
+
+          // $(".close-modal").click(){
+          //   $(".modal").removeClass("show-modal");
+          // }
+
+          $(".close-modal").click(function () {
+            $(".modal").removeClass("show-modal");
+          });
 
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
