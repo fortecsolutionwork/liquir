@@ -317,6 +317,82 @@ section.main_section.second-page .list_wrapper {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+/* message minder */
+.bottom-options.center .container-wrapper > div {
+  flex: 0 0 43%;
+  max-width: 43%;
+}
+.bottom-options.center .inner-right {
+  width: 100%;
+}
+.bottom-options.center .container-wrapper {
+  justify-content: center;
+}
+
+/* enter message */
+.main_section.enter-message .list li .right-side input,
+.main_section.enter-message .list li .right-side select {
+  width: 100%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #454444cc;
+  padding-bottom: 3px;
+  font-size: 1.2vw;
+  color: #000;
+}
+
+.main_section.enter-message
+  .list
+  li
+  .right-side
+  input::-webkit-input-placeholder {
+  /* Edge */
+  font-size: 1.2vw;
+  color: #000;
+}
+
+.main_section.enter-message .list li .right-side input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 1.2vw;
+  color: #000;
+}
+
+.main_section.enter-message .list li .right-side input::placeholder {
+  font-size: 1.2vw;
+  color: #000;
+}
+
+.main_section.enter-message .list li .right-side input:focus,
+.main_section.enter-message .list li .right-side input:focus-visible,
+.main_section.enter-message .list li .right-side select:focus,
+.main_section.enter-message .list li .right-side select:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.main_section.enter-message .list li .right-side {
+  flex: 0 0 85%;
+  max-width: 85%;
+}
+
+section.bottom-options.bottom {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  margin-bottom: 0;
+}
+.main_section.enter-message .list li .right-side.message {
+  position: relative;
+}
+.main_section.enter-message .list li .right-side.message::before {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./images/comment.png);
+}
 /* media quaries */
 @media (max-width: 1440px) {
   .main_section {
@@ -358,6 +434,23 @@ section.main_section.second-page .list_wrapper {
   }
   .checkout-page .list li .left-side h3 {
     font-size: 15px;
+  }
+  .main_section.enter-message .list li .right-side {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  .bottom-options.center .inner-right,
+  .bottom-options.bottom .inner-right {
+    height: 5vw;
+  }
+  .bottom-options.center .container-wrapper .inner-left,
+  .bottom-options.bottom .container-wrapper .inner-left {
+    width: 4vw;
+    height: 4vw;
+  }
+  .main_section.enter-message .list li .right-side.message::before {
+    width: 26px;
+    height: 26px;
   }
 }
 
