@@ -328,7 +328,12 @@ section.main_section.second-page .list_wrapper {
 .bottom-options.center .container-wrapper {
   justify-content: center;
 }
-
+.message-minder {
+  padding-top: 8vh !important;
+}
+.enter-message {
+  padding-top: 12vh !important;
+}
 /* enter message */
 .main_section.enter-message .list li .right-side input,
 .main_section.enter-message .list li .right-side select {
