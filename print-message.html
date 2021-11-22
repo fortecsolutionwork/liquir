@@ -37,19 +37,19 @@
         <div class="container-fluid">
           <form class="message-print-form" onsubmit="return false;">
             <div class="input-group">
-              <label for="">enter the date to review</label>
+              <label for="">enter the date </label>
               <input
                 type="date"
-                style="position: unset; font-size: 19px"
+                style="font-size: 19px"
                 autofocus
                 id="search"
                 class="icon-white"
               />
             </div>
             <div class="input-group">
-              <label for="">enter the message to review</label>
-              <select name="" id="">
-                <option value="audi" selected>Select Employe</option>
+              <label for="">select</label>
+              <select style="position: relative; top: -5px" name="" id="">
+                <option value="audi" selected>Employee</option>
                 <option value="">Simran</option>
                 <option value="">ANKITA</option>
                 <option value="">RAHUL</option>
@@ -60,6 +60,9 @@
                 <option value="">MANJODH</option>
                 <option value="">HARPREET</option>
               </select>
+            </div>
+            <div class="input-group input-group--change">
+              <button id="search-btn" class="btn">search</button>
             </div>
           </form>
           <table cellpadding="0" cellspacing="0" border="0">
@@ -241,6 +244,7 @@
             var type = $("#search").val();
             $("#list").show();
           }
+
           if (name == "2") {
             window.location.replace("./dashboard.html");
           }
@@ -251,6 +255,10 @@
         },
         false
       );
+
+      $("#search-btn").click(function () {
+        $("#list").show();
+      });
     </script>
 
     <!-- bootstrap bundle -->

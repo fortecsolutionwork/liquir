@@ -57,6 +57,9 @@
     width: 26px;
     height: 26px;
   }
+  .product-list.instore-inquiry .main_section.second-page {
+    max-width: 97vw;
+  }
 }
 
 @media (max-width: 1024px) {

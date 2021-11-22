@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Merriweather", serif;
 }
+button:focus,
+button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 /* font-family: 'Merriweather', serif;
 font-family: 'Mulish', sans-serif; */
@@ -425,4 +430,15 @@ section.bottom-options.bottom {
 .message-print-form select:focus-visible {
   outline: none;
   box-shadow: none;
+}
+
+/* product inquiry */
+.product-list .input-group--change {
+  justify-content: flex-end;
+  padding-right: 3%;
+  width: 20%;
+}
+.input-group--change button.btn {
+  background: #1e75c6;
+  color: #fff;
 }
