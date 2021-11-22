@@ -189,6 +189,9 @@ section.main_section.second-page .list_wrapper {
   border-radius: 10px;
   align-items: center;
 }
+.inner-right.width-half {
+  width: 36vw;
+}
 .bottom-options .inner-right span {
   text-transform: uppercase;
   font-weight: 600;

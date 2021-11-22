@@ -28,14 +28,14 @@
     margin-bottom: 0;
   }
   .bottom-options .container-wrapper .inner-left {
-    width: 3vw;
-    height: 3vw;
+    width: 4vw;
+    height: 4vw;
   }
   .bottom-options .container-wrapper .inner-left span {
     font-size: 20px;
   }
   .bottom-options .inner-right {
-    height: 3vw;
+    height: 4vw;
   }
   .checkout-page .list li .left-side h3 {
     font-size: 15px;
@@ -115,6 +115,24 @@
   }
   .message-print-form {
     flex-wrap: wrap;
+  }
+  .main_section.inventory-reports .list_wrapper ul {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .main_section.inventory-reports .list_wrapper {
+    flex-wrap: wrap;
+  }
+  .main_section.inventory-reports .list-second {
+    direction: inherit;
+  }
+  .main_section.inventory-reports .list-second li .left-side {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .inventory-reports.bottom-options .inner-right {
+    height: 7vw;
+    width: 88vw;
   }
 }
 
