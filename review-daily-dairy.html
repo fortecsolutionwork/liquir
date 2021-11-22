@@ -37,16 +37,21 @@
         <div class="container-fluid">
           <form onsubmit="return false;">
             <div class="input-group">
-              <label for="">enter part of product name</label>
-              <input type="text" autofocus id="search" />
+              <label for="">enter the date to review</label>
+              <input
+                type="date"
+                style="position: unset; font-size: 19px"
+                autofocus
+                id="search"
+                class="icon-white"
+              />
             </div>
           </form>
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
-                <th width="80">REF</th>
-                <th style="text-align: center">PRODUCT NAME</th>
-                <th width="100">RETAIL</th>
+                <th width="80">DATE</th>
+                <th style="text-align: center">MESSAGE</th>
               </tr>
             </thead>
           </table>
@@ -56,68 +61,94 @@
             <tbody>
               <tr>
                 <td width="80">1</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">2</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">3</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">4</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">5</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">6</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">7</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">8</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">9</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">10</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">11</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">12</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </td>
               </tr>
               <tr>
                 <td width="80">13</td>
-                <td style="text-align: center">375 GREY GOOSE VODKA</td>
-                <td width="80">$18.99</td>
+                <td style="text-align: center">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry..
+                </td>
               </tr>
             </tbody>
           </table>
@@ -131,7 +162,7 @@
       <section class="bottom-options">
         <div class="container-fluid">
           <div class="container-wrapper">
-            <div style="cursor: pointer" id="b4" class="left-side">
+            <div style="cursor: pointer" id="b" class="left-side">
               <div class="inner-left">
                 <span>B</span>
               </div>
@@ -166,6 +197,9 @@
       $("#b4").click(function () {
         window.location.replace("./checkout.html");
       });
+      $("#b").click(function () {
+        window.location.replace("./message-minder.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -182,7 +216,7 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./checkout.html");
+            window.location.replace("./message-minder.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

@@ -32,41 +32,28 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <section class="main_section second-page message-minder">
+    <section class="main_section second-page enter-message">
       <div class="container-fluid">
-        <h2 class="title">Message Minder Menu</h2>
+        <h2 class="title">
+          diary information <br />
+          entry screen
+        </h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li style="cursor: pointer" id="b1">
+            <li>
               <div class="left-side">
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>Enter Messages</h4>
+                <h4><input type="date" id="Date" name="Date" /></h4>
               </div>
             </li>
-            <li style="cursor: pointer" id="b2">
+            <li>
               <div class="left-side">
                 <h3>2</h3>
               </div>
-              <div class="right-side">
-                <h4>Print Messages</h4>
-              </div>
-            </li>
-            <li style="cursor: pointer" id="b3">
-              <div class="left-side">
-                <h3>3</h3>
-              </div>
-              <div class="right-side">
-                <h4>Enter Daily Dairy</h4>
-              </div>
-            </li>
-            <li style="cursor: pointer" id="b4">
-              <div class="left-side">
-                <h3>4</h3>
-              </div>
-              <div class="right-side">
-                <h4>Review Daily Dairy</h4>
+              <div class="right-side message">
+                <input type="text" placeholder="Message" name="" id="" />
               </div>
             </li>
           </ul>
@@ -74,25 +61,25 @@
       </div>
     </section>
 
-    <section class="bottom-options center">
+    <section class="bottom-options bottom">
       <div class="container-fluid">
         <div class="container-wrapper">
-          <div style="cursor: pointer" id="b5" class="left-side">
+          <div style="cursor: pointer" id="b" class="left-side">
             <div class="inner-left">
-              <span>5</span>
+              <span>B</span>
             </div>
             <div class="inner-right">
               <span>Back</span>
             </div>
           </div>
-          <!-- <div class="right-side">
+          <div class="right-side">
             <div class="inner-left">
               <span>2</span>
             </div>
             <div class="inner-right">
-              <span>return to main menu</span>
+              <span>Submit</span>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -111,22 +98,10 @@
         window.location.replace("./dashboard.html");
       });
       $("#b4").click(function () {
-        window.location.replace("./checkout.html");
+        window.location.replace("./message-minder.html");
       });
-      $("#b1").click(function () {
-        window.location.replace("./enter-message.html");
-      });
-      $("#b5").click(function () {
-        window.location.replace("./dashboard.html");
-      });
-      $("#b3").click(function () {
-        window.location.replace("./enter-daily-dairy.html");
-      });
-      $("#b4").click(function () {
-        window.location.replace("./review-daily-dairy.html");
-      });
-      $("#b2").click(function () {
-        window.location.replace("./print-message.html");
+      $("#b").click(function () {
+        window.location.replace("./message-minder.html");
       });
 
       document.addEventListener(
@@ -135,20 +110,14 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
-          if (name == "1") {
-            window.location.replace("./enter-message.html");
-          }
-          if (name == "5") {
+          if (name == "4") {
             window.location.replace("./dashboard.html");
           }
-          if (name == "3") {
-            window.location.replace("./enter-daily-dairy.html");
+          if (name == "5") {
+            window.location.replace("./checkout.html");
           }
-          if (name == "4") {
-            window.location.replace("./review-daily-dairy.html");
-          }
-          if (name == "2") {
-            window.location.replace("./print-message.html");
+          if (name == "B" || name == "b") {
+            window.location.replace("./message-minder.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
