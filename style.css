@@ -442,3 +442,23 @@ section.bottom-options.bottom {
   background: #1e75c6;
   color: #fff;
 }
+
+/* keg reserve */
+
+.keg-reserve-check .list li .right-side {
+  flex: 0 0 85%;
+  max-width: 85%;
+  width: 85%;
+}
+
+.keg-reserve-check .list li .right-side input {
+  width: 100%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid;
+}
+.keg-reserve-check .list li .right-side input:focus,
+.keg-reserve-check .list li .right-side input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

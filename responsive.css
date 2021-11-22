@@ -88,6 +88,12 @@
   .product-list form.message-print-form .input-group label {
     font-size: 16px;
   }
+  .keg-reserve-check .list li .right-side input {
+    width: 94%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid;
+  }
 }
 
 @media (max-width: 768px) {
@@ -147,6 +153,20 @@
   .inventory-reports.bottom-options .inner-right {
     height: 7vw;
     width: 88vw;
+  }
+  .keg-reserve-check .list_wrapper {
+    flex-wrap: wrap;
+  }
+  .keg-reserve-check .list_wrapper ul {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .keg-reserve-check .list_wrapper .list-second {
+    direction: inherit;
+  }
+  .keg-reserve-check .list_wrapper .list-second li .left-side {
+    margin-right: 20px;
+    margin-left: 0;
   }
 }
 
