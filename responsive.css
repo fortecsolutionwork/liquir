@@ -67,6 +67,13 @@
   .bottom-options .inner-right {
     height: 7vw;
   }
+  form.message-print-form input#search,
+  .message-print-form select {
+    font-size: 16px !important;
+  }
+  .product-list form.message-print-form .input-group label {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -101,6 +108,13 @@
   .main_section.enter-message .list li .right-side.message::before {
     width: 23px;
     height: 23px;
+  }
+  .message-print-form > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .message-print-form {
+    flex-wrap: wrap;
   }
 }
 
