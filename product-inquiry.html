@@ -37,7 +37,7 @@
         <h2 class="title">product inquiry menu</h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li id="a">
+            <li id="pi1">
               <div class="left-side">
                 <h3>1</h3>
               </div>
@@ -138,6 +138,9 @@
       $("#back").click(function () {
         window.location.replace("./reports.html");
       });
+      $("#pi1").click(function () {
+        window.location.replace("./in-store-inquiry.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -150,6 +153,9 @@
           }
           if (name == "B" || name === "b") {
             window.location.replace("./reports.html");
+          }
+          if (name == "1") {
+            window.location.replace("./in-store-inquiry.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
