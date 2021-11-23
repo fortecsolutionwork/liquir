@@ -462,3 +462,79 @@ section.bottom-options.bottom {
   outline: none;
   box-shadow: none;
 }
+
+.main_section.detail-sales-report .nav-link {
+  color: #fff;
+}
+.main_section.detail-sales-report .nav-link.active,
+.main_section.detail-sales-report .nav-link.active:hover {
+  color: #000;
+}
+.main_section.detail-sales-report .nav-link:hover {
+  color: #fff;
+}
+.main_section.detail-sales-report form {
+  background: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.main_section.detail-sales-report form label {
+  margin-right: 10px;
+}
+.main_section.detail-sales-report form .input-group {
+  align-items: center;
+  width: auto;
+}
+.main_section.detail-sales-report form select {
+  padding: 6px 10px;
+}
+.main_section.detail-sales-report table {
+  color: #fff;
+}
+.all table,
+.hourly table {
+  width: 100%;
+}
+.all table thead > tr > th {
+  width: 15%;
+  padding: 20px 0;
+}
+
+.all table tbody tr td {
+  width: 15%;
+}
+.all table tbody tr > td:nth-child(3) {
+  width: 25%;
+}
+.all table thead > tr > th:nth-child(3) {
+  width: 25%;
+}
+.main_section.detail-sales-report .tbl-content {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.detail-sales-report.bottom-options {
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+}
+.hourly table thead > tr > th {
+  width: 25%;
+  padding: 20px 0;
+}
+
+.hourly table tbody tr > td {
+  width: 25%;
+}
+.catagory table {
+  width: 100%;
+}
+.catagory table tbody tr td {
+  width: 50%;
+}
+.detail-sales-report .catagory {
+  padding-top: 30px;
+}

@@ -168,6 +168,10 @@
     margin-right: 20px;
     margin-left: 0;
   }
+  .detail-sales-report .message-print-form > div {
+    flex: auto;
+    max-width: initial;
+  }
 }
 
 @media (max-width: 767px) {
