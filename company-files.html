@@ -32,69 +32,71 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <section class="main_section setup-screen">
-      <div class="container-fluid">
-        <h2 class="title">Set up date</h2>
-        <div class="setup-inner">
-          <div>
-            <div class="group">
-              <span>DAY : </span>
-              <span>Monday</span>
+    <div class="product-list">
+      <section class="main_section second-page">
+        <div class="container-fluid">
+            <h2 class="title">company profile</h2>
+      </section>
+
+      <!-- <div id="enter" style="color: #fff; text-align: center">
+        Type number of your choice
+      </div> -->
+
+      <section class="bottom-options">
+        <div class="container-fluid">
+          <div class="container-wrapper">
+            <div style="cursor: pointer" id="b4" class="left-side">
+              <div class="inner-left">
+                <span>B</span>
+              </div>
+              <div class="inner-right">
+                <span>Back</span>
+              </div>
             </div>
-            <div class="group">
-              <span>Date : </span>
-              <input type="date" name="" id="" />
+            <div class="right-side">
+              <div class="inner-left">
+                <span>E</span>
+              </div>
+              <div class="inner-right">
+                <span>edit</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="setup-screen bottom-options">
-      <div class="container-fluid">
-        <div class="container-wrapper">
-          <div style="cursor: pointer" id="editDate" class="left-side">
-            <div class="inner-left">
-              <span>1</span>
-            </div>
-            <div class="inner-right">
-              <span>Edit Date</span>
-            </div>
-          </div>
-          <div style="cursor: pointer" id="continue" class="right-side">
-            <div class="inner-left">
-              <span>2</span>
-            </div>
-            <div class="inner-right">
-              <span> continue</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- modal -->
+      </section>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-
     <script>
-      $("#continue").click(function () {
+      document.getElementById("search").focus();
+
+      $("#c4").click(function () {
         window.location.replace("./dashboard.html");
       });
+      $("#b4").click(function () {
+        window.location.replace("./file-maintenance.html");
+      });
 
-      //   press key
       document.addEventListener(
         "keydown",
         (event) => {
           var name = event.key;
-          var code = event.code;
+          var code = event.keyCode;
           $("#enter").html(name);
+
+          if (code === 13) {
+            var type = $("#search").val();
+            $("#list").show();
+          }
           if (name == "2") {
             window.location.replace("./dashboard.html");
+          }
+          if (name == "B" || name === "b") {
+            window.location.replace("./file-maintenance.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

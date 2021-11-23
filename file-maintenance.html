@@ -53,7 +53,7 @@
                 <h4>inventory file</h4>
               </div>
             </li>
-            <li>
+            <li id="company-files">
               <div class="left-side">
                 <h3>3</h3>
               </div>
@@ -87,6 +87,9 @@
       $("#c4").click(function () {
         window.location.replace("./dashboard.html");
       });
+      $("#company-files").click(function () {
+        window.location.replace("./company-files.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -96,6 +99,9 @@
           $("#enter").html(name);
           if (name == "4") {
             window.location.replace("./dashboard.html");
+          }
+          if (name == "3") {
+            window.location.replace("./company-files.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

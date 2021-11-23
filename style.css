@@ -541,7 +541,6 @@ section.bottom-options.bottom {
 
 /* setup html */
 .enter-password .password-wrapper {
-  background: #f2f6fa;
   height: 50vh;
   max-width: 800px;
   margin: 0 auto;
@@ -550,7 +549,7 @@ section.bottom-options.bottom {
 }
 .enter-password .password-wrapper img {
   max-width: 200px;
-  margin: 50px auto;
+  margin: 50px auto 0;
 }
 .enter-password .password-wrapper input[type="password"] {
   width: 37%;
@@ -561,6 +560,8 @@ section.bottom-options.bottom {
   padding-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
 }
 .enter-password .password-wrapper input[type="password"]:focus,
 .enter-password .password-wrapper input[type="password"]:focus-visible {
@@ -572,16 +573,19 @@ section.bottom-options.bottom {
   input[type="password"]::-webkit-input-placeholder {
   font-size: 16px;
   font-weight: 500;
+  color: #fff;
 }
 
 .enter-password .password-wrapper input[type="password"]:-ms-input-placeholder {
   font-size: 16px;
   font-weight: 500;
+  color: #fff;
 }
 
 .enter-password .password-wrapper input[type="password"]::placeholder {
   font-size: 16px;
   font-weight: 500;
+  color: #fff;
 }
 .enter-password button.btn {
   background: #1e75c6;
@@ -593,7 +597,6 @@ section.bottom-options.bottom {
 }
 .setup-screen .setup-inner {
   max-width: 800px;
-  background: #ffff;
   min-height: 50vh;
   margin: 0 auto;
   display: grid;
@@ -609,6 +612,7 @@ section.bottom-options.bottom {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #fff;
 }
 .setup-screen .setup-inner .group {
   display: flex;
