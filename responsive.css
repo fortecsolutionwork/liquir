@@ -172,6 +172,10 @@
     flex: auto;
     max-width: initial;
   }
+  .section_head_wrapper {
+    position: unset;
+    margin: 25px 0 20px;
+  }
 }
 
 @media (max-width: 767px) {

@@ -538,3 +538,118 @@ section.bottom-options.bottom {
 .detail-sales-report .catagory {
   padding-top: 30px;
 }
+
+/* setup html */
+.enter-password .password-wrapper {
+  background: #f2f6fa;
+  height: 50vh;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+}
+.enter-password .password-wrapper img {
+  max-width: 200px;
+  margin: 50px auto;
+}
+.enter-password .password-wrapper input[type="password"] {
+  width: 37%;
+  text-align: center;
+  border: none;
+  background: transparent;
+  border-bottom: 2px dashed;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.enter-password .password-wrapper input[type="password"]:focus,
+.enter-password .password-wrapper input[type="password"]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.enter-password
+  .password-wrapper
+  input[type="password"]::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.enter-password .password-wrapper input[type="password"]:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.enter-password .password-wrapper input[type="password"]::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+.enter-password button.btn {
+  background: #1e75c6;
+  color: #fff;
+  display: block;
+  margin: 20px auto 0;
+  min-width: 200px;
+  padding: 10px;
+}
+.setup-screen .setup-inner {
+  max-width: 800px;
+  background: #ffff;
+  min-height: 50vh;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.setup-screen.bottom-options {
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+}
+.setup-screen .setup-inner .group span {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.setup-screen .setup-inner .group {
+  display: flex;
+  margin-bottom: 20px;
+}
+.setup-screen .setup-inner .group span:first-child {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.setup-screen .setup-inner .group span:nth-child(2) {
+  display: block;
+  margin-right: 10px;
+}
+.setup-screen .setup-inner .group input {
+  font-size: 30px;
+  font-weight: bold;
+}
+.sechtion_head > div img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.sechtion_head > div {
+  display: flex;
+  align-items: center;
+}
+
+.sechtion_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sechtion_head > div span {
+  color: #fff;
+  font-size: 25px;
+}
+.section_head_wrapper {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  padding: 0 5%;
+}

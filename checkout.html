@@ -35,6 +35,17 @@
     <div class="checkout-page">
       <section class="main_section second-page">
         <div class="container-fluid">
+          <div class="section_head_wrapper">
+            <div class="sechtion_head">
+              <div>
+                <span>DOB : 23-11-2021</span>
+              </div>
+              <div>
+                <img src="images/user.png" alt="" />
+                <span>JOHN DOE</span>
+              </div>
+            </div>
+          </div>
           <h2 class="title">product entry screen</h2>
           <div class="list_wrapper" style="justify-content: space-between">
             <ul class="list">
@@ -188,7 +199,7 @@
                 <span>to bill</span>
               </div>
             </div>
-            <div class="right-side">
+            <div style="cursor: pointer" id="return" class="right-side">
               <div class="inner-left">
                 <span>2</span>
               </div>
@@ -212,6 +223,9 @@
       //   });
       $("#a4").click(function () {
         window.location.replace("./product-list.html");
+      });
+      $("#return").click(function () {
+        window.location.replace("./dashboard.html");
       });
 
       document.addEventListener(
