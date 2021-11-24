@@ -657,3 +657,73 @@ section.bottom-options.bottom {
   left: 0;
   padding: 0 5%;
 }
+
+/* company profile */
+.company-profile .group {
+  display: flex;
+}
+
+.company-profile .group p {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.company-profile .section-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.company-profile .section-head h2 {
+  margin-bottom: 0;
+}
+
+.company-profile .section-head .btn {
+  font-size: 20px;
+  background: #1e75c6;
+  color: #fff;
+  text-transform: uppercase;
+  min-width: 160px;
+  padding: 15px;
+}
+.company-profile .section-wrapper {
+  margin-bottom: 30px;
+}
+.company-profile .group input {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+.company-profile .group input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.company-profile .group input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+  font-size: 20px;
+}
+
+.company-profile .group input::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+.company-profile .group input:focus,
+.company-profile .group input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.edit.company-profile .group p {
+  margin-bottom: 0;
+}
+.edit.company-profile .group {
+  margin-bottom: 15px;
+}

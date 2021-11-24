@@ -33,44 +33,44 @@
   </head>
   <body id="body">
     
-      <section class="main_section company-profile">
+      <section class="main_section company-profile edit">
         <div class="container-fluid">
             <div class="section-head">
               <h2 class="title">company profile</h2>
-              <button id="staff" class="btn">staff</button>
+              <!-- <button class="btn">staff</button> -->
             </div>
             <div class="section-wrapper">
               <div class="group">
-                <p>management password : </p>
-                <p>zuluking</p>
+                <p>management password : </p>      
+                <input type="text" placeholder="ZULUKING">
               </div>
               <div class="group">
                 <p>sales tax rate : </p>
-                <p>0.00</p>
+                <input type="text" placeholder="0.00">
               </div>
               <div class="group">
                 <p>company name : </p>
-                <p>grand Liquir</p>
+                <input type="text" placeholder="GRAND LIQUIR">
               </div>
               <div class="group">
                 <p>address : </p>
-                <p>5431 johnson drive</p>
+                <input type="text" placeholder="5431 JOHNSON DRIVE">
               </div>
               <div class="group">
                 <p>city state & zip : </p>
-                <p>misssion. ks. 66202</p>
+                <input type="text" placeholder="MISSSION. KS. 66202">
               </div>
               <div class="group">
                 <p>telephone number : </p>
-                <p>913-432-4055</p>
+                <input type="text" placeholder="913-432-4055">
               </div>
               <div class="group">
                 <p>credit card charge : </p>
-                <p>0</p>
+                <input type="text" placeholder="0">
               </div>
               <div class="group">
                 <p>3 fer amount : </p>
-                <p>0.00</p>
+                <input type="text" placeholder="0.00">
               </div>
             </div>
       </section>
@@ -90,14 +90,14 @@
                 <span>Back</span>
               </div>
             </div>
-            <div style="cursor: pointer" id="edit" class="right-side">
+            <!-- <div class="right-side">
               <div class="inner-left">
                 <span>E</span>
               </div>
               <div class="inner-right">
                 <span>edit</span>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -117,12 +117,6 @@
       $("#back").click(function () {
         window.location.replace("./file-maintenance.html");
       });
-      $("#edit").click(function () {
-        window.location.replace("./company-files-edit.html");
-      });
-      $("#staff").click(function () {
-        window.location.replace("./staff.html");
-      });
 
       document.addEventListener(
         "keydown",
@@ -139,15 +133,8 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./company-files.html");
+            window.location.replace("./file-maintenance.html");
           }
-          if (name == "e" || name === "E") {
-            window.location.replace("./company-files-edit.html");
-          }
-          if (name == "s" || name === "S") {
-            window.location.replace("./staff.html");
-          }
-        
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false

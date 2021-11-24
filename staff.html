@@ -32,47 +32,73 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    
-      <section class="main_section company-profile">
+    <div class="product-list staff">
+      <section class="main_section second-page">
         <div class="container-fluid">
-            <div class="section-head">
-              <h2 class="title">company profile</h2>
-              <button id="staff" class="btn">staff</button>
+          <form onsubmit="return false;">
+            <div class="input-group">
+              <label for="">LIST OF COMPANY staff</label>
             </div>
-            <div class="section-wrapper">
-              <div class="group">
-                <p>management password : </p>
-                <p>zuluking</p>
-              </div>
-              <div class="group">
-                <p>sales tax rate : </p>
-                <p>0.00</p>
-              </div>
-              <div class="group">
-                <p>company name : </p>
-                <p>grand Liquir</p>
-              </div>
-              <div class="group">
-                <p>address : </p>
-                <p>5431 johnson drive</p>
-              </div>
-              <div class="group">
-                <p>city state & zip : </p>
-                <p>misssion. ks. 66202</p>
-              </div>
-              <div class="group">
-                <p>telephone number : </p>
-                <p>913-432-4055</p>
-              </div>
-              <div class="group">
-                <p>credit card charge : </p>
-                <p>0</p>
-              </div>
-              <div class="group">
-                <p>3 fer amount : </p>
-                <p>0.00</p>
-              </div>
-            </div>
+          </form>
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>EMPloyee</th>
+                <th style="text-align: center">PASSWORD</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content" id="list" style="">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td>simran</td>
+                <td style="text-align: center">1012</td>
+              </tr>
+              <tr>
+                <td>priya</td>
+                <td style="text-align: center">1014</td>
+              </tr>
+              <tr>
+                <td>kuldeep</td>
+                <td style="text-align: center">1016</td>
+              </tr>
+              <tr>
+                <td>shubham</td>
+                <td style="text-align: center">1018</td>
+              </tr>
+              <tr>
+                <td>ankiya</td>
+                <td style="text-align: center">1020</td>
+              </tr>
+              <tr>
+                <td>manvir</td>
+                <td style="text-align: center">1022</td>
+              </tr>
+              <tr>
+                <td>rahul</td>
+                <td style="text-align: center">1024</td>
+              </tr>
+              <tr>
+                <td>amritpreet</td>
+                <td style="text-align: center">1026</td>
+              </tr>
+              <tr>
+                <td>nisha</td>
+                <td style="text-align: center">1028</td>
+              </tr>
+              <tr>
+                <td>anmol</td>
+                <td style="text-align: center">1030</td>
+              </tr>
+              <tr>
+                <td>kamalkant</td>
+                <td style="text-align: center">1032</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <!-- <div id="enter" style="color: #fff; text-align: center">
@@ -90,14 +116,14 @@
                 <span>Back</span>
               </div>
             </div>
-            <div style="cursor: pointer" id="edit" class="right-side">
+            <!-- <div class="right-side">
               <div class="inner-left">
                 <span>E</span>
               </div>
               <div class="inner-right">
                 <span>edit</span>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -109,19 +135,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
-     
-
       $("#c4").click(function () {
         window.location.replace("./dashboard.html");
       });
       $("#back").click(function () {
         window.location.replace("./file-maintenance.html");
-      });
-      $("#edit").click(function () {
-        window.location.replace("./company-files-edit.html");
-      });
-      $("#staff").click(function () {
-        window.location.replace("./staff.html");
       });
 
       document.addEventListener(
@@ -139,15 +157,8 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./company-files.html");
+            window.location.replace("./file-maintenance.html");
           }
-          if (name == "e" || name === "E") {
-            window.location.replace("./company-files-edit.html");
-          }
-          if (name == "s" || name === "S") {
-            window.location.replace("./staff.html");
-          }
-        
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
