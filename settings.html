@@ -33,49 +33,80 @@
   </head>
   <body id="body">
     
-      <section class="main_section company-profile">
+      <section class="main_section company-profile edit markup setting">
         <div class="container-fluid">
             <div class="section-head">
-              <h2 class="title">company profile</h2>
-              <div>
-                <button id="staff" class="btn">staff</button>
-                <button id="markUp" class="btn">mark up</button>
-                <button id="setting" class="btn">settings</button>
-                <button id="special" class="btn">special</button>
-              </div>
+              <h2 class="title">settings</h2>
+              <!-- <button class="btn">staff</button> -->
             </div>
             <div class="section-wrapper">
               <div class="group">
-                <p>management password : </p>
-                <p>zuluking</p>
+                <p>is verify is : </p>      
+                <input type="text" placeholder="OFF">
               </div>
               <div class="group">
-                <p>sales tax rate : </p>
-                <p>0.00</p>
+                <p>use the function key : </p>
+                <input type="text" placeholder="TYPE HERE">
               </div>
               <div class="group">
-                <p>company name : </p>
-                <p>grand Liquir</p>
+                <p>show "on sale" at pole : </p>
+                <input type="text" placeholder="TYPE HERE">
               </div>
               <div class="group">
-                <p>address : </p>
-                <p>5431 johnson drive</p>
+                <p>main pole mess : </p>
+                <input type="text" placeholder="WELCOME TO GRAND LIQUIR">
               </div>
               <div class="group">
-                <p>city state & zip : </p>
-                <p>misssion. ks. 66202</p>
+                <p>receipt mess : </p>
+                <input type="text" placeholder="MASTER LIQUIR 5432 JOHNSON ROAD">
               </div>
               <div class="group">
-                <p>telephone number : </p>
-                <p>913-432-4055</p>
+                <p>single/network system : </p>
+                <input type="text" placeholder="SINGLE">
               </div>
               <div class="group">
-                <p>credit card charge : </p>
-                <p>0</p>
+                <p>use the pole display : </p>
+                <input type="text" placeholder="NO">
               </div>
               <div class="group">
-                <p>3 fer amount : </p>
-                <p>0.00</p>
+                <p>ask for starting cash : </p>
+                <input type="text" placeholder="NO">
+              </div>
+              <div class="group">
+                <p>operating system : </p>
+                <input type="text" placeholder="WINDOWS">
+              </div>
+              <div class="group">
+                <p>ccp thru pos program : </p>
+                <input type="text" placeholder="NO">
+              </div>
+              <div class="group">
+                <p>merchant id# : </p>
+                <input type="text" placeholder="TYPE HERE">
+              </div>
+              <div class="group">
+                <p>pin pad mac address : </p>
+                <input type="text" placeholder="TYPE HERE">
+              </div>
+              <div class="group">
+                <p>tran cloud device id : </p>
+                <input type="text" placeholder="TYPE HERE">
+              </div>
+              <div class="group">
+                <p>password for cc voids  : </p>
+                <input type="text" placeholder="EZ4U">
+              </div>
+              <div class="group">
+                <p>which sound to use : </p>
+                <input type="text" placeholder="OLD">
+              </div>
+              <div class="group">
+                <p>block the '-' discount : </p>
+                <input type="text" placeholder="N">
+              </div>
+              <div class="group">
+                <p>print pay type report : </p>
+                <input type="text" placeholder="NO">
               </div>
             </div>
       </section>
@@ -95,12 +126,12 @@
                 <span>Back</span>
               </div>
             </div>
-            <div style="cursor: pointer" id="edit" class="right-side">
+            <div style="cursor: pointer;" class="right-side">
               <div class="inner-left">
-                <span>E</span>
+                <span>S</span>
               </div>
               <div class="inner-right">
-                <span>edit</span>
+                <span>save</span>
               </div>
             </div>
           </div>
@@ -122,22 +153,7 @@
       $("#back").click(function () {
         window.location.replace("./file-maintenance.html");
       });
-      $("#edit").click(function () {
-        window.location.replace("./company-files-edit.html");
-      });
-      $("#staff").click(function () {
-        window.location.replace("./staff.html");
-      });
-      $("#markUp").click(function () {
-        window.location.replace("./markup.html");
-      });
-      $("#setting").click(function () {
-        window.location.replace("./settings.html");
-      });
-      $("#special").click(function () {
-        window.location.replace("./special.html");
-      });
-      
+
       document.addEventListener(
         "keydown",
         (event) => {
@@ -153,15 +169,8 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./company-files.html");
+            window.location.replace("./file-maintenance.html");
           }
-          if (name == "e" || name === "E") {
-            window.location.replace("./company-files-edit.html");
-          }
-          if (name == "s" || name === "S") {
-            window.location.replace("./staff.html");
-          }
-        
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false

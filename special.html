@@ -33,50 +33,30 @@
   </head>
   <body id="body">
     
-      <section class="main_section company-profile">
+      <section class="main_section company-profile edit markup special">
         <div class="container-fluid">
             <div class="section-head">
-              <h2 class="title">company profile</h2>
-              <div>
-                <button id="staff" class="btn">staff</button>
-                <button id="markUp" class="btn">mark up</button>
-                <button id="setting" class="btn">settings</button>
-                <button id="special" class="btn">special</button>
-              </div>
+              <h2 class="title">special password</h2>
+              <!-- <button class="btn">staff</button> -->
             </div>
             <div class="section-wrapper">
               <div class="group">
-                <p>management password : </p>
-                <p>zuluking</p>
+                <p>fianl daily : </p>      
+                <input type="password" placeholder="XXXX">
               </div>
               <div class="group">
-                <p>sales tax rate : </p>
-                <p>0.00</p>
+                <p>new product : </p>      
+                <input type="password" placeholder="1012">
               </div>
               <div class="group">
-                <p>company name : </p>
-                <p>grand Liquir</p>
+                <p>rec product : </p>      
+                <input type="password" placeholder="1960">
               </div>
               <div class="group">
-                <p>address : </p>
-                <p>5431 johnson drive</p>
+                <p>credit order : </p>      
+                <input type="password" placeholder="VVVV">
               </div>
-              <div class="group">
-                <p>city state & zip : </p>
-                <p>misssion. ks. 66202</p>
-              </div>
-              <div class="group">
-                <p>telephone number : </p>
-                <p>913-432-4055</p>
-              </div>
-              <div class="group">
-                <p>credit card charge : </p>
-                <p>0</p>
-              </div>
-              <div class="group">
-                <p>3 fer amount : </p>
-                <p>0.00</p>
-              </div>
+             
             </div>
       </section>
 
@@ -84,7 +64,7 @@
         Type number of your choice
       </div> -->
 
-      <section class="bottom-options">
+      <section class="bottom-options special">
         <div class="container-fluid">
           <div class="container-wrapper">
             <div style="cursor: pointer" id="back" class="left-side">
@@ -95,12 +75,12 @@
                 <span>Back</span>
               </div>
             </div>
-            <div style="cursor: pointer" id="edit" class="right-side">
+            <div style="cursor: pointer;" class="right-side">
               <div class="inner-left">
-                <span>E</span>
+                <span>S</span>
               </div>
               <div class="inner-right">
-                <span>edit</span>
+                <span>save</span>
               </div>
             </div>
           </div>
@@ -122,22 +102,7 @@
       $("#back").click(function () {
         window.location.replace("./file-maintenance.html");
       });
-      $("#edit").click(function () {
-        window.location.replace("./company-files-edit.html");
-      });
-      $("#staff").click(function () {
-        window.location.replace("./staff.html");
-      });
-      $("#markUp").click(function () {
-        window.location.replace("./markup.html");
-      });
-      $("#setting").click(function () {
-        window.location.replace("./settings.html");
-      });
-      $("#special").click(function () {
-        window.location.replace("./special.html");
-      });
-      
+
       document.addEventListener(
         "keydown",
         (event) => {
@@ -153,15 +118,8 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./company-files.html");
+            window.location.replace("./file-maintenance.html");
           }
-          if (name == "e" || name === "E") {
-            window.location.replace("./company-files-edit.html");
-          }
-          if (name == "s" || name === "S") {
-            window.location.replace("./staff.html");
-          }
-        
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false

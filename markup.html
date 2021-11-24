@@ -33,49 +33,84 @@
   </head>
   <body id="body">
     
-      <section class="main_section company-profile">
+      <section class="main_section company-profile edit markup">
         <div class="container-fluid">
             <div class="section-head">
-              <h2 class="title">company profile</h2>
-              <div>
-                <button id="staff" class="btn">staff</button>
-                <button id="markUp" class="btn">mark up</button>
-                <button id="setting" class="btn">settings</button>
-                <button id="special" class="btn">special</button>
-              </div>
+              <h2 class="title">mark up</h2>
+              <!-- <button class="btn">staff</button> -->
             </div>
             <div class="section-wrapper">
               <div class="group">
-                <p>management password : </p>
-                <p>zuluking</p>
+                <p>spirt markup : </p>      
+                <input type="text" placeholder="28.50">
               </div>
               <div class="group">
-                <p>sales tax rate : </p>
-                <p>0.00</p>
+                <p>cordial markup : </p>
+                <input type="text" placeholder="31.50">
               </div>
               <div class="group">
-                <p>company name : </p>
-                <p>grand Liquir</p>
+                <p>suitcase beer markup : </p>
+                <input type="text" placeholder="20.00">
               </div>
               <div class="group">
-                <p>address : </p>
-                <p>5431 johnson drive</p>
+                <p>12 pack beer markup : </p>
+                <input type="text" placeholder="25.00">
               </div>
               <div class="group">
-                <p>city state & zip : </p>
-                <p>misssion. ks. 66202</p>
+                <p>6 pack beer markup : </p>
+                <input type="text" placeholder="25.00">
               </div>
               <div class="group">
-                <p>telephone number : </p>
-                <p>913-432-4055</p>
+                <p>wine markup : </p>
+                <input type="text" placeholder="40.00">
               </div>
               <div class="group">
-                <p>credit card charge : </p>
-                <p>0</p>
+                <p>end of sale upc : </p>
+                <input type="text" placeholder="123.456">
               </div>
               <div class="group">
-                <p>3 fer amount : </p>
-                <p>0.00</p>
+                <p>round to nearest '9' : </p>
+                <select name="" id="">
+                    <option value="">yes</option>
+                    <option value="">no</option>
+                </select>
+              </div>
+              <div class="group">
+                <p>750m+ -49/.99 rounding : </p>
+                <select name="" id="">
+                    <option value="">no</option>
+                    <option value="">yes</option>
+                </select>
+              </div>
+              <div class="group">
+                <p>"nickel up" selling price : </p>
+                <select name="" id="">
+                    <option value="">no</option>
+                    <option value="">yes</option>
+                </select>
+              </div>
+              <div class="group">
+                <p>print shelf tags : </p>
+                <select name="" id="">
+                    <option value="">yes</option>
+                    <option value="">no</option>
+                </select>
+              </div>
+              <div class="group">
+                <p>print receipts on : </p>
+                <input type="text" placeholder="WIDE PRINTER">
+              </div>
+              <div class="group">
+                <p>print "X" reports on : </p>
+                <input type="text" placeholder="WIDE PRINTER">
+              </div>
+              <div class="group">
+                <p>final daily printed : </p>
+                <input type="text" placeholder="THAT EVENING">
+              </div>
+              <div class="group">
+                <p>disco/rever sale report : </p>
+                <input type="text" placeholder="DAILY">
               </div>
             </div>
       </section>
@@ -95,12 +130,12 @@
                 <span>Back</span>
               </div>
             </div>
-            <div style="cursor: pointer" id="edit" class="right-side">
+            <div style="cursor: pointer;" class="right-side">
               <div class="inner-left">
-                <span>E</span>
+                <span>S</span>
               </div>
               <div class="inner-right">
-                <span>edit</span>
+                <span>save</span>
               </div>
             </div>
           </div>
@@ -122,22 +157,7 @@
       $("#back").click(function () {
         window.location.replace("./file-maintenance.html");
       });
-      $("#edit").click(function () {
-        window.location.replace("./company-files-edit.html");
-      });
-      $("#staff").click(function () {
-        window.location.replace("./staff.html");
-      });
-      $("#markUp").click(function () {
-        window.location.replace("./markup.html");
-      });
-      $("#setting").click(function () {
-        window.location.replace("./settings.html");
-      });
-      $("#special").click(function () {
-        window.location.replace("./special.html");
-      });
-      
+
       document.addEventListener(
         "keydown",
         (event) => {
@@ -153,15 +173,8 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./company-files.html");
+            window.location.replace("./file-maintenance.html");
           }
-          if (name == "e" || name === "E") {
-            window.location.replace("./company-files-edit.html");
-          }
-          if (name == "s" || name === "S") {
-            window.location.replace("./staff.html");
-          }
-        
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false

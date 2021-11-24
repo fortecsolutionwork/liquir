@@ -63,6 +63,26 @@
   .staff .main_section {
     margin-top: 2vh;
   }
+  .main_section.markup .section-wrapper {
+    margin-bottom: 0;
+    max-height: 63vh;
+    overflow-y: scroll;
+  }
+  .main_section.markup .group input,
+  .main_section.markup .group p {
+    font-size: 18px;
+  }
+  .main_section.markup .group input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+
+  .main_section.markup .group input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+
+  .main_section.markup .group input::placeholder {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -100,6 +120,14 @@
   .company-profile .group p {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+  .main_section.setting input {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .company-profile .section-head .btn {
+    font-size: 15px;
+    min-width: 110px;
   }
 }
 
@@ -182,6 +210,20 @@
   .section_head_wrapper {
     position: unset;
     margin: 25px 0 20px;
+  }
+  .main_section.markup select,
+  .main_section.markup input {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  .main_section.setting input {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .company-profile .section-head .btn {
+    font-size: 15px;
+    min-width: 140px;
+    margin-bottom: 10px;
   }
 }
 

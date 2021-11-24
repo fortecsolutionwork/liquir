@@ -688,6 +688,7 @@ section.bottom-options.bottom {
   text-transform: uppercase;
   min-width: 160px;
   padding: 15px;
+  margin-left: 5px;
 }
 .company-profile .section-wrapper {
   margin-bottom: 30px;
@@ -726,4 +727,36 @@ section.bottom-options.bottom {
 }
 .edit.company-profile .group {
   margin-bottom: 15px;
+}
+.main_section.markup select,
+.main_section.markup input {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.main_section.markup .group {
+  margin-bottom: 10px;
+}
+.main_section.markup .section-head {
+  margin-bottom: 30px;
+}
+.main_section.markup .title {
+  font-size: 3vw;
+}
+.main_section.markup {
+  padding: 40px 0 30px;
+}
+.setting.main_section {
+  padding: 10px 0 30px;
+}
+.main_section.setting input {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.main_section.special {
+  padding-top: 10vh;
+}
+.bottom-options.special {
+  position: absolute;
+  width: 100%;
+  bottom: 10vh;
 }
