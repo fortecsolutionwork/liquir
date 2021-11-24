@@ -619,8 +619,8 @@ section.bottom-options.bottom {
   margin-bottom: 20px;
 }
 .setup-screen .setup-inner .group span:first-child {
-  flex: 0 0 30%;
-  max-width: 30%;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 .setup-screen .setup-inner .group span:nth-child(2) {
   display: block;

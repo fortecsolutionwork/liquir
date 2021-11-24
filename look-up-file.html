@@ -37,36 +37,44 @@
         <h2 class="title">file maintenance main menu</h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li id="lookupFile">
+            <li>
               <div class="left-side">
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>look up file</h4>
+                <h4>change upc codes</h4>
               </div>
             </li>
-            <li id="inventoryFile">
+            <li>
               <div class="left-side">
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>inventory file</h4>
+                <h4>reorganize the lookup file</h4>
               </div>
             </li>
-            <li id="company-files">
+            <li>
               <div class="left-side">
                 <h3>3</h3>
               </div>
               <div class="right-side">
-                <h4>company files</h4>
+                <h4>change product locations</h4>
               </div>
             </li>
-            <li id="c4">
+            <li>
               <div class="left-side">
                 <h3>4</h3>
               </div>
               <div class="right-side">
-                <h4>return to main menu</h4>
+                <h4>size utility menu</h4>
+              </div>
+            </li>
+            <li id="c4">
+              <div class="left-side">
+                <h3>5</h3>
+              </div>
+              <div class="right-side">
+                <h4>return to f/m main menu</h4>
               </div>
             </li>
           </ul>
@@ -90,12 +98,6 @@
       $("#company-files").click(function () {
         window.location.replace("./company-files.html");
       });
-      $("#lookupFile").click(function () {
-        window.location.replace("./look-up-file.html");
-      });
-      $("#inventoryFile").click(function () {
-        window.location.replace("./inventory-file.html");
-      });
 
       document.addEventListener(
         "keydown",
@@ -104,16 +106,11 @@
           var code = event.code;
           $("#enter").html(name);
           if (name == "5") {
-            window.location.replace("./dashboard.html");
+            window.location.replace("./file-maintenance.html");
           }
-
-          if (name == "1") {
-            window.location.replace("./look-up-file.html");
-          }
-
-          if (name == "2") {
-            window.location.replace("./inventory-file.html");
-          }
+          //   if (name == "3") {
+          //     window.location.replace("./company-files.html");
+          //   }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
