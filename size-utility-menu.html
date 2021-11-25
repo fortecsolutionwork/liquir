@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <section class="main_section mainMenu inventory-reports">
+    <section class="main_section mainMenu size-utility-menu second-page">
       <div class="container-fluid">
-        <h2 class="title">inventory file maintenance menu</h2>
+        <h2 class="title">size utility menu</h2>
         <div class="list_wrapper">
           <ul class="list">
             <li>
@@ -42,15 +42,15 @@
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>add new products</h4>
+                <h4>transfers - add sizes</h4>
               </div>
             </li>
-            <li id="pi2">
+            <li>
               <div class="left-side">
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>change products</h4>
+                <h4>transfers - change sizes</h4>
               </div>
             </li>
             <li>
@@ -58,49 +58,31 @@
                 <h3>3</h3>
               </div>
               <div class="right-side">
-                <h4>delete products</h4>
+                <h4>prod ref# - add sizes</h4>
               </div>
             </li>
-            <li id="d4">
+            <li>
               <div class="left-side">
                 <h3>4</h3>
               </div>
               <div class="right-side">
-                <h4>recieve products</h4>
+                <h4>prod ref# - change sizes</h4>
               </div>
             </li>
-          </ul>
-          <ul class="list list-second">
             <li>
               <div class="left-side">
                 <h3>5</h3>
               </div>
               <div class="right-side">
-                <h4>product utility menu</h4>
+                <h4>beer transfer file</h4>
               </div>
             </li>
-            <li id="g">
+            <li id="c4">
               <div class="left-side">
                 <h3>6</h3>
               </div>
               <div class="right-side">
-                <h4>add new category</h4>
-              </div>
-            </li>
-            <li>
-              <div class="left-side">
-                <h3>7</h3>
-              </div>
-              <div class="right-side">
-                <h4>add new vendor</h4>
-              </div>
-            </li>
-            <li>
-              <div class="left-side">
-                <h3>8</h3>
-              </div>
-              <div class="right-side">
-                <h4>dupe / short / case menu</h4>
+                <h4>return to f/m main menu</h4>
               </div>
             </li>
           </ul>
@@ -108,28 +90,6 @@
       </div>
     </section>
 
-    <section class="bottom-options inventory-reports">
-      <div class="container-fluid">
-        <div class="container-wrapper">
-          <div style="cursor: pointer" id="back" class="left-side">
-            <div class="inner-left">
-              <span>B</span>
-            </div>
-            <div class="inner-right width-half">
-              <span>Back</span>
-            </div>
-          </div>
-          <!-- <div class="right-side">
-              <div class="inner-left">
-                <span>2</span>
-              </div>
-              <div class="inner-right">
-                <span>return to main menu</span>
-              </div>
-            </div> -->
-        </div>
-      </div>
-    </section>
     <div id="enter" style="color: #fff; text-align: center">
       Type number of your choice
     </div>
@@ -140,18 +100,12 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // $("#c4").click(function () {
-      //   window.location.replace("./dashboard.html");
-      // });
-      $("#back").click(function () {
-        window.location.replace("./dashboard.html");
+      $("#c4").click(function () {
+        window.location.replace("./look-up-file.html");
       });
-      // $("#pi1").click(function () {
-      //   window.location.replace("./in-store-inquiry.html");
-      // });
-      // $("#pi2").click(function () {
-      //   window.location.replace("./detail-sales-report.html");
-      // });
+      $("#company-files").click(function () {
+        window.location.replace("./company-files.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -159,18 +113,12 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
-          // if (name == "4") {
-          //   window.location.replace("./dashboard.html");
-          // }
-          if (name == "B" || name === "b") {
-            window.location.replace("./dashboard.html");
+          if (name == "6") {
+            window.location.replace("./look-up-file.html");
           }
-          // if (name == "1") {
-          //   window.location.replace("./in-store-inquiry.html");
-          // }
-          // if (name == "2") {
-          //   window.location.replace("./detail-sales-report.html");
-          // }
+          //   if (name == "3") {
+          //     window.location.replace("./company-files.html");
+          //   }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false

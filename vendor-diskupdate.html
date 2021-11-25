@@ -32,10 +32,9 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <h1 style="text-align: center; color: #fff">this is vendor disk update</h1>
-    <section class="main_section second-page">
+    <section class="main_section mainMenu inventory-reports">
       <div class="container-fluid">
-        <h2 class="title">file maintenance main menu</h2>
+        <h2 class="title">vendor disk upadate main menu</h2>
         <div class="list_wrapper">
           <ul class="list">
             <li>
@@ -43,7 +42,7 @@
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>look up file</h4>
+                <h4>download new vendor price disk and/or print proof disk</h4>
               </div>
             </li>
             <li>
@@ -51,7 +50,7 @@
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>inventory file</h4>
+                <h4>make corrections to proof report</h4>
               </div>
             </li>
             <li>
@@ -59,15 +58,33 @@
                 <h3>3</h3>
               </div>
               <div class="right-side">
-                <h4>company files</h4>
+                <h4>replace new retail with old - discounts</h4>
               </div>
             </li>
-            <li id="c4">
+          </ul>
+          <ul class="list list-second">
+            <li>
               <div class="left-side">
                 <h3>4</h3>
               </div>
               <div class="right-side">
-                <h4>return to main menu</h4>
+                <h4>print final report & price labels</h4>
+              </div>
+            </li>
+            <li>
+              <div class="left-side">
+                <h3>5</h3>
+              </div>
+              <div class="right-side">
+                <h4>update inventory from corrected file</h4>
+              </div>
+            </li>
+            <li>
+              <div class="left-side">
+                <h3>6</h3>
+              </div>
+              <div class="right-side">
+                <h4>create sale item price file for vendor</h4>
               </div>
             </li>
           </ul>
@@ -75,6 +92,28 @@
       </div>
     </section>
 
+    <section class="bottom-options inventory-reports">
+      <div class="container-fluid">
+        <div class="container-wrapper">
+          <div style="cursor: pointer" id="back" class="left-side">
+            <div class="inner-left">
+              <span>B</span>
+            </div>
+            <div class="inner-right width-half">
+              <span>return to the main menu</span>
+            </div>
+          </div>
+          <!-- <div class="right-side">
+              <div class="inner-left">
+                <span>2</span>
+              </div>
+              <div class="inner-right">
+                <span>return to main menu</span>
+              </div>
+            </div> -->
+        </div>
+      </div>
+    </section>
     <div id="enter" style="color: #fff; text-align: center">
       Type number of your choice
     </div>
@@ -88,6 +127,15 @@
       $("#c4").click(function () {
         window.location.replace("./dashboard.html");
       });
+      $("#back").click(function () {
+        window.location.replace("./dashboard.html");
+      });
+      $("#pi1").click(function () {
+        window.location.replace("./in-store-inquiry.html");
+      });
+      $("#pi2").click(function () {
+        window.location.replace("./detail-sales-report.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -97,6 +145,15 @@
           $("#enter").html(name);
           if (name == "4") {
             window.location.replace("./dashboard.html");
+          }
+          if (name == "B" || name === "b") {
+            window.location.replace("./dashboard.html");
+          }
+          if (name == "1") {
+            window.location.replace("./in-store-inquiry.html");
+          }
+          if (name == "2") {
+            window.location.replace("./detail-sales-report.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

@@ -32,10 +32,9 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <h1 style="text-align: center; color: #fff">this is misc-program-menu</h1>
-    <section class="main_section second-page">
+    <section class="main_section mainMenu inventory-reports">
       <div class="container-fluid">
-        <h2 class="title">file maintenance main menu</h2>
+        <h2 class="title">miscellaneous programs menu</h2>
         <div class="list_wrapper">
           <ul class="list">
             <li>
@@ -43,7 +42,7 @@
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>look up file</h4>
+                <h4>checkout practice</h4>
               </div>
             </li>
             <li>
@@ -51,7 +50,7 @@
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>inventory file</h4>
+                <h4>wholesale club menu</h4>
               </div>
             </li>
             <li>
@@ -59,15 +58,49 @@
                 <h3>3</h3>
               </div>
               <div class="right-side">
-                <h4>company files</h4>
+                <h4>payroll/bookkeeping menu</h4>
               </div>
             </li>
-            <li id="c4">
+            <li>
               <div class="left-side">
                 <h3>4</h3>
               </div>
               <div class="right-side">
-                <h4>return to main menu</h4>
+                <h4>mailing list/wine club</h4>
+              </div>
+            </li>
+          </ul>
+          <ul class="list list-second">
+            <li>
+              <div class="left-side">
+                <h3>5</h3>
+              </div>
+              <div class="right-side">
+                <h4>cooler/edlp product menu</h4>
+              </div>
+            </li>
+            <li>
+              <div class="left-side">
+                <h3>6</h3>
+              </div>
+              <div class="right-side">
+                <h4>print upc codes</h4>
+              </div>
+            </li>
+            <li>
+              <div class="left-side">
+                <h3>7</h3>
+              </div>
+              <div class="right-side">
+                <h4>word processing</h4>
+              </div>
+            </li>
+            <li>
+              <div class="left-side">
+                <h3>8</h3>
+              </div>
+              <div class="right-side">
+                <h4>sign maker</h4>
               </div>
             </li>
           </ul>
@@ -75,6 +108,28 @@
       </div>
     </section>
 
+    <section class="bottom-options inventory-reports">
+      <div class="container-fluid">
+        <div class="container-wrapper">
+          <div style="cursor: pointer" id="back" class="left-side">
+            <div class="inner-left">
+              <span>B</span>
+            </div>
+            <div class="inner-right width-half">
+              <span>return to the main menu</span>
+            </div>
+          </div>
+          <!-- <div class="right-side">
+              <div class="inner-left">
+                <span>2</span>
+              </div>
+              <div class="inner-right">
+                <span>return to main menu</span>
+              </div>
+            </div> -->
+        </div>
+      </div>
+    </section>
     <div id="enter" style="color: #fff; text-align: center">
       Type number of your choice
     </div>
@@ -85,7 +140,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#c4").click(function () {
+      $("#back").click(function () {
         window.location.replace("./dashboard.html");
       });
 
@@ -95,9 +150,11 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
-          if (name == "4") {
+
+          if (name == "B" || name === "b") {
             window.location.replace("./dashboard.html");
           }
+
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
