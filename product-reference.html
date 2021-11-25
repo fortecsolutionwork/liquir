@@ -32,57 +32,33 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <section class="main_section mainMenu size-utility-menu second-page">
+    <section class="main_section mainMenu look-up-file second-page">
       <div class="container-fluid">
-        <h2 class="title">size utility menu</h2>
+        <h2 class="title">file maintenance main menu</h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li>
+            <li id="standard">
               <div class="left-side">
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>transfers - add sizes</h4>
+                <h4>standard</h4>
               </div>
             </li>
-            <li>
+            <li id="glazer">
               <div class="left-side">
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>transfers - change sizes</h4>
+                <h4>glazer</h4>
               </div>
             </li>
-            <li>
+            <li id="back">
               <div class="left-side">
-                <h3>3</h3>
+                <h3>b</h3>
               </div>
               <div class="right-side">
-                <h4>prod ref# - add sizes</h4>
-              </div>
-            </li>
-            <li id="prod">
-              <div class="left-side">
-                <h3>4</h3>
-              </div>
-              <div class="right-side">
-                <h4>prod ref# - change sizes</h4>
-              </div>
-            </li>
-            <li id="beer">
-              <div class="left-side">
-                <h3>5</h3>
-              </div>
-              <div class="right-side">
-                <h4>beer transfer file</h4>
-              </div>
-            </li>
-            <li id="c4">
-              <div class="left-side">
-                <h3>6</h3>
-              </div>
-              <div class="right-side">
-                <h4>return to f/m main menu</h4>
+                <h4>back</h4>
               </div>
             </li>
           </ul>
@@ -100,17 +76,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#c4").click(function () {
-        window.location.replace("./look-up-file.html");
+      $("#back").click(function () {
+        window.location.replace("./size-utility-menu.html");
       });
-      $("#company-files").click(function () {
-        window.location.replace("./company-files.html");
-      });
-      $("#beer").click(function () {
-        window.location.replace("./beer-transfer.html");
-      });
-      $("#prod").click(function () {
-        window.location.replace("./product-reference.html");
+      $("#standard").click(function () {
+        window.location.replace("./existing-product.html");
       });
 
       document.addEventListener(
@@ -119,20 +89,12 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
-          if (name == "6") {
-            window.location.replace("./look-up-file.html");
+          if (name == "b" || name == "B") {
+            window.location.replace("./size-utility-menu.html");
           }
-          if (name == "5") {
-            window.location.replace("./beer-transfer.html");
+          if (name == "1") {
+            window.location.replace("./existing-product.html");
           }
-          if (name == "4") {
-            window.location.replace("./product-reference.html");
-          }
-
-          //   if (name == "3") {
-          //     window.location.replace("./company-files.html");
-          //   }
-          //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
       );

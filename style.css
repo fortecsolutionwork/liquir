@@ -777,3 +777,56 @@ section.bottom-options.bottom {
   min-height: 80vh;
   padding-top: 0;
 }
+
+.size-utility-menu {
+  padding-top: 5vh;
+}
+.existing-product h2 {
+  font-size: 3vw !important;
+}
+.existing-product table {
+  width: 100%;
+}
+.existing-product table th,
+.existing-product table td {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.existing-product table td input {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+.existing-product table td input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.existing-product table td input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.existing-product table td input::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.existing-product table td input:focus,
+.existing-product table td input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.existing-product table th:nth-child(2) {
+  width: 100px !important;
+}
+
+.existing-product table th:nth-child(1) {
+  width: 120px;
+}
+.existing-product .table-wrapper {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
