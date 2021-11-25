@@ -89,7 +89,7 @@
                   <h4>hold sale</h4>
                 </div>
               </li>
-              <li>
+              <li id="customMail">
                 <div class="left-side">
                   <h3>m</h3>
                 </div>
@@ -227,6 +227,9 @@
       $("#return").click(function () {
         window.location.replace("./dashboard.html");
       });
+      $("#customMail").click(function () {
+        window.location.replace("./custom-mail.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -236,6 +239,9 @@
           $("#enter").html(name);
           if (name == "a" || name == "A") {
             window.location.replace("./product-list.html");
+          }
+          if (name == "m" || name == "M") {
+            window.location.replace("./custom-mail.html");
           }
           if (name == "2") {
             window.location.replace("./dashboard.html");
