@@ -853,7 +853,16 @@ section.history-total {
   position: absolute;
   right: 0;
   width: 100%;
+  z-index: -1;
 }
 .master-club-list .main_section {
   margin-top: 6vh;
+}
+
+.total-table {
+  margin-top: 50px;
+}
+
+.total-table td {
+  border: none;
 }

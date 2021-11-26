@@ -33,38 +33,57 @@
   </head>
   <body id="body">
     
-      <section class="main_section mainMenu company-profile edit">
+      <section class="main_section add-new-club mainMenu company-profile edit">
         <div class="container-fluid">
             <div class="section-head">
-              <h2 class="title">customer correction screen</h2>
+              <h2 class="title">club correction screen</h2>
               <!-- <button class="btn">staff</button> -->
             </div>
             <div class="section-wrapper">
               <div class="group">
-                <p>customer name : </p>      
-                <input type="text" placeholder="ENTER HERE">
+                <p>club license x-date </p>      
+                <input type="text" placeholder="08-28-2013">
               </div>
               <div class="group">
-                <p>street address : </p>
-                <input type="text" placeholder="ENTER HERE">
+                <p>club name</p>
+                <input type="text" placeholder="HAPPY DRINKS LLC DBA HAPPY DRINKS">
               </div>
               <div class="group">
-                <p>city/state/zip : </p>
-                <input type="text" placeholder="ENTER HERE">
+                <p>club street address</p>
+                <input type="text" placeholder="7240 SHAWNEE MISSION PARKWAY">
               </div>
               <div class="group">
-                <p>phone number : </p>
-                <input type="text" placeholder="ENTER HERE">
+                <p>club city/state/zip</p>
+                <input type="text" placeholder="OVERLAND PARK, KS 66202">
               </div>
               <div class="group">
-                <p>birthday(s) : </p>
-                <input type="text" placeholder="ENTER HERE">
+                <p>club phone number</p>
+                <input type="text" placeholder="816-446-7832">
               </div>
               <div class="group">
-                <p>anniversary : </p>
-                <input type="text" placeholder="ENTER HERE">
+                <p>contact 1 contact 2</p>
+                <input type="text" placeholder="TONY QUINN">
               </div>
-             
+              <div class="group">
+                <p>liquor/resale license</p>
+                <input type="text" placeholder="10-019-3156-02">
+              </div>
+              <div class="group">
+                <p>sort info</p>
+                <input type="text" placeholder="1">
+              </div>
+              <div class="group">
+                <p>pass on case cost</p>
+                <input type="text" placeholder="NO">
+              </div>
+              <div class="group">
+                <p>beer markup percent</p>
+                <input type="text" placeholder="0.000">
+              </div>
+              <div class="group">
+                <p>other markup percent</p>
+                <input type="text" placeholder="0.000">
+              </div>
             </div>
       </section>
 
@@ -106,7 +125,7 @@
 
  
       $("#back").click(function () {
-        window.location.replace("./custom-mail.html");
+        window.location.replace("./club-sales.html");
       });
 
       document.addEventListener(
@@ -117,7 +136,7 @@
           $("#enter").html(name);
 
           if (name == "B" || name === "b") {
-            window.location.replace("./custom-mail.html");
+            window.location.replace("./club-sales.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

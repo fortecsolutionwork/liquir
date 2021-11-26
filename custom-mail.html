@@ -82,6 +82,9 @@
       $("#newCustomer").click(function () {
         window.location.replace("./new-customer.html");
       });
+      $("#glazer").click(function () {
+        window.location.replace("./existing-customer.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -94,6 +97,9 @@
           }
           if (name == "1") {
             window.location.replace("./new-customer.html");
+          }
+          if (name == "2") {
+            window.location.replace("./existing-customer.html");
           }
         },
         false

@@ -48,7 +48,12 @@
           </table>
         </div>
         <div class="tbl-content" id="list" style="">
-          <table cellpadding="0" cellspacing="0" border="0">
+          <table
+            id="master-club-list"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+          >
             <tbody>
               <tr>
                 <td>1</td>
@@ -157,6 +162,9 @@
       });
       $("#back").click(function () {
         window.location.replace("./club-sales.html");
+      });
+      $("#master-club-list tr").click(function () {
+        window.location.replace("./master-club-list-inner.html");
       });
 
       document.addEventListener(
