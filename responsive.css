@@ -4,7 +4,7 @@
     padding: 20px 0 0;
   }
   .main_section .title {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 30px;
   }
   .main_section .list li {
@@ -15,14 +15,21 @@
     font-size: 28px;
   }
   .checkout-page .main_section {
-    padding: 12px 0 0;
+    padding: 5vh 0 0;
+  }
+  .checkout-page .list_wrapper {
+    padding-top: 1vh;
+  }
+  .sechtion_head > div img {
+    max-width: 25px;
+    margin-right: 6px;
   }
   .checkout-page .list li .left-side {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 35px;
+    min-height: 35px;
   }
   .checkout-page .main_section .list li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .checkout-page .list_wrapper ul {
     margin-bottom: 0;
@@ -38,7 +45,7 @@
     height: 4vw;
   }
   .checkout-page .list li .left-side h3 {
-    font-size: 15px;
+    font-size: 12px;
   }
   .main_section.enter-message .list li .right-side {
     flex: 0 0 80%;
@@ -106,6 +113,46 @@
   }
   .add-new-club .section-head {
     margin-bottom: 20px;
+  }
+  .product-list .main_section {
+    padding: 3vh 0 30px;
+    margin-top: 6vh;
+  }
+  .sks-receipt.product-list .main_section {
+    margin-top: 3vh;
+  }
+  .price-history.product-list .main_section {
+    padding: 3vh 0 30px;
+    margin-top: 3vh;
+  }
+  .history-total .group p {
+    font-size: 15px;
+  }
+  .drive-up.product-list .main_section {
+    margin-top: 2vh;
+  }
+  .master-club-list.product-list .main_section {
+    margin-top: 3vh;
+  }
+  .setting.main_section {
+    padding: 6vh 0 30px;
+  }
+  .setup-screen.main_section {
+    padding: 20vh 0 0;
+  }
+  .dashboard_main.main_section .list li {
+    margin-bottom: 15px;
+  }
+  .dashboard_main {
+    padding-top: 7vh;
+  }
+  .time_date_wrapper h5 {
+    font-size: 18px;
+    color: #fff;
+  }
+  .sechtion_head > div span {
+    color: #fff;
+    font-size: 18px;
   }
 }
 
