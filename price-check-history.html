@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <div class="product-list">
+    <div class="product-list price-history">
       <section class="main_section second-page">
         <div class="container-fluid">
           <form class="message-print-form" onsubmit="return false;">
@@ -46,21 +46,6 @@
                 class="icon-white"
               />
             </div>
-            <div class="input-group">
-              <label for="">select</label>
-              <select style="position: relative; top: -5px" name="" id="">
-                <option value="audi" selected>Employee</option>
-                <option value="">Simran</option>
-                <option value="">ANKITA</option>
-                <option value="">RAHUL</option>
-                <option value="">MANVIR</option>
-                <option value="">KULDEEP</option>
-                <option value="">SHUBHAM</option>
-                <option value="">PRIYA</option>
-                <option value="">MANJODH</option>
-                <option value="">HARPREET</option>
-              </select>
-            </div>
             <div class="input-group input-group--change">
               <button id="search-btn" class="btn">search</button>
             </div>
@@ -68,122 +53,134 @@
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
-                <th width="80">NO</th>
-                <th style="text-align: center">EMPLOY NAME</th>
-                <th>MESSAGE</th>
+                <th>month</th>
+                <th>o/h</th>
+                <th>rec</th>
+                <th>sld</th>
+                <th>cost</th>
+                <th>rta</th>
               </tr>
             </thead>
           </table>
         </div>
-        <div class="tbl-content" id="list" style="display: none">
+        <div class="tbl-content" id="list">
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
               <tr>
-                <td width="80">1</td>
-                <td style="text-align: center">SIMRAN</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>JANUARY</td>
+                <td>6</td>
+                <td>2</td>
+                <td>0</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">2</td>
-                <td style="text-align: center">ANKITA</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>FEBRUARY</td>
+                <td>5</td>
+                <td>0</td>
+                <td>1</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">3</td>
-                <td style="text-align: center">RAHUL</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>MARCH</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">4</td>
-                <td style="text-align: center">MANVIR</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>APRIL</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">5</td>
-                <td style="text-align: center">KULDEEP</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>may</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">6</td>
-                <td style="text-align: center">SHUBHAM</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>june</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">7</td>
-                <td style="text-align: center">PRIYA</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>july</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">8</td>
-                <td style="text-align: center">MANJODH</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>august</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">9</td>
-                <td style="text-align: center">HARPREET</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>SEPTEMBER</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">10</td>
-                <td style="text-align: center">ANMOL</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>october</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">11</td>
-                <td style="text-align: center">NISHA</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>november</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
               <tr>
-                <td width="80">12</td>
-                <td style="text-align: center">AMRITPREET</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
-              </tr>
-              <tr>
-                <td width="80">13</td>
-                <td style="text-align: center">KAMAL KANT</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </td>
+                <td>december</td>
+                <td>4</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5.45</td>
+                <td>6.99</td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <section class="history-total">
+        <div class="container-fluid">
+          <div class="group">
+            <p>totals :</p>
+            <p>15</p>
+          </div>
+          <div class="group">
+            <p>average :</p>
+            <p>3.75</p>
+          </div>
+          <div class="group">
+            <p>profit :</p>
+            <p>21.56</p>
+          </div>
         </div>
       </section>
 
@@ -230,7 +227,7 @@
         window.location.replace("./checkout.html");
       });
       $("#b").click(function () {
-        window.location.replace("./message-minder.html");
+        window.location.replace("./price-check.html");
       });
 
       document.addEventListener(
@@ -249,7 +246,7 @@
             window.location.replace("./dashboard.html");
           }
           if (name == "B" || name === "b") {
-            window.location.replace("./message-minder.html");
+            window.location.replace("./price-check.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

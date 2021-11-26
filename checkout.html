@@ -97,7 +97,7 @@
                   <h4>custom mail</h4>
                 </div>
               </li>
-              <li>
+              <li id="priceCheck">
                 <div class="left-side">
                   <h3>pc</h3>
                 </div>
@@ -105,7 +105,7 @@
                   <h4>price check</h4>
                 </div>
               </li>
-              <li>
+              <li id="sks">
                 <div class="left-side">
                   <h3>r</h3>
                 </div>
@@ -147,7 +147,7 @@
                   <h4>add hold</h4>
                 </div>
               </li>
-              <li>
+              <li id="clubSale">
                 <div class="left-side">
                   <h3>cs</h3>
                 </div>
@@ -171,7 +171,7 @@
                   <h4>mess minder</h4>
                 </div>
               </li>
-              <li>
+              <li id="du">
                 <div class="left-side">
                   <h3>du</h3>
                 </div>
@@ -230,6 +230,18 @@
       $("#customMail").click(function () {
         window.location.replace("./custom-mail.html");
       });
+      $("#priceCheck").click(function () {
+        window.location.replace("./price-check.html");
+      });
+      $("#clubSale").click(function () {
+        window.location.replace("./club-sales.html");
+      });
+      $("#sks").click(function () {
+        window.location.replace("./sks-receipt.html");
+      });
+      $("#du").click(function () {
+        window.location.replace("./drive-up.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -242,6 +254,9 @@
           }
           if (name == "m" || name == "M") {
             window.location.replace("./custom-mail.html");
+          }
+          if (name == "r" || name == "R") {
+            window.location.replace("./sks-receipt.html");
           }
           if (name == "2") {
             window.location.replace("./dashboard.html");

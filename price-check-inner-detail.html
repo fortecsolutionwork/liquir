@@ -32,73 +32,56 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <div class="product-list staff">
-      <section class="main_section second-page">
+    
+      <section class="main_section mainMenu company-profile edit">
         <div class="container-fluid">
-          <form onsubmit="return false;">
-            <div class="input-group">
-              <label for="">LIST OF COMPANY staff</label>
+            <div class="section-head">
+              <h2 class="title">product inner screen</h2>
+              <!-- <button class="btn">staff</button> -->
             </div>
-          </form>
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>EMPloyee</th>
-                <th style="text-align: center">PASSWORD</th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-        <div class="tbl-content" id="list" style="">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>simran</td>
-                <td style="text-align: center">1012</td>
-              </tr>
-              <tr>
-                <td>priya</td>
-                <td style="text-align: center">1014</td>
-              </tr>
-              <tr>
-                <td>kuldeep</td>
-                <td style="text-align: center">1016</td>
-              </tr>
-              <tr>
-                <td>shubham</td>
-                <td style="text-align: center">1018</td>
-              </tr>
-              <tr>
-                <td>ankiya</td>
-                <td style="text-align: center">1020</td>
-              </tr>
-              <tr>
-                <td>manvir</td>
-                <td style="text-align: center">1022</td>
-              </tr>
-              <tr>
-                <td>rahul</td>
-                <td style="text-align: center">1024</td>
-              </tr>
-              <tr>
-                <td>amritpreet</td>
-                <td style="text-align: center">1026</td>
-              </tr>
-              <tr>
-                <td>nisha</td>
-                <td style="text-align: center">1028</td>
-              </tr>
-              <tr>
-                <td>anmol</td>
-                <td style="text-align: center">1030</td>
-              </tr>
-              <tr>
-                <td>kamalkant</td>
-                <td style="text-align: center">1032</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <div class="section-wrapper">
+              <div class="group">
+                <p>375M GREY GOOSE UODKR </p>      
+                <p>18.99 </p>      
+                
+              </div>
+              <div class="group">
+                <p>SINGLE BOTTLE cost</p>
+                <p>15.78</p>
+              
+              </div>
+              <div class="group">
+                <p>13 wk</p>
+                <p>11</p>
+              
+              </div>
+              <div class="group">
+                <p>26 wk</p>
+                <p>18</p>
+              
+              </div>
+              <div class="group">
+                <p>39 wk</p>
+                <p>28</p>
+              
+              </div>
+              <div class="group">
+                <p>52 wk</p>
+                <p>30</p>
+              
+              </div>
+              <div class="group">
+                <p>CASE BOTTLE cost</p>
+                <p>14.78</p>
+                
+              </div>
+              <div class="group">
+                <p>FULL CASE cost</p>
+                <p>177.36</p>
+              
+              </div>
+             
+            </div>
       </section>
 
       <!-- <div id="enter" style="color: #fff; text-align: center">
@@ -116,14 +99,14 @@
                 <span>Back</span>
               </div>
             </div>
-            <!-- <div class="right-side">
+            <div id="history" style="cursor: pointer;" class="right-side">
               <div class="inner-left">
-                <span>E</span>
+                <span>H</span>
               </div>
               <div class="inner-right">
-                <span>edit</span>
+                <span>History</span>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -135,12 +118,16 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#c4").click(function () {
-        window.location.replace("./dashboard.html");
-      });
+     
+
+ 
       $("#back").click(function () {
-        window.location.replace("./file-maintenance.html");
+        window.location.replace("./price-check.html");
       });
+      $("#history").click(function () {
+        window.location.replace("./price-check-history.html");
+      });
+
 
       document.addEventListener(
         "keydown",
@@ -149,15 +136,11 @@
           var code = event.keyCode;
           $("#enter").html(name);
 
-          if (code === 13) {
-            var type = $("#search").val();
-            $("#list").show();
-          }
-          if (name == "2") {
-            window.location.replace("./dashboard.html");
-          }
           if (name == "B" || name === "b") {
-            window.location.replace("./file-maintenance.html");
+            window.location.replace("./price-check.html");
+          }
+          if (name == "h" || name === "H") {
+            window.location.replace("./price-check-history.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

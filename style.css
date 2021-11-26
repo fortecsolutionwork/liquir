@@ -830,3 +830,30 @@ section.bottom-options.bottom {
   max-height: 50vh;
   overflow-y: scroll;
 }
+
+.history-total .group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.history-total .group p {
+  padding: 0;
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  flex: 0 0 7%;
+  max-width: 7%;
+}
+
+section.history-total {
+  margin-bottom: 15px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+.master-club-list .main_section {
+  margin-top: 6vh;
+}

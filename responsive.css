@@ -94,6 +94,19 @@
     width: 100%;
     table-layout: auto;
   }
+  .history-total .group p {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .price-history .main_section {
+    margin-top: 1vh;
+  }
+  .add-new-club .group {
+    margin-bottom: 10px !important;
+  }
+  .add-new-club .section-head {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 1280px) {
