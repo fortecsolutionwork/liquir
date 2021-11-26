@@ -53,7 +53,7 @@
                 <h4>company payouts</h4>
               </div>
             </li>
-            <li>
+            <li id="c3">
               <div class="left-side">
                 <h3>3</h3>
               </div>
@@ -138,6 +138,9 @@
       $("#back").click(function () {
         window.location.replace("./dashboard.html");
       });
+      $("#c3").click(function () {
+        window.location.replace("./company-files.html");
+      });
       // $("#pi1").click(function () {
       //   window.location.replace("./in-store-inquiry.html");
       // });
@@ -160,9 +163,9 @@
           // if (name == "1") {
           //   window.location.replace("./in-store-inquiry.html");
           // }
-          // if (name == "2") {
-          //   window.location.replace("./detail-sales-report.html");
-          // }
+          if (name == "3") {
+            window.location.replace("./company-files.html");
+          }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
