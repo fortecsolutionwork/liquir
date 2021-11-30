@@ -27,6 +27,11 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+
     <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
@@ -43,7 +48,7 @@
             </div>
             <div class="group">
               <span>Date : </span>
-              <input type="date" name="" id="" />
+              <input type="text" placeholder="Select Date" id="datepicker" />
             </div>
           </div>
         </div>
@@ -108,5 +113,17 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    <script>
+      $(function () {
+        $("#datepicker").datepicker({
+          dateFormat: "dd-mm-yy",
+          changeMonth: true,
+          changeYear: true,
+        });
+      });
+    </script>
   </body>
 </html>

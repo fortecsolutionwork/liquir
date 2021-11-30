@@ -866,3 +866,20 @@ section.history-total {
 .total-table td {
   border: none;
 }
+
+#datepicker::-webkit-input-placeholder {
+  /* Edge */
+  font-size: 30px;
+  color: #fff;
+}
+
+#datepicker:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 30px;
+  color: #fff;
+}
+
+#datepicker::placeholder {
+  font-size: 30px;
+  color: #fff;
+}
