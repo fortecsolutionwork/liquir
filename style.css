@@ -870,16 +870,16 @@ section.history-total {
 #datepicker::-webkit-input-placeholder {
   /* Edge */
   font-size: 30px;
-  color: #fff;
+  color: #fff !important;
 }
 
 #datepicker:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-size: 30px;
-  color: #fff;
+  color: #fff !important;
 }
 
 #datepicker::placeholder {
   font-size: 30px;
-  color: #fff;
+  color: #fff !important;
 }
