@@ -81,7 +81,7 @@
                   <h4>employ disc</h4>
                 </div>
               </li>
-              <li>
+              <li id="hold-sale">
                 <div class="left-side">
                   <h3>h</h3>
                 </div>
@@ -251,6 +251,9 @@
       $("#employee-disc").click(function () {
         window.location.replace("./employee-disc.html");
       });
+      $("#hold-sale").click(function () {
+        window.location.replace("./hold-sale.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -275,6 +278,9 @@
           }
           if (name == "e" || name == "E") {
             window.location.replace("./employee-disc.html");
+          }
+          if (name == "h" || name == "H") {
+            window.location.replace("./hold-sale.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

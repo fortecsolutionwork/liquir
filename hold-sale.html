@@ -43,15 +43,13 @@
     >
       <section class="main_section second-page">
         <div class="container-fluid">
-          <h2 class="title mb-4">billing revision</h2>
+          <h2 class="title mb-4">hold sale</h2>
 
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
                 <th>ref</th>
                 <th>PRODUCT discription</th>
-                <th>o/h</th>
-                <th>oty sld</th>
                 <th>price</th>
               </tr>
             </thead>
@@ -63,36 +61,7 @@
               <tr>
                 <td>1</td>
                 <td>375m grey goose vodka</td>
-                <td>16</td>
-                <td>2</td>
                 <td>37.98</td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            id="changeTable"
-            class="total-table"
-            cellpadding="0"
-            cellspacing="0"
-            border="0"
-          >
-            <tbody>
-              <tr id="changeTr">
-                <td>sales tax</td>
-                <td></td>
-                <td style="text-align: center">41.02</td>
-              </tr>
-              <tr id="changeTr2">
-                <td>total amount due</td>
-                <td></td>
-                <td style="text-align: center">41.02</td>
-              </tr>
-              <tr>
-                <td id="changeText">
-                  the total for this order (including tax) is
-                </td>
-                <td></td>
-                <td id="changeText2" style="text-align: center">41.02</td>
               </tr>
             </tbody>
           </table>
@@ -103,25 +72,25 @@
         Type number of your choice
       </div> -->
 
-      <section id="btn1" class="bottom-multi-buttons">
+      <section class="bottom-options">
         <div class="container-fluid">
-          <div class="wrapper">
-            <a href="#" class="btn">add</a>
-            <a href="#" class="btn">delete</a>
-            <a href="#" class="btn">change qty</a>
-            <a href="#" id="showBtn2" class="btn">checkout</a>
-            <a href="#" class="btn hold">hold</a>
-          </div>
-        </div>
-      </section>
-      <section id="btn2" class="bottom-multi-buttons">
-        <div class="container-fluid">
-          <div class="wrapper">
-            <a href="#" id="cash" class="btn">cash</a>
-            <a href="#" id="check" class="btn">check</a>
-            <a href="#" id="charge" class="btn">charge card</a>
-            <a href="#" id="changes" class="btn">changes</a>
-            <a href="#" class="btn hold">hold</a>
+          <div class="container-wrapper">
+            <div style="cursor: pointer" class="left-side">
+              <div class="inner-left">
+                <span>1</span>
+              </div>
+              <div class="inner-right">
+                <span>to bill</span>
+              </div>
+            </div>
+            <div id="back" style="cursor: pointer" class="right-side">
+              <div class="inner-left">
+                <span>2</span>
+              </div>
+              <div class="inner-right">
+                <span>return to main menu</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -133,19 +102,9 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      //   $("#a").click(function () {
-      //     window.location.replace("./product-list.html");
-      //   });
-      $("#a4").click(function () {
-        window.location.replace("./product-list.html");
-      });
       $("#back").click(function () {
         window.location.replace("./checkout.html");
       });
-      $(".hold").click(function () {
-        window.location.replace("./checkout.html");
-      });
-
       document.addEventListener(
         "keydown",
         (event) => {
@@ -155,33 +114,13 @@
           //   if (name == "a" || name == "A") {
           //     window.location.replace("./product-list.html");
           //   }
-          if (name == "B" || name == "b") {
+          if (name == "2") {
             window.location.replace("./checkout.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
       );
-
-      $("#showBtn2").click(function () {
-        $("#btn2").addClass("show");
-        $("#changeTr").addClass("show");
-        $("#changeTr2").addClass("show");
-      });
-      $("#changes").click(function () {
-        $("#btn2").removeClass("show");
-        $("#changeTr").removeClass("show");
-        $("#changeTr2").removeClass("show");
-      });
-      $("#check").click(function () {
-        $("#changeText").text("PAID BY CHECK IN THE AMOUNT OF");
-      });
-      $("#charge").click(function () {
-        $("#changeText").text("PAID BY CHARGE IN THE AMOUNT OF");
-      });
-      $("#cash").click(function () {
-        $("#changeText").text("PAID BY CASH IN THE AMOUNT OF");
-      });
     </script>
 
     <!-- bootstrap bundle -->
