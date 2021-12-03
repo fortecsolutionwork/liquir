@@ -200,6 +200,10 @@
     font-size: 15px;
     min-width: 110px;
   }
+  /* 3 dec */
+  section.bottom-multi-buttons .btn {
+    min-width: 140px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -300,6 +304,11 @@
   .size-utility-menu .list_wrapper ul {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+  /* 3 dec */
+  section.bottom-multi-buttons .btn {
+    min-width: 120px;
+    font-size: 14px;
   }
 }
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquir</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body id="body">
+    
+      <section class="main_section mainMenu change-product-location company-profile edit">
+        <div class="container-fluid">
+            <div class="section-head">
+              <h2 class="title">change product location </h2>
+              <!-- <button class="btn">staff</button> -->
+            </div>
+            <div class="heading-group">
+              <p>location </p>      
+              <p>product name</p> 
+            </div>
+            <div class="section-wrapper">
+          
+              <div class="group">
+                <p>a00028</p>      
+                <p>750m MAKERS MARK WOOD FINISH</p>      
+              </div>
+              <div class="group">
+                <p>a00090</p>      
+                <p>750m EZRA BROOKS BOURBON</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>750m OLD FORESTER 1910 BOURBON</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>750m JACK DANIEL ERIC CHURCH</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>375m JAGERMEISTER LIQUEUR</p>      
+              </div>
+             
+              
+              <div class="group">
+                <p>a01110</p>      
+                <p>750m MAKERS MARK WOOD FINISH</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>750m MAKERS MARK WOOD FINISH</p>      
+              </div>
+              <div class="group">
+                <p>a00090</p>      
+                <p>750m EZRA BROOKS BOURBON</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>750m OLD FORESTER 1910 BOURBON</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>750m JACK DANIEL ERIC CHURCH</p>      
+              </div>
+             
+              <div class="group">
+                <p>a00028</p>      
+                <p>375m JAGERMEISTER LIQUEUR</p>      
+              </div>
+             
+              
+              <div class="group">
+                <p>a01110</p>      
+                <p>750m MAKERS MARK WOOD FINISH</p>      
+              </div>
+             
+             
+            </div>
+      </section>
+
+      <!-- <div id="enter" style="color: #fff; text-align: center">
+        Type number of your choice
+      </div> -->
+
+      <section class="bottom-options">
+        <div class="container-fluid">
+          <div class="container-wrapper">
+            <div style="cursor: pointer" id="back" class="left-side">
+              <div class="inner-left">
+                <span>B</span>
+              </div>
+              <div class="inner-right">
+                <span>Back</span>
+              </div>
+            </div>
+            <div  style="cursor: pointer;" class="right-side">
+              <div class="inner-left">
+                <span>N</span>
+              </div>
+              <div class="inner-right">
+                <span>Next page</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+     
+
+ 
+      $("#back").click(function () {
+        window.location.replace("./price-check.html");
+      });
+      $("#history").click(function () {
+        window.location.replace("./price-check-history.html");
+      });
+
+
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          var name = event.key;
+          var code = event.keyCode;
+          $("#enter").html(name);
+
+          if (name == "B" || name === "b") {
+            window.location.replace("./price-check.html");
+          }
+          if (name == "h" || name === "H") {
+            window.location.replace("./price-check-history.html");
+          }
+          //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
+        },
+        false
+      );
+    </script>
+
+    <!-- bootstrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

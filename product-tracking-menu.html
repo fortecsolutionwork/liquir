@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <section class="main_section mainMenu look-up-file second-page">
+    <section class="main_section mainMenu file-tracking-menu second-page">
       <div class="container-fluid">
-        <h2 class="title">file maintenance main menu</h2>
+        <h2 class="title">product tracking file main menu</h2>
         <div class="list_wrapper">
           <ul class="list">
             <li>
@@ -42,7 +42,7 @@
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>change upc codes</h4>
+                <h4>add new product</h4>
               </div>
             </li>
             <li>
@@ -50,7 +50,7 @@
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>reorganize the lookup file</h4>
+                <h4>delete existing product</h4>
               </div>
             </li>
             <li>
@@ -58,23 +58,15 @@
                 <h3>3</h3>
               </div>
               <div class="right-side">
-                <h4>change product locations</h4>
+                <h4>product tracking report</h4>
               </div>
             </li>
-            <li id="product-tracking">
+            <li>
               <div class="left-side">
                 <h3>4</h3>
               </div>
               <div class="right-side">
-                <h4>product tracking menu</h4>
-              </div>
-            </li>
-            <li id="sizeUtility">
-              <div class="left-side">
-                <h3>5</h3>
-              </div>
-              <div class="right-side">
-                <h4>size utility menu</h4>
+                <h4>delete product history</h4>
               </div>
             </li>
             <li id="c4">
@@ -103,12 +95,6 @@
       $("#c4").click(function () {
         window.location.replace("./dashboard.html");
       });
-      $("#sizeUtility").click(function () {
-        window.location.replace("./size-utility-menu.html");
-      });
-      $("#product-tracking").click(function () {
-        window.location.replace("./product-tracking-menu.html");
-      });
 
       document.addEventListener(
         "keydown",
@@ -117,12 +103,6 @@
           var code = event.code;
           $("#enter").html(name);
           if (name == "5") {
-            window.location.replace("./product-tracking-menu.html");
-          }
-          if (name == "4") {
-            window.location.replace("./size-utility-menu.html");
-          }
-          if (name == "6") {
             window.location.replace("././dashboard.html");
           }
           // alert(`Key pressed ${name} \r\n Key code value: ${code}`);

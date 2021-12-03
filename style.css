@@ -883,3 +883,59 @@ section.history-total {
   font-size: 30px;
   color: #fff !important;
 }
+
+/* new css */
+/* 3-12-2021 */
+.file-tracking-menu,
+.look-up-file {
+  min-height: 100vh;
+}
+
+.change-product-location .section-head h2 {
+  font-size: 3vw;
+}
+.change-product-location .section-head {
+  margin-bottom: 30px;
+}
+.change-product-location .group {
+  margin-bottom: 10px !important;
+}
+.change-product-location .group p {
+  font-size: 18px;
+}
+.change-product-location .heading-group {
+  display: flex;
+}
+
+.change-product-location .heading-group p {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  flex: 0 0 30%;
+  max-width: 30%;
+  font-weight: 900;
+}
+.change-product-location .section-wrapper {
+  height: 50vh;
+  overflow-y: scroll;
+}
+section.bottom-multi-buttons .btn {
+  background: #1e75c6;
+  color: #fff;
+  display: block;
+  margin: 20px auto 0;
+  min-width: 200px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+section.bottom-multi-buttons .wrapper {
+  display: flex;
+}
+
+section.bottom-multi-buttons {
+  margin-top: 2vh;
+  position: fixed;
+  width: 100%;
+  bottom: 3vh;
+}
