@@ -939,3 +939,23 @@ section.bottom-multi-buttons {
   width: 100%;
   bottom: 3vh;
 }
+section#btn2 {
+  display: none;
+}
+section#btn2.show {
+  display: block;
+}
+#changeTr {
+  display: none;
+}
+#changeTr.show {
+  display: block;
+  display: table-row;
+}
+#changeTr2 {
+  display: none;
+}
+#changeTr2.show {
+  display: block;
+  display: table-row;
+}

@@ -310,6 +310,9 @@
     min-width: 120px;
     font-size: 14px;
   }
+  .change-product-location th {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 767px) {

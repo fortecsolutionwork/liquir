@@ -53,7 +53,7 @@
                 <h4>reorganize the lookup file</h4>
               </div>
             </li>
-            <li>
+            <li id="product-location">
               <div class="left-side">
                 <h3>3</h3>
               </div>
@@ -109,6 +109,9 @@
       $("#product-tracking").click(function () {
         window.location.replace("./product-tracking-menu.html");
       });
+      $("#product-location").click(function () {
+        window.location.replace("./change-product-location.html");
+      });
 
       document.addEventListener(
         "keydown",
@@ -123,7 +126,10 @@
             window.location.replace("./size-utility-menu.html");
           }
           if (name == "6") {
-            window.location.replace("././dashboard.html");
+            window.location.replace("./dashboard.html");
+          }
+          if (name == "3") {
+            window.location.replace("./change-product-location.html");
           }
           // alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
