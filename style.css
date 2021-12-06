@@ -969,3 +969,23 @@ section#btn2.show {
 .vendor-list .group {
   cursor: pointer;
 }
+.recieve-products-vendor-list-inner .title {
+  font-size: 2vw !important;
+}
+.recieve-products-vendor-list-inner .message-print-form {
+  justify-content: center;
+}
+.recieve-products-vendor-list-inner .message-print-form .input-group {
+  width: auto;
+}
+.recieve-products-vendor-list-inner
+  .message-print-form
+  .input-group.input-group--change {
+  margin-left: 20px;
+}
+.recieve-products-vendor-list-inner .tbl-content {
+  height: 43vh;
+}
+.recieve-products-vendor-list-inner th {
+  padding: 10px 15px;
+}

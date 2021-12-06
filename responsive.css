@@ -313,6 +313,11 @@
   .change-product-location th {
     font-size: 15px;
   }
+  /* 6 dec */
+  .recieve-products-vendor-list-inner .message-print-form .input-group {
+    flex: 0 0 auto;
+    max-width: initial;
+  }
 }
 
 @media (max-width: 767px) {

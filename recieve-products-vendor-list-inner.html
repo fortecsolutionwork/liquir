@@ -32,10 +32,34 @@
     <link rel="stylesheet" href="responsive.css" />
   </head>
   <body id="body">
-    <div class="checkout-page master-club-list keg-reserve-check product-list">
+    <div
+      class="
+        checkout-page
+        master-club-list
+        keg-reserve-check
+        product-list
+        recieve-products-vendor-list-inner
+      "
+    >
       <section class="main_section second-page">
         <div class="container-fluid">
           <h2 class="title mb-4">purchase order correction</h2>
+
+          <form class="message-print-form" onsubmit="return false;">
+            <div class="input-group">
+              <label for="">enter the date </label>
+              <input
+                type="date"
+                style="font-size: 19px"
+                autofocus=""
+                id="search"
+                class="icon-white"
+              />
+            </div>
+            <div class="input-group input-group--change">
+              <button id="search-btn" class="btn">search</button>
+            </div>
+          </form>
 
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
