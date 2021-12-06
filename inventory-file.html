@@ -61,7 +61,7 @@
                 <h4>delete products</h4>
               </div>
             </li>
-            <li id="d4">
+            <li id="recieve-product">
               <div class="left-side">
                 <h3>4</h3>
               </div>
@@ -146,6 +146,9 @@
       $("#back").click(function () {
         window.location.replace("./dashboard.html");
       });
+      $("#recieve-product").click(function () {
+        window.location.replace("./recieve-products.html");
+      });
       // $("#pi1").click(function () {
       //   window.location.replace("./in-store-inquiry.html");
       // });
@@ -164,6 +167,9 @@
           // }
           if (name == "B" || name === "b") {
             window.location.replace("./dashboard.html");
+          }
+          if (name == "4") {
+            window.location.replace("./recieve-products.html");
           }
           // if (name == "1") {
           //   window.location.replace("./in-store-inquiry.html");

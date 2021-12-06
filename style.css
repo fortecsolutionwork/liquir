@@ -959,3 +959,13 @@ section#btn2.show {
   display: block;
   display: table-row;
 }
+
+/* 6-12-2021 */
+.vendor-list .group p:first-child {
+  flex: 0 0 auto;
+  max-width: initial;
+  margin-right: 20px;
+}
+.vendor-list .group {
+  cursor: pointer;
+}
