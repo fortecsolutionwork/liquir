@@ -37,7 +37,7 @@
         <h2 class="title">SAME PRODUCT DIFFERENT UPC MENU</h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li id="dupe-1-1">
+            <li>
               <div class="left-side">
                 <h3>1</h3>
               </div>
@@ -45,7 +45,7 @@
                 <h4>enter new DIFFERENT upc codes</h4>
               </div>
             </li>
-            <li>
+            <li id="dupe-1-2">
               <div class="left-side">
                 <h3>2</h3>
               </div>
@@ -87,8 +87,8 @@
       $("#back").click(function () {
         window.location.replace("./dupe-short-case-menu.html");
       });
-      $("#dupe-1-1").click(function () {
-        window.location.replace("./dupe-short-case-menu-1-inner-1.html");
+      $("#dupe-1-2").click(function () {
+        window.location.replace("./dupe-short-case-menu-1-inner-2.html");
       });
 
       document.addEventListener(
@@ -100,8 +100,8 @@
           if (name == "4") {
             window.location.replace("./dupe-short-case-menu.html");
           }
-          if (name == "1") {
-            window.location.replace("./dupe-short-case-menu-1-inner-1.html");
+          if (name == "2") {
+            window.location.replace("./dupe-short-case-menu-1-inner-2.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
