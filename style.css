@@ -989,3 +989,32 @@ section#btn2.show {
 .recieve-products-vendor-list-inner th {
   padding: 10px 15px;
 }
+
+/* dec 7 */
+.main_section.p-4vh {
+  padding-top: 4vh;
+}
+.edit-upc-code .upc-code .group {
+  display: flex;
+}
+
+.edit-upc-code .upc-code .group span {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.edit-upc-code .upc-code .group input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  margin: 0 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.edit-upc-code .upc-code .group button {
+  border: none;
+  background: #1e75c6;
+  color: #fff;
+}
