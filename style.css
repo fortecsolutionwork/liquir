@@ -1018,3 +1018,44 @@ section#btn2.show {
   background: #1e75c6;
   color: #fff;
 }
+.dupe-4-1 .section-head select {
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.dupe-4-1 .section-head select:focus,
+.dupe-4-1 .section-head select:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.dupe-4-1 .group p:first-child {
+  position: relative;
+}
+.dupe-4-1 .group p {
+  flex: 0 0 10%;
+  max-width: 10%;
+  margin-right: 30px;
+}
+.dupe-4-1 .group p:first-child::before {
+  content: ")";
+  position: absolute;
+  right: -10px;
+  font-size: 20px;
+}
+.dupe-4-1 .section-wrapper {
+  height: 50vh;
+  overflow-y: scroll;
+}
+.dupe-4-1 .group p:first-child {
+  flex: 0 0 auto;
+  max-width: initial;
+}
+.dupe-4-2 form .input-group label,
+.dupe-4-2 form .input-group select {
+  text-transform: uppercase;
+}
+.dupe-4-2 .all table thead > tr > th {
+  text-transform: uppercase;
+}
+.dupe-4-2 .all table td {
+  padding-bottom: 10px;
+}

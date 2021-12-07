@@ -34,55 +34,31 @@
   <body id="body">
     <section class="main_section p-4vh mainMenu second-page">
       <div class="container-fluid">
-        <h2 class="title">dupe / short / case beer</h2>
+        <h2 class="title">SINGLE/CRSE BOTTLE COSR DIFFERENCE</h2>
         <div class="list_wrapper">
           <ul class="list">
-            <li id="dupe-1">
+            <li id="dupe-4-1">
               <div class="left-side">
                 <h3>1</h3>
               </div>
               <div class="right-side">
-                <h4>SAME PRODUCT DIFFERENT upc menu</h4>
+                <h4>for file maintenance</h4>
               </div>
             </li>
-            <li id="dupe-2">
+            <li id="dupe-4-2">
               <div class="left-side">
                 <h3>2</h3>
               </div>
               <div class="right-side">
-                <h4>2 DIGIT SHORT-CUT MENU</h4>
-              </div>
-            </li>
-            <li id="dupe-3">
-              <div class="left-side">
-                <h3>3</h3>
-              </div>
-              <div class="right-side">
-                <h4>CASE SCAN ro SINGLE UNIT MENU</h4>
-              </div>
-            </li>
-            <li id="dupe-4">
-              <div class="left-side">
-                <h3>4</h3>
-              </div>
-              <div class="right-side">
-                <h4>SINGLE/CRSE BOTTLE cosr DIFFERENCE</h4>
-              </div>
-            </li>
-            <li id="dupe-5">
-              <div class="left-side">
-                <h3>5</h3>
-              </div>
-              <div class="right-side">
-                <h4>PREFERRED CUSTOMER DISCOUNT MENU</h4>
+                <h4>for reports</h4>
               </div>
             </li>
             <li id="back">
               <div class="left-side">
-                <h3>6</h3>
+                <h3>3</h3>
               </div>
               <div class="right-side">
-                <h4>return to inventory f/m menu</h4>
+                <h4>RETURN to DUPE/SHORT/CRSE MENU</h4>
               </div>
             </li>
           </ul>
@@ -101,22 +77,13 @@
     ></script>
     <script>
       $("#back").click(function () {
-        window.location.replace("./inventory-file.html");
+        window.location.replace("./dupe-short-case-menu.html");
       });
-      $("#dupe-1").click(function () {
-        window.location.replace("./dupe-short-case-menu-1.html");
+      $("#dupe-4-1").click(function () {
+        window.location.replace("./dupe-short-case-menu-4-inner-1.html");
       });
-      $("#dupe-2").click(function () {
-        window.location.replace("./dupe-short-case-menu-2.html");
-      });
-      $("#dupe-3").click(function () {
-        window.location.replace("./dupe-short-case-menu-3.html");
-      });
-      $("#dupe-4").click(function () {
-        window.location.replace("./dupe-short-case-menu-4.html");
-      });
-      $("#dupe-5").click(function () {
-        window.location.replace("./dupe-short-case-menu-5.html");
+      $("#dupe-4-2").click(function () {
+        window.location.replace("./dupe-short-case-menu-4-inner-2.html");
       });
 
       document.addEventListener(
@@ -125,23 +92,14 @@
           var name = event.key;
           var code = event.code;
           $("#enter").html(name);
-          if (name == "6") {
-            window.location.replace("./inventory-file.html");
+          if (name == "4") {
+            window.location.replace("./dupe-short-case-menu.html");
           }
           if (name == "1") {
-            window.location.replace("./dupe-short-case-menu-1.html");
+            window.location.replace("./dupe-short-case-menu-4-inner-1.html");
           }
           if (name == "2") {
-            window.location.replace("./dupe-short-case-menu-2.html");
-          }
-          if (name == "3") {
-            window.location.replace("./dupe-short-case-menu-3.html");
-          }
-          if (name == "4") {
-            window.location.replace("./dupe-short-case-menu-4.html");
-          }
-          if (name == "5") {
-            window.location.replace("./dupe-short-case-menu-5.html");
+            window.location.replace("./dupe-short-case-menu-4-inner-2.html");
           }
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },

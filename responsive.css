@@ -165,6 +165,14 @@
     width: 100%;
     table-layout: auto;
   }
+  /* dec 6 */
+  .dupe-4-2 .all table tbody tr td:first-child {
+    width: 30%;
+  }
+
+  .dupe-4-2 .all table thead > tr > th:first-child {
+    width: 30%;
+  }
 }
 
 @media (max-width: 1024px) {
