@@ -1059,3 +1059,45 @@ section#btn2.show {
 .dupe-4-2 .all table td {
   padding-bottom: 10px;
 }
+
+/* dec 8 */
+.checkout-wrapper-new ul li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.checkout-wrapper-new ul li h3 {
+  margin-right: 30px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.checkout-wrapper-new ul li h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+}
+.checkout-wrapper-new ul li h3::after {
+  position: absolute;
+  content: ")";
+  right: -14px;
+}
+.checkout-page.new .main_section .title {
+  font-size: 2vw;
+  margin-bottom: 3vh;
+}
+.checkout-wrapper-new .left-side p {
+  color: #fff;
+}
+.checkout-wrapper-new .left-side p {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+#hidden {
+  display: none;
+}
+#hidden.show {
+  display: block;
+}

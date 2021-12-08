@@ -139,14 +139,14 @@
                 <span>Back</span>
               </div>
             </div>
-            <!-- <div class="right-side">
+            <div style="cursor: pointer" id="showList" class="right-side">
               <div class="inner-left">
-                <span>2</span>
+                <span>s</span>
               </div>
               <div class="inner-right">
-                <span>return to main menu</span>
+                <span>Submit</span>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -188,6 +188,12 @@
         },
         false
       );
+    </script>
+
+    <script>
+      $("#showList").click(function () {
+        window.location.replace("./checkout.html#hidden-list");
+      });
     </script>
 
     <!-- bootstrap bundle -->
