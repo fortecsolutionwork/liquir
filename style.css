@@ -1101,3 +1101,9 @@ section#btn2.show {
 #hidden.show {
   display: block;
 }
+.checkout-wrapper-new .left-side {
+  border: 8px solid #fff;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-left: 20px;
+}

@@ -335,6 +335,23 @@
     flex: 0 0 auto;
     max-width: initial;
   }
+  /* 8 dec */
+  .checkout-wrapper-new > .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .checkout-wrapper-new > .row {
+    flex-direction: column-reverse;
+  }
+
+  .checkout-wrapper-new > .row > div:nth-child(1) {
+    border: none;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 767px) {
