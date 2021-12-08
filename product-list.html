@@ -220,12 +220,13 @@
             var type = $("#search").val();
             $("#list").show();
           }
-          if (name == "2") {
-            window.location.replace("./dashboard.html");
+          if (name == "s" || name === "S") {
+            window.location.replace("./checkout.html#hidden");
           }
           if (name == "B" || name === "b") {
             window.location.replace("./checkout.html");
           }
+
           //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         },
         false
