@@ -44,6 +44,9 @@
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
+                <th width="50">
+                  <input id="ckbCheckAll" type="checkbox" name="" id="" />
+                </th>
                 <th width="80">REF</th>
                 <th style="text-align: center">PRODUCT NAME</th>
                 <th width="100">RETAIL</th>
@@ -55,66 +58,105 @@
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">1</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">2</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">3</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">4</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">5</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">6</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">7</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">8</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">9</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">10</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">11</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">12</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
               </tr>
               <tr>
+                <td width="50">
+                  <input type="checkbox" class="checkBox" name="" id="" />
+                </td>
                 <td width="80">13</td>
                 <td style="text-align: center">375 GREY GOOSE VODKA</td>
                 <td width="80">$18.99</td>
@@ -193,6 +235,11 @@
     <script>
       $("#showList").click(function () {
         window.location.replace("./checkout.html#hidden-list");
+      });
+      $(document).ready(function () {
+        $("#ckbCheckAll").click(function () {
+          $(".checkBox").attr("checked", this.checked);
+        });
       });
     </script>
 
