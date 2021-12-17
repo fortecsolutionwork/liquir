@@ -1107,3 +1107,10 @@ section#btn2.show {
   padding-top: 30px;
   padding-left: 20px;
 }
+/* 15 dec */
+.checkout-page.new td {
+  font-size: 15px;
+}
+.checkout-page.new th {
+  padding-bottom: 10px;
+}
