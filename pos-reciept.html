@@ -17,7 +17,7 @@
         min-height: 100vh;
       }
       .inner {
-        width: 25rem;
+        width: 31rem;
         margin: 0 auto;
         background: #fff;
         box-shadow: 1px 1px 10px #ccc;
@@ -37,7 +37,7 @@
       }
 
       #logo {
-        width: 60%;
+        width: 80%;
         text-align: center;
         -webkit-align-content: center;
         align-content: center;
@@ -47,8 +47,9 @@
         margin: 0 auto;
         margin: 0 auto 20px;
         font-weight: 900;
+        text-transform: uppercase;
+        font-size: 14px;
       }
-
       header {
         width: 100%;
         text-align: center;
@@ -95,6 +96,7 @@
         font-size: 12px;
         text-align: right;
         vertical-align: bottom;
+        padding-top: 2px;
       }
 
       .price::before {
@@ -115,9 +117,6 @@
       .total.price {
         text-align: right;
       }
-      .total.price::before {
-        content: "\20B9";
-      }
       .line {
         border-top: 1px solid black !important;
       }
@@ -126,6 +125,7 @@
       }
       .heading.amount {
         width: 25%;
+        text-align: right;
       }
       .heading.qty {
         width: 5%;
@@ -138,6 +138,49 @@
       footer {
         font-size: 12px;
       }
+      .recipt-head > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .recipt-head {
+        margin-bottom: 10px;
+      }
+      footer {
+        margin-top: 5px;
+        border-top: 1px dashed;
+        padding-top: 8px;
+      }
+      .payed-by-cash-wrapper {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+      .payed-by-cash-wrapper p {
+        font-size: 14px;
+      }
+      .total-subtotal {
+        padding-top: 3px;
+        border-top: 1px solid;
+        margin-top: 10px;
+      }
+      .total-subtotal > div {
+        display: flex;
+        justify-content: space-between;
+        max-width: 40%;
+        margin-left: auto;
+      }
+      .total-subtotal > div p {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .total-subtotal > div.total-price p {
+        font-weight: 600;
+      }
+      .total-subtotal > div.total-price {
+        max-width: inherit;
+        padding-left: 60%;
+        border-top: 1px dashed;
+        border-bottom: 1px dashed;
+      }
     </style>
   </head>
 
@@ -145,15 +188,22 @@
     <div class="inner">
       <header>
         <div id="logo" class="media" data-src="logo.png" src="./logo.png">
-          Company name
+          daily worksheet for grand liquor as far of 11-30-2021 at 21:06 for
+          terminal# f - david
         </div>
       </header>
-      <p>GST Number : 4910487129047124</p>
-      <table class="bill-details">
+      <p>GST Number : 1234567890</p>
+      <div class="recipt-head">
+        <div>
+          <p>Date : 17-12-2021</p>
+          <p>Time : 1:00 PM</p>
+        </div>
+      </div>
+      <!-- <table class="bill-details">
         <tbody>
           <tr>
-            <td>Date : <span>1</span></td>
-            <td>Time : <span>2</span></td>
+            <td>Date : <span>17-12-2021</span></td>
+            <td>Time : <span>1:00 PM</span></td>
           </tr>
           <tr>
             <td>Table #: <span>3</span></td>
@@ -165,199 +215,102 @@
             </th>
           </tr>
         </tbody>
-      </table>
+      </table> -->
 
-      <table class="items">
+      <table cellpadding="0" cellspacing="0" border="0" class="items">
         <thead>
           <tr>
-            <th class="heading name">Item</th>
+            <th class="heading name">Product</th>
             <th class="heading qty">Qty</th>
-            <th class="heading rate">Rate</th>
+            <!-- <th class="heading rate">Rate</th> -->
             <th class="heading amount">Amount</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td>Chocolate milkshake frappe</td>
+            <td>12 OZ BARRITTS GINGER BEER 4 PACK CANS</td>
             <td>1</td>
-            <td class="price">200.00</td>
-            <td class="price">200.00</td>
+            <td class="price">$5.95</td>
           </tr>
           <tr>
-            <td>Non-Veg Focaccoa S/W</td>
+            <td>NOT YOUR FATHER ROOT BEER 6 PACK BTL</td>
             <td>2</td>
-            <td class="price">300.00</td>
-            <td class="price">600.00</td>
+            <td class="price">$18</td>
           </tr>
           <tr>
-            <td>Classic mojito</td>
+            <td>SHARPS NA BEER 6 PK CANS DISC</td>
             <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
+            <td class="price">$4.4</td>
           </tr>
           <tr>
-            <td>Non-Veg Ciabatta S/W</td>
+            <td>MACS BEER 12 PACK BTL</td>
+            <td>3</td>
+            <td class="price">$15.4</td>
+          </tr>
+          <tr>
+            <td>MIKKELLER BEER 500M GEEK BREAKFAST</td>
             <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
+            <td class="price">$10.76</td>
           </tr>
           <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
+            <td>375ML BUNDABERG LOTTERY GINGER BEER</td>
+            <td>5</td>
+            <td class="price">$40.78</td>
           </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td>Classic mojito</td>
-            <td>1</td>
-            <td class="price">800.00</td>
-            <td class="price">800.00</td>
-          </tr>
-          <tr>
-            <td>Non-Veg Ciabatta S/W</td>
-            <td>1</td>
-            <td class="price">500.00</td>
-            <td class="price">500.00</td>
-          </tr>
-          <tr>
-            <td colspan="3" class="sum-up line">Subtotal</td>
-            <td class="line price">12112.00</td>
-          </tr>
-          <tr>
-            <td colspan="3" class="sum-up">CGST</td>
-            <td class="price">10.00</td>
-          </tr>
-          <tr>
-            <td colspan="3" class="sum-up">SGST</td>
-            <td class="price">10.00</td>
-          </tr>
-          <tr>
-            <th colspan="3" class="total text">Total</th>
-            <th class="total price">12132.00</th>
-          </tr>
+        </tr>
+        <tr>
+          <td>NOT YOUR FATHER ROOT BEER 6 PACK BTL</td>
+          <td>2</td>
+          <td class="price">$18</td>
+        </tr>
+        <tr>
+          <td>SHARPS NA BEER 6 PK CANS DISC</td>
+          <td>1</td>
+          <td class="price">$4.4</td>
+        </tr>
+        <tr>
+          <td>MACS BEER 12 PACK BTL</td>
+          <td>3</td>
+          <td class="price">$15.4</td>
+        </tr>
+        <tr>
+          <td>MIKKELLER BEER 500M GEEK BREAKFAST</td>
+          <td>1</td>
+          <td class="price">$10.76</td>
+        </tr>
+        <tr>
+          <td>375ML BUNDABERG LOTTERY GINGER BEER</td>
+          <td>5</td>
+          <td class="price">$40.78</td>
+        </tr>
+        
         </tbody>
       </table>
-      <section>
+      <div class="total-subtotal">
+        <div>
+          <p>Subtotal</p>
+          <p>$95.00</p>
+        </div>
+        <div>
+          <p>CGST</p>
+          <p>$2.00</p>
+        </div>
+        <div>
+          <p>SGST</p>
+          <p>$3.00</p>
+        </div>
+        <div class="total-price">
+          <p>total</p>
+          <p>$100.00</p>
+        </div>
+      </div>
+      <div class="payed-by-cash-wrapper">
         <p>Paid by : <span>CASH</span></p>
-        <p style="text-align: center">Thank you for your visit!</p>
-      </section>
+      </div>
       <footer style="text-align: center">
-        <p>Company Name</p>
+        <p>GRAND LIQUOR</p>
+        <p style="text-align: center">Thank you for your visit!</p>
       </footer>
     </div>
   </body>
