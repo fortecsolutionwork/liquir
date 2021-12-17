@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Liquir</title>
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -8,35 +10,50 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
     <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <style>
       body {
         display: grid;
         place-items: center;
         min-height: 100vh;
       }
-      .inner {
+      .pos-reciept {
         width: 31rem;
         margin: 0 auto;
         background: #fff;
         box-shadow: 1px 1px 10px #ccc;
         padding: 1rem;
       }
-      table {
+      .pos-reciept table {
         width: 100%;
       }
 
-      tr {
+      .pos-reciept tr {
         width: 100%;
       }
 
-      h1 {
+      .pos-reciept h1 {
         text-align: center;
         vertical-align: middle;
       }
 
-      #logo {
+      .pos-reciept #logo {
         width: 80%;
         text-align: center;
         -webkit-align-content: center;
@@ -50,7 +67,7 @@
         text-transform: uppercase;
         font-size: 14px;
       }
-      header {
+      .pos-reciept  header {
         width: 100%;
         text-align: center;
         -webkit-align-content: center;
@@ -58,23 +75,23 @@
         vertical-align: middle;
       }
 
-      .items thead {
+      .pos-reciept .items thead {
         text-align: center;
       }
 
-      .center-align {
+      .pos-reciept  .center-align {
         text-align: center;
       }
 
-      .bill-details td {
+      .pos-reciept .bill-details td {
         font-size: 12px;
       }
 
-      .receipt {
+      .pos-reciept  .receipt {
         font-size: medium;
       }
 
-      .items .heading {
+      .pos-reciept  .items .heading {
         font-size: 12.5px;
         text-transform: uppercase;
         border-top: 1px solid black;
@@ -83,8 +100,8 @@
         vertical-align: middle;
       }
 
-      .items thead tr th:first-child,
-      .items tbody tr td:first-child {
+      .pos-reciept .items thead tr th:first-child,
+      .pos-reciept .items tbody tr td:first-child {
         width: 47%;
         min-width: 47%;
         max-width: 47%;
@@ -92,90 +109,86 @@
         text-align: left;
       }
 
-      .items td {
+      .pos-reciept  .items td {
         font-size: 12px;
         text-align: right;
         vertical-align: bottom;
         padding-top: 2px;
       }
 
-      .price::before {
-        content: "\20B9";
-        font-family: Arial;
-        text-align: right;
-      }
+    
 
-      .sum-up {
+      .pos-reciept  .sum-up {
         text-align: right !important;
       }
-      .total {
+      .pos-reciept .total {
         font-size: 13px;
         border-top: 1px dashed black !important;
         border-bottom: 1px dashed black !important;
       }
-      .total.text,
-      .total.price {
+      .pos-reciept  .total.text,
+      .pos-reciept  .total.price {
         text-align: right;
       }
-      .line {
+      .pos-reciept .line {
         border-top: 1px solid black !important;
       }
-      .heading.rate {
+      .pos-reciept .heading.rate {
         width: 20%;
       }
-      .heading.amount {
+      .pos-reciept  .heading.amount {
         width: 25%;
         text-align: right;
       }
-      .heading.qty {
+      .pos-reciept  .heading.qty {
         width: 5%;
       }
-      p {
+      .pos-reciept   p {
         padding: 1px;
         margin: 0;
       }
-      section,
-      footer {
+      .pos-reciept section,
+      .pos-reciept  footer {
         font-size: 12px;
       }
-      .recipt-head > div {
+      .pos-reciept .recipt-head > div {
         display: flex;
         justify-content: space-between;
       }
-      .recipt-head {
+      .pos-reciept  .recipt-head {
         margin-bottom: 10px;
       }
-      footer {
+      .pos-reciept footer {
         margin-top: 5px;
         border-top: 1px dashed;
         padding-top: 8px;
       }
-      .payed-by-cash-wrapper {
+      .pos-reciept  .payed-by-cash-wrapper {
         margin-top: 0;
         margin-bottom: 30px;
       }
-      .payed-by-cash-wrapper p {
+      .pos-reciept .payed-by-cash-wrapper p {
         font-size: 14px;
       }
-      .total-subtotal {
+      .pos-reciept  .total-subtotal {
         padding-top: 3px;
         border-top: 1px solid;
         margin-top: 10px;
       }
-      .total-subtotal > div {
+      .pos-reciept .total-subtotal > div {
         display: flex;
         justify-content: space-between;
         max-width: 40%;
         margin-left: auto;
       }
-      .total-subtotal > div p {
+      .pos-reciept .total-subtotal > div p {
         font-size: 14px;
         text-transform: uppercase;
       }
-      .total-subtotal > div.total-price p {
+      .pos-reciept  .total-subtotal > div.total-price p {
         font-weight: 600;
       }
-      .total-subtotal > div.total-price {
+      .pos-reciept  .total-subtotal > div.total-price {
         max-width: inherit;
         padding-left: 60%;
         border-top: 1px dashed;
@@ -185,7 +198,7 @@
   </head>
 
   <body>
-    <div class="inner">
+    <div class="inner pos-reciept">
       <header>
         <div id="logo" class="media" data-src="logo.png" src="./logo.png">
           daily worksheet for grand liquor as far of 11-30-2021 at 21:06 for
