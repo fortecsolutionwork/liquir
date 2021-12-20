@@ -130,7 +130,11 @@
       <div class="container-fluid">
         <div class="time_date_wrapper">
           <h5 id="date"></h5>
+
           <h5 id="time"></h5>
+        </div>
+        <div class="time-menu">
+          <h5 id="timeBtn">T) Time</h5>
         </div>
       </div>
     </section>
@@ -196,6 +200,9 @@
       $("#j").click(function () {
         window.location.replace("./end-session.html");
       });
+      $("#timeBtn").click(function () {
+        window.location.replace("./timing.html");
+      });
       document.addEventListener(
         "keydown",
         (event) => {
@@ -237,6 +244,9 @@
           }
           if (name == "j" || name == "J") {
             window.location.replace("./end-session.html");
+          }
+          if (name == "t" || name == "T") {
+            window.location.replace("./timing.html");
           } else {
             $(".modal").addClass("show-modal");
           }
