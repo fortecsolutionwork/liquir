@@ -1144,14 +1144,17 @@ section#btn2.show {
 }
 .time-in-out-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  max-width: 90%;
+  margin: 0 auto;
 }
-
 .time-in-out-wrapper > div {
-  flex: 0 0 20%;
-  max-width: 20%;
-  background: #f8eeea;
-  min-height: 20vh;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.time-in-out-wrapper > div .inner {
+  background: #d2cfce;
+  min-height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1161,12 +1164,23 @@ section#btn2.show {
   font-weight: 900;
 }
 
-.time-in-out-wrapper > div:first-child {
-  margin-right: 10px;
+.time-in-out-wrapper > div:first-child .inner {
+  /* margin-right: 10px;
+  background-color: #22c522;
+  color: #fff; */
 }
 
-.time-in-out-wrapper > div:last-child {
-  margin-left: 10px;
+.time-in-out-wrapper > div:last-child .inner {
+  /* margin-left: 10px;
+  background-color: red;
+  color: #fff; */
+}
+.time-in-out-wrapper > div .cta {
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 .timing-page {
   padding-top: 10vh;
@@ -1184,4 +1198,11 @@ section#btn2.show {
 }
 .employee-login-page .title {
   margin-bottom: 20px;
+}
+p#exit {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
