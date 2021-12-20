@@ -138,7 +138,8 @@
     padding: 6vh 0 30px;
   }
   .setup-screen.main_section {
-    padding: 20vh 0 0;
+    /* padding: 20vh 0 0;  */
+    /* remove this css 20-12-2021 */
   }
   .dashboard_main.main_section .list li {
     margin-bottom: 15px;
@@ -220,6 +221,10 @@
   /* 3 dec */
   section.bottom-multi-buttons .btn {
     min-width: 140px;
+  }
+  /* new css 20-12-2021 */
+  .setup-screen .setup-inner-wrapper {
+    max-width: 60vw;
   }
 }
 

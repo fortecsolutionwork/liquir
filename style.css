@@ -1117,7 +1117,7 @@ section#btn2.show {
 
 /* new css  20-12-2021 */
 #typing {
-  /* animation: type 3s steps(12) infinite; */
+  animation: type 3s steps(12) infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 4px solid rgb(255, 255, 255);
@@ -1153,7 +1153,7 @@ section#btn2.show {
   max-width: 25%;
 }
 .time-in-out-wrapper > div .inner {
-  background: #d2cfce;
+  background: #ffffff;
   min-height: 35vh;
   display: flex;
   justify-content: center;
@@ -1162,19 +1162,10 @@ section#btn2.show {
   margin-bottom: 5vh;
   font-size: 1.25vw;
   font-weight: 900;
+  border-radius: 15px;
+  box-shadow: 50px 50px 24px #0e0e0e5c;
 }
 
-.time-in-out-wrapper > div:first-child .inner {
-  /* margin-right: 10px;
-  background-color: #22c522;
-  color: #fff; */
-}
-
-.time-in-out-wrapper > div:last-child .inner {
-  /* margin-left: 10px;
-  background-color: red;
-  color: #fff; */
-}
 .time-in-out-wrapper > div .cta {
   font-size: 2vw;
   color: #fff;
@@ -1205,4 +1196,75 @@ p#exit {
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+.time-in-out-wrapper > div .inner span {
+  display: block;
+}
+.time-in-out-wrapper > div .inner span:first-child {
+  background: #00519b;
+  height: 5vw;
+  width: 5vw;
+  display: grid;
+  place-items: center;
+  border-radius: 50px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 3.5vw;
+  line-height: 0;
+  font-weight: 600;
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+.time-in-out-wrapper > div .inner span:nth-child(2) {
+  font-size: 1.6vw;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.setup-screen .setup-inner-wrapper {
+  background: #ffffff;
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25vw;
+  font-weight: 900;
+  border-radius: 15px;
+  box-shadow: 50px 30px 24px #0e0e0e5c;
+  max-width: 31vw;
+  margin: 5vh auto;
+}
+.setup-screen .setup-inner-wrapper p {
+  margin-bottom: 0;
+}
+.setup-screen .both-action-btn {
+  display: flex;
+  justify-content: center;
+}
+.setup-screen .both-action-btn button {
+  background: #1e75c6;
+  color: #fff;
+  min-width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+}
+.setup-screen {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

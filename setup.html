@@ -39,46 +39,19 @@
   <body id="body">
     <section class="main_section setup-screen">
       <div class="container-fluid">
-        <h2 class="title">Set up date</h2>
-        <div class="setup-inner">
-          <div>
-            <div class="group">
-              <span>DAY : </span>
-              <span>Monday</span>
-            </div>
-            <div class="group">
-              <span>Date : </span>
-              <input type="text" placeholder="Select Date" id="datepicker" />
-            </div>
+        <h2 id="typing" class="title">Set up date</h2>
+        <div class="setup-inner-wrapper">
+          <div class="inner">
+            <p>DAY:MONDAY</p>
+            <p>DATE: <span>20-12-2021</span></p>
           </div>
+        </div>
+        <div class="both-action-btn">
+          <button style="cursor: pointer" id="editDate">EDIT DATE</button>
+          <button style="cursor: pointer" id="continue">CONTINUE</button>
         </div>
       </div>
     </section>
-
-    <section class="setup-screen bottom-options">
-      <div class="container-fluid">
-        <div class="container-wrapper">
-          <div style="cursor: pointer" id="editDate" class="left-side">
-            <div class="inner-left">
-              <span>1</span>
-            </div>
-            <div class="inner-right">
-              <span>Edit Date</span>
-            </div>
-          </div>
-          <div style="cursor: pointer" id="continue" class="right-side">
-            <div class="inner-left">
-              <span>2</span>
-            </div>
-            <div class="inner-right">
-              <span> continue</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- modal -->
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
