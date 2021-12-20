@@ -9,7 +9,10 @@ button:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
-
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
 /* font-family: 'Merriweather', serif;
 font-family: 'Mulish', sans-serif; */
 
@@ -1163,7 +1166,7 @@ section#btn2.show {
   font-size: 1.25vw;
   font-weight: 900;
   border-radius: 15px;
-  box-shadow: 50px 50px 24px #0e0e0e5c;
+  box-shadow: 50px 30px 24px #0e0e0e5c;
 }
 
 .time-in-out-wrapper > div .cta {
