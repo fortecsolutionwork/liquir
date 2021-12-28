@@ -1120,11 +1120,11 @@ section#btn2.show {
 
 /* new css  20-12-2021 */
 #typing {
-  animation: type 3s steps(12) infinite;
+  animation: type 3s steps(13) infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 4px solid rgb(255, 255, 255);
-  width: 12ch;
+  width: 13ch;
   margin: 0 auto;
 }
 
@@ -1133,7 +1133,7 @@ section#btn2.show {
     width: 0ch;
   }
   100% {
-    width: 12ch;
+    width: 13ch;
   }
 }
 .time-menu {
