@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Merchant Copy Wide';
+    src: url('MerchantCopyWide.eot');
+    src: url('MerchantCopyWide.eot?#iefix') format('embedded-opentype'),
+        url('MerchantCopyWide.woff2') format('woff2'),
+        url('MerchantCopyWide.woff') format('woff'),
+        url('MerchantCopyWide.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merchant Copy Doublesize';
+    src: url('MerchantCopyDoublesize.eot');
+    src: url('MerchantCopyDoublesize.eot?#iefix') format('embedded-opentype'),
+        url('MerchantCopyDoublesize.woff2') format('woff2'),
+        url('MerchantCopyDoublesize.woff') format('woff'),
+        url('MerchantCopyDoublesize.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merchant Copy';
+    src: url('MerchantCopy.eot');
+    src: url('MerchantCopy.eot?#iefix') format('embedded-opentype'),
+        url('MerchantCopy.woff2') format('woff2'),
+        url('MerchantCopy.woff') format('woff'),
+        url('MerchantCopy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -32,75 +32,25 @@
     <link rel="stylesheet" href="responsive.css" />
 
     <style>
-
-.company-profile .section-wrapper {
-    margin-bottom: 30px;
-    border: 5px solid #fff;
-    border-radius: 10px;
-    padding: 20px;
-}
-.main_section .title {
-    font-size: 3vw;
-    margin-bottom: 4vh;
-}
-.group-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 18px;
-}
-
-.group-wrapper .group {
-    flex: 0 0 47%;
-    max-width: 47%;
-    display: block;
-    position: relative;
-}
-.group-wrapper.w-100 .group {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.group-wrapper .group p {
-    flex: 0 0 100%;
-    max-width: 100%;
-    font-size: 14px !important;
-    background: #00519b;
-    display: inline-block;
-    position: absolute;
-    left: 11px;
-    top: -8px;
-    padding: 0px 8px;
-}
-
-.group-wrapper .group input {
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
-    border: 1px solid;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 12px;
-    min-height: 40px;
-    padding-bottom: 0;
-    padding-left: 19px;
-    color: #cccc;
-}
-.group-wrapper .group  input::-webkit-input-placeholder {
-    font-size: 12px;
-    color: #cccc;
-  }
-  .group-wrapper .group input:-ms-input-placeholder {
-    font-size: 12px;
-    color: #cccc;
-  }
-
-  .group-wrapper .group input::placeholder {
-    font-size: 12px;
-    color: #cccc;
-  }
       @media (max-width: 1440px) {
     .add-new-club .group {
         margin-bottom: 0px !important;
     }
+  .add-new-club .group p {
+      font-size: 16px;
+  }
+  .add-new-club .group
+    input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  .add-new-club .group input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .add-new-club .group input::placeholder {
+    font-size: 16px;
+  }
   }
     </style>
   </head>
@@ -109,66 +59,53 @@
       <section class="main_section add-new-club mainMenu company-profile edit">
         <div class="container-fluid">
             <div class="section-head">
-              
+              <h2 class="title">club correction screen</h2>
               <!-- <button class="btn">staff</button> -->
             </div>
             <div class="section-wrapper">
-              <h2 class="title">club correction screen</h2>
-              <div class="group-wrapper">
-                <div class="group">
-                  <p>club license x-date </p>      
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
-                <div class="group">
-                  <p>club name</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
+              <div class="group">
+                <p>club license x-date </p>      
+                <input type="text" placeholder="ENTER HERE">
               </div>
-              <div class="group-wrapper w-100">
-                <div class="group">
-                  <p>club street address</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
+              <div class="group">
+                <p>club name</p>
+                <input type="text" placeholder="ENTER HERE">
               </div>
-              <div class="group-wrapper">
-                <div class="group">
-                  <p>club city/state/zip</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
-                <div class="group">
-                  <p>club phone number</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
+              <div class="group">
+                <p>club street address</p>
+                <input type="text" placeholder="ENTER HERE">
               </div>
-              <div class="group-wrapper">
-                <div class="group">
-                  <p>contact 1 contact 2</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
-                <div class="group">
-                  <p>liquor/resale license</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
+              <div class="group">
+                <p>club city/state/zip</p>
+                <input type="text" placeholder="ENTER HERE">
               </div>
-              <div class="group-wrapper">
-                <div class="group">
-                  <p>sort info</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
-                <div class="group">
-                  <p>pass on case cost</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
+              <div class="group">
+                <p>club phone number</p>
+                <input type="text" placeholder="ENTER HERE">
               </div>
-              <div class="group-wrapper">
-                <div class="group">
-                  <p>beer markup percent</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
-                <div class="group">
-                  <p>other markup percent</p>
-                  <input type="text" placeholder="ENTER HERE">
-                </div>
+              <div class="group">
+                <p>contact 1 contact 2</p>
+                <input type="text" placeholder="ENTER HERE">
+              </div>
+              <div class="group">
+                <p>liquor/resale license</p>
+                <input type="text" placeholder="ENTER HERE">
+              </div>
+              <div class="group">
+                <p>sort info</p>
+                <input type="text" placeholder="ENTER HERE">
+              </div>
+              <div class="group">
+                <p>pass on case cost</p>
+                <input type="text" placeholder="ENTER HERE">
+              </div>
+              <div class="group">
+                <p>beer markup percent</p>
+                <input type="text" placeholder="ENTER HERE">
+              </div>
+              <div class="group">
+                <p>other markup percent</p>
+                <input type="text" placeholder="ENTER HERE">
               </div>
             </div>
       </section>
