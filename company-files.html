@@ -30,78 +30,142 @@
     <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+<style>
+  body{
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  .main_section {
+      padding: 20px 0 0;
+  }
+  .company-profile .section-head {
+    justify-content: center;
+  }
+  .main_section .title {
+    font-size: 3vw;
+  }
+  .company-profile .group p {
+    font-size: 14.5px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .company-profile .section-head {
+    margin-bottom: 20px;
+  }
+  .company-profile .wrapper {
+    border: 10px solid #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 70vh;
+    overflow-y: scroll;
+  }
+  .inner-title {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .company-profile .section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ .company-profile .group {
+    flex: 0 0 50%;
+    max-width: 50%;
+ }
+ .special-password-master li {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+ }
+ .special-password-master {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.special-password-master ul {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.company-profile .group p span {
+    margin-right: 8px;
+    position: relative;
+    text-transform: uppercase;
+    background: #1e75c6;
+    width: 35px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 2px;
+    font-size: 14.5px;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+</style>
   </head>
   <body id="body">
-    
       <section class="main_section mainMenu company-profile">
         <div class="container-fluid">
             <div class="section-head">
-              <h2 class="title">company profile</h2>
-              <div>
-                <button id="staff" class="btn">staff</button>
-                <button id="markUp" class="btn">mark up</button>
-                <button id="setting" class="btn">settings</button>
-                <button id="special" class="btn">special</button>
-              </div>
+              <h2 class="title">company master files change</h2>
             </div>
-            <div class="section-wrapper">
-              <div class="group">
-                <p>management password : </p>
-                <p>zuluking</p>
-              </div>
-              <div class="group">
-                <p>sales tax rate : </p>
-                <p>0.00</p>
-              </div>
-              <div class="group">
-                <p>company name : </p>
-                <p>grand Liquir</p>
-              </div>
-              <div class="group">
-                <p>address : </p>
-                <p>5431 johnson drive</p>
-              </div>
-              <div class="group">
-                <p>city state & zip : </p>
-                <p>misssion. ks. 66202</p>
-              </div>
-              <div class="group">
-                <p>telephone number : </p>
-                <p>913-432-4055</p>
-              </div>
-              <div class="group">
-                <p>credit card charge : </p>
-                <p>0</p>
-              </div>
-              <div class="group">
-                <p>3 fer amount : </p>
-                <p>0.00</p>
+            <div class="wrapper">
+              <ul class="section-wrapper">
+                <li class="group"><p><span>1</span> 1st emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>2</span> 2nd emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>3</span> 3rd emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>4</span> 4th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>5</span> 5th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>6</span> 6th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>7</span>7th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>8</span> 8th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>9</span> 9th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>10</span> 10th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>11</span> 11th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>12</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>13</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>14</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>15</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>16</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>17</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>18</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>19</span> 12th emp  password  </p> <p>1012/simran</p></li>
+                <li class="group"><p><span>20</span> 12th emp  password  </p> <p>1012/simran</p></li>
+              </ul>
+              <div class="special-password-master">
+                <ul class="section-wrapper">
+                  <li class="group"><p><span>21</span> management password : </p> <p>zuluking</p></li>
+                  <li class="group"><p><span>22</span>sales tax rate : </p><p>0.00</p></li>
+                  <li class="group"><p><span>23</span>company name : </p><p>grand Liquir</p></li>
+                  <li class="group"><p><span>24</span>address : </p><p>5431 johnson drive</p></li>
+                  <li class="group"><p><span>25</span>city state & zip : </p><p>misssion. ks. 66202</p></li>
+                  <li class="group"><p><span>26</span>telephone number : </p><p>913-432-4055</p></li>
+                  <li class="group"><p><span>27</span>credit card charge : </p><p>0</p></li>
+                  <li class="group"><p><span>28</span>3 fer amount : </p><p>0.00</p></li>
+                </ul>
+                <ul class="section-wrapper">
+                  <h3 class="inner-title">SPECIAL PASSWORD</h3>
+                  <li class="group"><p><span>1</span>FIANL DAILY : </p> <p>xxxx</p></li>
+                  <li class="group"><p><span>2</span>NEW PRODUCT : </p><p>1012</p></li>
+                  <li class="group"><p><span>3</span>REC PRODUCT : </p><p>1960</p></li>
+                  <li class="group"><p><span>4</span>CREDIT ORDER : </p><p>vvvv</p></li>
+                </ul>
               </div>
             </div>
       </section>
-
-      <!-- <div id="enter" style="color: #fff; text-align: center">
-        Type number of your choice
-      </div> -->
-
-      <section class="bottom-options">
+     <section class="bottom-options">
         <div class="container-fluid">
           <div class="container-wrapper">
             <div style="cursor: pointer" id="back" class="left-side">
-              <div class="inner-left">
-                <span>B</span>
-              </div>
-              <div class="inner-right">
-                <span>Back</span>
-              </div>
+              <div class="inner-left"><span>B</span></div>
+              <div class="inner-right"><span>Back</span></div>
             </div>
             <div style="cursor: pointer" id="edit" class="right-side">
-              <div class="inner-left">
-                <span>E</span>
-              </div>
-              <div class="inner-right">
-                <span>edit</span>
-              </div>
+              <div class="inner-left"><span>E</span></div>
+              <div class="inner-right"><span>edit</span> </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquir</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+
+    <style>
+
+.company-profile .section-wrapper {
+    margin-bottom: 30px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.main_section .title {
+    font-size: 3vw;
+    margin-bottom: 4vh;
+}
+.group-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.group-wrapper .group {
+    flex: 0 0 47%;
+    max-width: 47%;
+    display: block;
+    position: relative;
+}
+.group-wrapper.w-100 .group {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.group-wrapper .group p {
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 14px !important;
+    background: #00519b;
+    display: inline-block;
+    position: absolute;
+    left: 11px;
+    top: -8px;
+    padding: 0px 8px;
+    z-index: 5;
+}
+
+.group-wrapper .group input {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    min-height: 40px;
+    padding-bottom: 0;
+    padding-left: 19px;
+    color: #cccc;
+}
+.group-wrapper .group  input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #cccc;
+  }
+  .group-wrapper .group input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #cccc;
+  }
+
+  .group-wrapper .group input::placeholder {
+    font-size: 12px;
+    color: #cccc;
+  }
+  .edit.company-profile .group select {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+      border: 1px solid;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 12px;
+      min-height: 40px;
+      padding-bottom: 0;
+      padding-left: 19px;
+      color: #cccc;
+      background: transparent;
+  }
+  .edit.company-profile .group select:focus,.edit.company-profile .group select:focus-visible{
+    outline: none;
+    box-shadow: none;
+  }
+  .edit.company-profile .group select option {
+    background: #00519b;
+    color: #fff;
+  } 
+  /* select */
+  .wrap-drop {
+    background: #00519b;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid;
+    padding: 13px;
+    border-radius: 5px;
+    font-size: 12px;
+    min-height: 40px;
+    padding-bottom: 0;
+    padding-left: 19px;
+    color: #cccc;
+}
+
+.wrap-drop::after {
+border-color:#ccc transparent;
+border-style:solid;
+border-width:10px 10px 0;
+content:"";
+height:0;
+margin-top:-4px;
+position:absolute;
+right:1rem;
+top:50%;
+width:0;
+}
+
+.wrap-drop .drop {
+background:#156ec0;
+box-shadow:3px 3px 3px rgba(0,0,0,.2);
+display:none;
+left:0;
+list-style:none;
+margin-top:0;
+opacity:0;
+padding-left:0;
+pointer-events:none;
+position:absolute;
+right:0;
+top:100%;
+z-index:2;
+}
+
+.wrap-drop .drop li a {
+color:#fff;
+display:block;
+padding:1rem;
+text-transform: uppercase;
+font-size: 12px;
+text-decoration:none;
+}
+
+.wrap-drop span {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.wrap-drop .drop li:hover a {
+    background-color: #2d83d1;
+    color: #e7ded5;
+}
+.wrap-drop.active::after {
+border-width:0 10px 10px;
+}
+
+.wrap-drop.active .drop {
+  display:block;
+  opacity:1;
+  pointer-events:auto;
+}
+.group-wrapper.activeon p {
+    z-index: 12;
+}
+.wrap-drop.active {
+    z-index: 9;
+}
+  @media (max-width: 1440px) {
+    .add-new-club .group {
+        margin-bottom: 0px !important;
+    }
+  }
+    </style>
+  </head>
+  <body id="body">
+    
+      <section class="main_section add-new-club mainMenu company-profile edit">
+        <div class="container-fluid">
+            <div class="section-head">
+            </div>
+            <div class="section-wrapper">
+              <h2 class="title">Add Product screen</h2>
+              <div class="group-wrapper">
+                <div class="group"><p>ENTER PRODUCT NAME </p><input type="text" placeholder="ENTER PRODUCT NAME"></div>
+                <div class="group"><p>ENTER UPC CODE</p><input type="text" placeholder="ENTER UPC CODE" /></div>
+              </div>
+              <div class="group-wrapper">
+                <div class="group">
+                  <p>ENTER VENDOR NAME</p>
+                  <div class="wrap-drop" id="c1">
+                    <span>none</span>
+                    <ul class="drop">
+                        <li><a>standard</a></li>
+                        <li><a>glazer</a></li>
+                        <li><a>crawford</a></li>
+                        <li><a>midwest</a></li>
+                        <li><a>the store</a></li>
+                    </ul>
+                 </div>
+                </div>
+                <div class="group">
+                  <p>ENTER CATEGORY NAME</p>
+                  <div class="wrap-drop" id="c2">
+                    <span>none</span>
+                    <ul class="drop">
+                        <li><a>standard</a></li>
+                        <li><a>glazer</a></li>
+                        <li><a>crawford</a></li>
+                        <li><a>midwest</a></li>
+                        <li><a>the store</a></li>
+                    </ul>
+                 </div>
+                </div>
+              </div>
+              <div class="group-wrapper">
+                <div class="group">
+                  <p>ENTER BRAND NAME</p>
+                  <div class="wrap-drop" id="c3">
+                    <span>none</span>
+                    <ul class="drop">
+                        <li><a>standard</a></li>
+                        <li><a>glazer</a></li>
+                        <li><a>crawford</a></li>
+                        <li><a>midwest</a></li>
+                        <li><a>the store</a></li>
+                    </ul>
+                 </div>
+                </div>
+                <div class="group">
+                  <p>ENTER FLAVOUR NAME</p>
+                  <div class="wrap-drop" id="c4">
+                    <span>none</span>
+                    <ul class="drop">
+                        <li><a>standard</a></li>
+                        <li><a>glazer</a></li>
+                        <li><a>crawford</a></li>
+                        <li><a>midwest</a></li>
+                        <li><a>the store</a></li>
+                    </ul>
+                 </div>
+                </div>
+              </div>
+              <div class="group-wrapper">
+                <div class="group">
+                  <p>ENTER PRODUCT LOCATION</p>
+                  <div class="wrap-drop" id="c5">
+                    <span>none</span>
+                    <ul class="drop">
+                        <li><a>standard</a></li>
+                        <li><a>glazer</a></li>
+                        <li><a>crawford</a></li>
+                        <li><a>midwest</a></li>
+                        <li><a>the store</a></li>
+                    </ul>
+                 </div>
+                </div>
+                <div class="group">
+                  <p>ENTER SIZE NAME</p>
+                  <div class="wrap-drop" id="c6">
+                    <span>none</span>
+                    <ul class="drop">
+                        <li><a>standard</a></li>
+                        <li><a>glazer</a></li>
+                        <li><a>crawford</a></li>
+                        <li><a>midwest</a></li>
+                        <li><a>the store</a></li>
+                    </ul>
+                 </div>
+                </div>
+              </div>
+              <div class="group-wrapper">
+                <div class="group"><p>beer markup percent</p><input type="text" placeholder="ENTER HERE"></div>
+                <div class="group"><p>other markup percent</p><input type="text" placeholder="ENTER HERE"></div>
+              </div>
+            </div>
+      </section>
+
+      <!-- <div id="enter" style="color: #fff; text-align: center">
+        Type number of your choice
+      </div> -->
+
+      <section class="bottom-options">
+        <div class="container-fluid">
+          <div class="container-wrapper">
+            <div style="cursor: pointer" id="back" class="left-side">
+              <div class="inner-left">
+                <span>B</span>
+              </div>
+              <div class="inner-right">
+                <span>Back</span>
+              </div>
+            </div>
+            <div style="cursor: pointer;" class="right-side">
+              <div class="inner-left">
+                <span>S</span>
+              </div>
+              <div class="inner-right">
+                <span>submit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+     
+
+ 
+      $("#back").click(function () {
+        window.location.replace("./club-sales.html");
+      });
+
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          var name = event.key;
+          var code = event.keyCode;
+          $("#enter").html(name);
+
+          if (name == "B" || name === "b") {
+            window.location.replace("./club-sales.html");
+          }
+          //   alert(`Key pressed ${name} \r\n Key code value: ${code}`);
+        },
+        false
+      );
+    </script>
+
+    <!-- bootstrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- select js -->
+    <script>
+          function DropDown(el) {
+            this.dd = el;
+            this.placeholder = this.dd.children('span');
+            this.opts = this.dd.find('ul.drop li');
+            this.val = '';
+            this.index = -1;
+            this.initEvents();
+        }
+        DropDown.prototype = {
+            initEvents: function () {
+                var obj = this;
+                obj.dd.on('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $(this).toggleClass('active');
+                });
+                obj.opts.on('click', function () {
+                    var opt = $(this);
+                    obj.val = opt.text();
+                    obj.index = opt.index();
+                    obj.placeholder.text(obj.val);
+                    opt.siblings().removeClass('selected');
+                    opt.filter(':contains("' + obj.val + '")').addClass('selected');
+                }).change();
+            },
+            getValue: function () {
+                return this.val;
+            },
+            getIndex: function () {
+                return this.index;
+            }
+        };
+
+        $(function () {
+            var dd1 = new DropDown($('#c1'));
+            $(document).click(function () {
+                $('.wrap-drop').removeClass('active');
+            });
+        });
+        $(function () {
+            var dd1 = new DropDown($('#c2'));
+            $(document).click(function () {
+                $('.wrap-drop').removeClass('active');
+            });
+        });
+        $(function () {
+            var dd1 = new DropDown($('#c3'));
+            $(document).click(function () {
+                $('.wrap-drop').removeClass('active');
+            });
+        });
+        $(function () {
+            var dd1 = new DropDown($('#c4'));
+            $(document).click(function () {
+                $('.wrap-drop').removeClass('active');
+            });
+        });
+        $(function () {
+            var dd1 = new DropDown($('#c5'));
+            $(document).click(function () {
+                $('.wrap-drop').removeClass('active');
+            });
+        });
+        $(function () {
+            var dd1 = new DropDown($('#c6'));
+            $(document).click(function () {
+                $('.wrap-drop').removeClass('active');
+            });
+        });
+        $('.wrap-drop').click(function(){
+          $(this).parent().parent().toggleClass('activeon');
+          return false;
+        });
+    </script>
+  </body>
+</html>

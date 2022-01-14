@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquir</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../responsive.css" />
+    <link rel="stylesheet" href="../fonts/stylesheet.css" />
+
+    <style>
+      * {
+        font-family: "Merchant Copy Doublesize";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section.print-out-section {
+        /* min-height: 90vh; */
+        width: 297mm;
+        text-align: center;
+        padding: 50px;
+        margin: 20px auto;
+      }
+      section.print-out-section .title {
+        text-transform: uppercase;
+        line-height: 1.6;
+        margin-bottom: 4vh;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      th,
+      td {
+        text-transform: uppercase;
+      }
+      td {
+        font-size: 12px;
+        padding-bottom: 5px;
+      }
+      th {
+        padding-bottom: 10px;
+        font-size: 12.5px;
+        letter-spacing: 1px;
+      }
+      .tax-table {
+        width: 100%;
+      }
+      .tax-table tr:first-child td {
+        border-top: 1px dashed;
+        padding-top: 8px;
+      }
+      .product-list-table tr:last-child td {
+        padding-bottom: 50px;
+      }
+      .tax-table td {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="print-out-section">
+      <h2 class="title">
+        sales receipt for grand liquor <br />
+        as of 12-16-2021 at 17:41 <br />
+        from main registar
+      </h2>
+      <table class="product-list-table" style="width: 100%">
+        <thead>
+          <tr>
+            <th style="text-align: left">qty</th>
+            <th style="text-align: left">product (S) sold</th>
+            <th>each</th>
+            <th style="text-align: right">extend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left">1</td>
+            <td style="text-align: left">$martin city alchemy 6 pack cans</td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">5</td>
+            <td style="text-align: left">
+              $martin city rev dragon 16 oz 4 pack cans
+            </td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">1</td>
+            <td style="text-align: left">$martin city alchemy 6 pack cans</td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">5</td>
+            <td style="text-align: left">
+              $martin city rev dragon 16 oz 4 pack cans
+            </td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">1</td>
+            <td style="text-align: left">$martin city alchemy 6 pack cans</td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">5</td>
+            <td style="text-align: left">
+              $martin city rev dragon 16 oz 4 pack cans
+            </td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">1</td>
+            <td style="text-align: left">$martin city alchemy 6 pack cans</td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">5</td>
+            <td style="text-align: left">
+              $martin city rev dragon 16 oz 4 pack cans
+            </td>
+            <td>9.03</td>
+            <td style="text-align: right">9.03</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="tax-table">
+        <tbody>
+          <tr>
+            <td style="text-align: left">liquor tax</td>
+            <td></td>
+            <td style="text-align: right">4.05</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">total amount due</td>
+            <td></td>
+            <td style="text-align: right">54.73</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">paid with cash</td>
+            <td></td>
+            <td style="text-align: right">54.73</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">tendered</td>
+            <td></td>
+            <td style="text-align: right">54.73</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">cashback</td>
+            <td></td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

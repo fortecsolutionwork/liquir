@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquir</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../responsive.css" />
+    <link rel="stylesheet" href="../fonts/stylesheet.css" />
+
+    <style>
+      body {
+        overflow-y: auto;
+        height: auto;
+      }
+      * {
+        font-family: "Merchant Copy Doublesize";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section.print-out-section {
+        /* min-height: 90vh; */
+        width: 297mm;
+        text-align: center;
+        padding: 50px;
+        margin: 20px auto;
+      }
+      section.print-out-section .title {
+        text-transform: uppercase;
+
+        line-height: 1.6;
+        margin-bottom: 4vh;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 8px;
+      }
+      th,
+      td {
+        text-transform: uppercase;
+      }
+      td {
+        font-size: 12px;
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+      }
+      th {
+        padding-bottom: 10px;
+        font-size: 12.5px;
+        letter-spacing: 2px;
+      }
+      .tax-table {
+        width: 100%;
+      }
+      .tax-table tr:first-child td {
+        border-top: 1px dashed;
+        padding-top: 8px;
+      }
+      .product-list-table tr:last-child td {
+        padding-bottom: 50px;
+      }
+      .tax-table td {
+        font-weight: 600;
+      }
+      td span:first-child {
+        min-width: 55px;
+        display: inline-block;
+        text-align: center;
+      }
+      .blank-td-wrapper span.empty {
+        width: 50%;
+        border-bottom: 1px solid #000;
+        display: inline-block;
+        position: relative;
+        text-align: right;
+        margin-bottom: -8px;
+      }
+      .blank-td-wrapper td {
+        padding: 10px 0;
+      }
+      .blank-td-wrapper td span {
+        display: inline-block;
+        width: 16%;
+        margin: 0;
+        text-align: right !important;
+        letter-spacing: 2px;
+      }
+
+      .blank-td-wrapper td span:first-child {
+        text-align: left;
+        font-weight: 600;
+      }
+      /* new css */
+      .invoice-head {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .invoice-head p {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .invoice_header_info .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .invoice_header_info .wrapper > div:first-child {
+        flex: 0 0 30%;
+        max-width: 30%;
+      }
+
+      .invoice_header_info .wrapper > div:last-child {
+        flex: 0 0 70%;
+        max-width: 70%;
+      }
+      .invoice_header_info .wrapper > div {
+        text-align: left;
+      }
+      .invoice_header_info .wrapper span {
+        text-transform: uppercase;
+        border-bottom: 2px dashed;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      .invoice_header_info .wrapper > div p {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+      }
+
+      .invoice_header_info .wrapper > div:first-child p {
+        font-weight: 600;
+      }
+      .invoice_header_info {
+        padding-bottom: 30px;
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .invoice_header_info::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        border-bottom: 2px dashed;
+        border-top: 2px dashed;
+      }
+      .note-tag-line {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="print-out-section">
+      <h2 class="title">Club invoice</h2>
+      <div class="invoice-head">
+        <p>date: 01-05-2022</p>
+        <p>
+          invoice#: 1229 <br />
+          page: 1
+        </p>
+      </div>
+      <div class="invoice_header_info">
+        <div class="wrapper">
+          <div><span>wholesaler</span></div>
+          <div><span>sold to</span></div>
+        </div>
+        <div class="wrapper">
+          <div><p>grand liquor</p></div>
+          <div><p>000</p></div>
+        </div>
+        <div class="wrapper">
+          <div><p>5431 johnson drive</p></div>
+          <div><p>0</p></div>
+        </div>
+        <div class="wrapper">
+          <div><p>mission, ks. 66202</p></div>
+          <div><p></p></div>
+        </div>
+        <div class="wrapper">
+          <div><p>913-432-4055</p></div>
+          <div><p></p></div>
+        </div>
+        <div class="wrapper">
+          <div><p>ret lic: 01-019-3034-09</p></div>
+          <div><p>attn</p></div>
+        </div>
+        <div class="wrapper">
+          <div><p>who lic: ks-p-15458</p></div>
+          <div><p>ret lic:</p></div>
+        </div>
+      </div>
+      <table class="product-list-table" style="width: 100%">
+        <thead>
+          <tr>
+            <th width="50" style="padding-bottom: 20px">
+              <span
+                style="
+                  text-align: left;
+                  border-bottom: 2px dashed;
+                  padding-bottom: 5px;
+                "
+                >qty</span
+              >
+            </th>
+            <th style="padding-bottom: 20px">
+              <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                >ref</span
+              >
+            </th>
+            <th style="text-align: left; padding-bottom: 20px">
+              <span
+                style="
+                  text-align: left;
+                  border-bottom: 2px dashed;
+                  padding-bottom: 5px;
+                "
+              >
+                product description</span
+              >
+            </th>
+
+            <th style="padding-bottom: 20px">
+              <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                >each</span
+              >
+            </th>
+            <th style="padding-bottom: 20px">
+              <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                >extend</span
+              >
+            </th>
+            <th style="padding-bottom: 20px">
+              <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                >tax</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td width="50" style="text-align: left">1 btl</td>
+            <td>80</td>
+            <td style="text-align: left">750m jack daniels gift pack 21</td>
+            <td>25.99</td>
+            <td>25.99</td>
+            <td>2.08</td>
+          </tr>
+          <tr>
+            <td width="50" style="text-align: left">1 btl</td>
+            <td>80</td>
+            <td style="text-align: left">750m jamson whisky</td>
+            <td>23.99</td>
+            <td>23.99</td>
+            <td>1.92</td>
+          </tr>
+          <tr>
+            <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      text-align: left;
+                      font-weight: 700;
+                      padding-top: 30px;
+                    "
+                  >
+                    make check payable to: grand liquor
+                  </td>
+                  <td style="font-weight: 700; padding-top: 30px">subtotal</td>
+                  <td style="font-weight: 700; padding-top: 30px">49.98</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left; font-weight: 700">
+                    prices subject to change without notice
+                  </td>
+                  <td style="font-weight: 700">enforcement tax</td>
+                  <td style="font-weight: 700">4.00</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left; font-weight: 700">
+                    if you have questions or comments
+                  </td>
+                  <td style="font-weight: 700"></td>
+                  <td style="font-weight: 700">-----</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left; font-weight: 700">
+                    please call us at 913-432-4055
+                  </td>
+                  <td style="font-weight: 700">total sale</td>
+                  <td style="font-weight: 700">53.98</td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+          <tr>
+            <table style="width: 100%">
+              <thead>
+                <tr>
+                  <th width="50" style="padding-bottom: 3px; padding-top: 30px">
+                    <span
+                      style="
+                        text-align: left;
+                        border-bottom: 2px dashed;
+                        padding-bottom: 5px;
+                      "
+                      >spirits</span
+                    >
+                  </th>
+                  <th style="padding-bottom: 3px; padding-top: 30px">
+                    <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                      >cordials</span
+                    >
+                  </th>
+                  <th
+                    style="
+                      text-align: left;
+                      padding-bottom: 3px;
+                      padding-top: 30px;
+                    "
+                  >
+                    <span
+                      style="
+                        text-align: left;
+                        border-bottom: 2px dashed;
+                        padding-bottom: 5px;
+                      "
+                    >
+                      wine</span
+                    >
+                  </th>
+
+                  <th style="padding-bottom: 3px; padding-top: 30px">
+                    <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                      >beer</span
+                    >
+                  </th>
+                  <th style="padding-bottom: 3px; padding-top: 30px">
+                    <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                      >misc</span
+                    >
+                  </th>
+                  <th style="padding-bottom: 3px; padding-top: 30px">
+                    <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                      >non-liq</span
+                    >
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding-top: 10px">53.98</td>
+                  <td style="padding-top: 10px">0.00</td>
+                  <td style="padding-top: 10px;text-align: left;">0.00</td>
+                  <td style="padding-top: 10px">0.00</td>
+                  <td style="padding-top: 10px">0.00</td>
+                  <td style="padding-top: 10px">0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note-tag-line">
+        kansas state law requires payment upon delivery of product
+      </p>
+      <table style="width: 100%">
+        <tbody>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left">
+              <span> received by:</span>
+              <span class="empty"></span>
+            </td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left">
+              <span> delivered by:</span>
+              <span class="empty"></span>
+            </td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left">
+              <span> check#:</span>
+              <span class="empty"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquir</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../responsive.css" />
+    <link rel="stylesheet" href="../fonts/stylesheet.css" />
+
+<style>
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
+  * {
+    font-family: "Merchant Copy Doublesize";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  section.print-out-section {
+    /* min-height: 90vh; */
+    width: 297mm;
+    text-align: center;
+    padding: 50px;
+    margin: 20px auto;
+  }
+  section.print-out-section .title {
+    text-transform: uppercase;
+
+    line-height: 1.6;
+    margin-bottom: 4vh;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  th,td {
+    text-transform: uppercase;
+  }
+  td {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+  th {
+    padding-bottom: 10px;
+    font-size: 12.5px;
+    letter-spacing: 1px;
+  }
+  .tax-table {
+    width: 100%;
+  }
+  .tax-table tr:first-child td {
+    border-top: 1px dashed;
+    padding-top: 8px;
+  }
+  .product-list-table tr:last-child td {
+    padding-bottom: 50px;
+  }
+  .tax-table td {
+    font-weight: 600;
+  }
+  td span:first-child {
+    min-width: 55px;
+    display: inline-block;
+    text-align: center;
+  }
+  .blank-td-wrapper span.empty {
+    width: 30%;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    margin-bottom: -8px;
+  }
+  .blank-td-wrapper td {
+    padding: 10px 0;
+  }
+  .blank-td-wrapper td span {
+    display: inline-block;
+    width: 57%;
+    margin: 0;
+  }
+
+  .blank-td-wrapper td span:first-child {
+    text-align: left;
+    font-weight: 600;
+  }
+  .sales-by-hours *{
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .sales-by-hours {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.sales-by-hours .left-side {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-top: 50px;
+}
+
+.sales-by-hours  .right-side {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+.sales-by-hours .left-side .empty {
+    border-bottom: 1px solid;
+    display: inline-block;
+    min-width: 160px;
+}
+
+.sales-by-hours .left-side .group {
+    margin-bottom: 15px;
+    display: flex;
+}
+.sales-by-hours .left-side .group span:first-child {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: right;
+    margin-right: 10px;
+}
+.discount-tracking ,.employee-discount-report,.hold-log-report,.price-check-report,.daily-timecard-review-report{
+    padding-top: 50px;
+}
+</style>
+  </head>
+  <body>
+    <section class="print-out-section">
+      <h2 class="title"> daily worksheet for grand liquor <br />as of 12-30-2021 at 21:06 <br />for terminal# f - david
+      </h2>
+      <table class="product-list-table" style="width: 100%">
+        <thead>
+          <tr>
+            <th style="text-align: left">category information</th>
+            <th style="text-align: right">cog</th>
+            <th style="text-align: right">totals</th>
+            <th style="text-align: right">percent</th>
+            <th style="text-align: right">profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left">
+              <span>(1)</span> <span>spirits</span>
+            </td>
+            <td style="text-align: right">1,061.64</td>
+            <td style="text-align: right">1,336.17</td>
+            <td style="text-align: right">31.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">
+              <span>(2)</span> <span>CORDIALS</span>
+            </td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(3)</span> <span>BEER</span></td>
+            <td style="text-align: right">494.60</td>
+            <td style="text-align: right">632.60</td>
+            <td style="text-align: right">15.00</td>
+            <td style="text-align: right">21.79</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(4)</span> <span>WINE</span></td>
+            <td style="text-align: right">1,588.89</td>
+            <td style="text-align: right">2,209</td>
+            <td style="text-align: right">51.00</td>
+            <td style="text-align: right">28.09</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(5)</span> <span>MISC</span></td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(6)</span> <span>ICE</span></td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">
+              <span>(7)</span> <span>TOBACCO</span>
+            </td>
+            <td style="text-align: right">70.00</td>
+            <td style="text-align: right">100.60</td>
+            <td style="text-align: right">2.00</td>
+            <td style="text-align: right">30.42</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">
+              <span>(8)</span> <span>soft drinks</span>
+            </td>
+            <td style="text-align: right">5.79</td>
+            <td style="text-align: right">10.35</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">44.46</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">
+              <span>(9)</span> <span>mixers</span>
+            </td>
+            <td style="text-align: right">6.67</td>
+            <td style="text-align: right">10.96</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">39.14</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(10)</span> <span>energy drinks</span></td>
+            <td style="text-align: right">4.08</td>
+            <td style="text-align: right">7.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">41.71</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="tax-table">
+        <tbody>
+          <tr>
+            <td style="text-align: left">category totals</td>
+            <td style="text-align: right">
+              <span style="margin-right: 10px">3,231.67</span>
+              <span>4,307.16</span>
+            </td>
+            <td style="text-align: right">25.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">customer count</td>
+            <td style="text-align: right">183</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">average sale</td>
+            <td style="text-align: right">23.54</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; padding: 20px 0 5px"> register information</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total pay outs</td>
+            <td style="text-align: right; font-weight: 300">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total discount</td>
+            <td style="text-align: right; font-weight: 300">-288.10</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total tax</td>
+            <td style="text-align: right; font-weight: 300">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; padding: 20px 0">register total</td>
+            <td style="text-align: right">4,330.44</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">total cash (40)</td>
+            <td style="text-align: right">663.01</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">total checks (0)</td>
+            <td style="text-align: right">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">total charges (145)</td>
+            <td style="text-align: right">36,67.43</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 100%">
+        <tbody>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left"><span class="first-td-span">manual cash</span><span class="empty"></span>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left"><span class="first-td-span">man reg check</span><span class="empty"></span>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left"><span class="first-td-span">man ele check</span><span class="empty"></span>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left"><span class="first-td-span">manual charges</span><span class="empty"></span></td>
+            <td></td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left"><span class="first-td-span">manual total</span><span class="empty"></span></td>
+            <td></td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left">
+              <span class="first-td-span">difference ( + or -)</span>
+              <span class="empty"></span>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; padding: 10px 0 3px">
+              <span style="font-weight: 600">total x's run : &ensp; 2 </span>
+            </td>
+          </tr>
+          <tr style="font-weight: 600">
+            <td style="text-align: left">
+              <span>starting cash : &emsp; 125.00 </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 33%">
+        <thead>
+          <tr>
+            <th
+              width="50"
+              style="padding-bottom: 3px; padding-top: 30px; text-align: right"
+            >
+              <span
+                style="
+                  text-align: left;
+                  border-bottom: 2px dashed;
+                  padding-bottom: 5px;
+                "
+                >liquor sales</span
+              >
+            </th>
+            <th
+              width="50"
+              style="padding-bottom: 3px; padding-top: 30px; text-align: right"
+            >
+              <span style="border-bottom: 2px dashed; padding-bottom: 5px"
+                >liquor tax</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td width="50" style="padding-top: 10px; text-align: right">
+              3,890.15
+            </td>
+            <td width="50" style="padding-top: 10px; text-align: right">
+              311.38
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 100%;">
+        <thead>
+          <th style="text-align: left;"><span style="border-bottom: 2px dashed;font-weight: 200;margin-top: 20px;display: inline-block;padding-bottom: 5px;">category name</span> </th>
+          <th><span style="border-bottom: 2px dashed;font-weight: 200;margin-top: 20px;display: inline-block;padding-bottom: 5px;">nl sls</span></th>
+          <th><span style="border-bottom: 2px dashed;font-weight: 200;margin-top: 20px;display: inline-block;padding-bottom: 5px;">nl tax</span></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left;">ice</td>
+            <td>0.00</td>
+            <td>0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">TOBACCO</td>
+            <td>91.77</td>
+            <td>8.83</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">soft drinks</td>
+            <td>9.44</td>
+            <td>0.91</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">energy drinks</td>
+            <td>10.00</td>
+            <td>0.69</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">ice</td>
+            <td>6.39</td>
+            <td>0.61</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;padding-top: 20px;font-weight: 600;">period totals</td>
+            <td style="padding-top: 20px;font-weight: 600;">117.60</td>
+            <td style="padding-top: 20px;font-weight: 600;">11.31</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="sales-by-hours">
+        <div class="left-side">
+          <p style="display: inline-block;border-bottom: 2px dashed;padding-bottom: 5px;margin-bottom: 20px;margin-left: 20px;">daily deposits</p>
+          <div class="group">
+            <span>bank 1</span>
+            <span class="empty"></span>
+          </div>
+          <div class="group">
+            <span>change bank</span>
+            <span class="empty"></span>
+          </div>
+          <div class="group">
+            <span>sales tax</span>
+            <span class="empty"></span>
+          </div>
+          <div class="group">
+            <span>party shop</span>
+            <span class="empty"></span>
+          </div>
+          <div class="group">
+            <span>club sales</span>
+            <span class="empty"></span>
+          </div>
+        </div>
+        <div class="right-side">
+          <p style="margin-bottom:5px;font-size:15px;font-weight:600">sales by the hour</p>
+          <table class="product-list-table" style="width: 100%">
+            <thead>
+              <tr>
+                <th  style="padding-bottom: 15px;text-align: right">
+                  <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">time</span>
+                </th>
+                <th  style="padding-bottom: 15px;text-align: right">
+                  <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">cust</span>
+                </th>
+                <th  style="padding-bottom: 15px;text-align: right">
+                  <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">amount</span>
+                </th>
+                <th  style="padding-bottom: 15px;text-align: right">
+                  <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">avg</span>
+                </th>
+         
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: right">9:00</td>
+                <td style="text-align: right">0</td>
+                <td style="text-align: right">0.00</td>
+                <td style="text-align: right">0.00</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">10:00</td>
+                <td style="text-align: right">6</td>
+                <td style="text-align: right">162.40</td>
+                <td style="text-align: right">27.07</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">11:00</td>
+                <td style="text-align: right">7</td>
+                <td style="text-align: right">216.52</td>
+                <td style="text-align: right">30.93</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">12:00</td>
+                <td style="text-align: right">0</td>
+                <td style="text-align: right">0.00</td>
+                <td style="text-align: right">0.00</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">1:00</td>
+                <td style="text-align: right">6</td>
+                <td style="text-align: right">162.40</td>
+                <td style="text-align: right">27.07</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">2:00</td>
+                <td style="text-align: right">7</td>
+                <td style="text-align: right">216.52</td>
+                <td style="text-align: right">30.93</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">3:00</td>
+                <td style="text-align: right">0</td>
+                <td style="text-align: right">0.00</td>
+                <td style="text-align: right">0.00</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">4:00</td>
+                <td style="text-align: right">6</td>
+                <td style="text-align: right">162.40</td>
+                <td style="text-align: right">27.07</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">5:00</td>
+                <td style="text-align: right">7</td>
+                <td style="text-align: right">216.52</td>
+                <td style="text-align: right">30.93</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">6:00</td>
+                <td style="text-align: right">0</td>
+                <td style="text-align: right">0.00</td>
+                <td style="text-align: right">0.00</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">7:00</td>
+                <td style="text-align: right">6</td>
+                <td style="text-align: right">162.40</td>
+                <td style="text-align: right">27.07</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">8:00</td>
+                <td style="text-align: right">7</td>
+                <td style="text-align: right">216.52</td>
+                <td style="text-align: right">30.93</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">9:00</td>
+                <td style="text-align: right">0</td>
+                <td style="text-align: right">0.00</td>
+                <td style="text-align: right">0.00</td>
+              </tr>
+              <tr>
+                <td style="text-align: right">10:00</td>
+                <td style="text-align: right">6</td>
+                <td style="text-align: right">162.40</td>
+                <td style="text-align: right">27.07</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <h2 class="title"> terminal# f voided products for grand liquor <br> as of 11-30-2021 at 21:08</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="50" style="padding-bottom: 20px; padding-top: 30px">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">time</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">name</span>
+              </th>
+              <th style="text-align: left;padding-bottom: 20px;padding-top: 30px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">product name</span>
+              </th>
+
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">sold</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">voided</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11:00</td>
+              <td>pinkey</td>
+              <td width="600" style="text-align: left;">b-discount on sale</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>12.00</td>
+              <td>david</td>
+              <td width="600" style="text-align: left;">h-$750m new amsterdam vodka</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="discount-tracking">
+        <h2 class="title"> discount tracking report for grand liquor <br> as of 11-30-2021 at 21:08</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="130" style="padding-bottom: 20px; padding-top: 30px">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">date</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">time</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">employee</span>
+              </th>
+              <th style="text-align: left;padding-bottom: 20px;padding-top: 30px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">product name</span>
+              </th>
+
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">amount</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11-30-21</td>
+              <td>11:00</td>
+              <td>pinkey</td>
+              <td width="600" style="text-align: left;">tf-750m badger mountain nsa chardon</td>
+              <td>54.95</td>
+            </tr>
+            <tr>
+              <td>11-30-21</td>
+              <td>11:00</td>
+              <td>pinkey</td>
+              <td width="600" style="text-align: left;">tf-750m badger mountain nsa chardon</td>
+              <td>54.95</td>
+            </tr>
+            <tr>
+              <td>11-30-21</td>
+              <td>11:00</td>
+              <td>pinkey</td>
+              <td width="600" style="text-align: left;">tf-750m badger mountain nsa chardon</td>
+              <td>54.95</td>
+            </tr>
+            <tr>
+              <td>11-30-21</td>
+              <td>11:00</td>
+              <td>pinkey</td>
+              <td width="600" style="text-align: left;">tf-750m badger mountain nsa chardon</td>
+              <td>54.95</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="employee-discount-report">
+        <h2 class="title"> employee discount report for grand liquor <br> as of 11-30-2021 at 21:08</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="130" style="padding-bottom: 20px; padding-top: 30px">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">date</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">time</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">employee</span>
+              </th>
+              <th style="text-align: left;padding-bottom: 20px;padding-top: 30px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">product name</span>
+              </th>
+
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">amount</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11-30-21</td>
+              <td>14:31</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">tf-$10 cig decade gold lottery</td>
+              <td>22.40</td>
+            </tr>
+            <tr>
+              <td>11-30-21</td>
+              <td>14:31</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">tf-$10 cig decade gold lottery</td>
+              <td>22.40</td>
+            </tr>
+            <tr>
+              <td>11-30-21</td>
+              <td>14:31</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">tf-$10 cig decade gold lottery</td>
+              <td>22.40</td>
+            </tr>
+            <tr>
+              <td>11-30-21</td>
+              <td>14:31</td>
+              <td>rondey</td>
+              <td width="600" style="text-align: left;">tf-$10 cig decade gold lottery</td>
+              <td>22.40</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hold-log-report">
+        <h2 class="title"> hold log report for grand liquor <br> as of 11-30-2021 at 21:08</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="130" style="padding-bottom: 20px; padding-top: 30px">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">name</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">time</span>
+              </th>
+              <th style="text-align: left;padding-bottom: 20px;padding-top: 30px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">product name</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">qty</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">price</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>f-rondey</td>
+              <td>12:45</td>
+              <td width="600" style="text-align: left;">tf-$10 cig decade gold lottery</td>
+              <td>1</td>
+              <td>12.99</td>
+            </tr>
+            <tr>
+              <td>f-rondey</td>
+              <td>12:45</td>
+              <td width="600" style="text-align: left;">tf-$10 cig decade gold lottery</td>
+              <td>1</td>
+              <td>12.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="price-check-report">
+        <h2 class="title"> price check report for grand liquor <br> as of 11-30-2021</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="130" style="padding-bottom: 20px; padding-top: 30px">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">name</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">time</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">term</span>
+              </th>
+              <th style="text-align: left;padding-bottom: 20px;padding-top: 30px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">product name</span>
+              </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="daily-timecard-review-report">
+        <h2 class="title"> price check report for grand liquor <br> as of 11-30-2021</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="130" style="padding-bottom: 20px; padding-top: 30px">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">name</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">time</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 30px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">term</span>
+              </th>
+              <th style="text-align: left;padding-bottom: 20px;padding-top: 30px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">product name</span>
+              </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+            <tr>
+              <td>rondey</td>
+              <td>12:29</td>
+              <td>f</td>
+              <td width="600" style="text-align: left;">750m wild turkey 101</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
