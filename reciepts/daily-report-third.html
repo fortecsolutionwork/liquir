@@ -111,35 +111,42 @@
         text-align: left;
         font-weight: 600;
       }
+      .print-btn {
+        background: transparent;
+        color: #000;
+        min-width: 130px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        margin: 5px;
+        border: 2px solid #000;
+        font-size: 12px;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+    @media print {
+        .print-btn {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
+    <button class="print-btn">Print (Ctrl + P)</button>
     <section class="print-out-section">
-      <h2 class="title">
-        daily worksheet for grand liquor <br />
-        as of 12-30-2021 at 21:06 <br />
-        for terminal# f - david
-      </h2>
+      <h2 class="title">daily worksheet for grand liquor <br />as of 12-30-2021 at 21:06 <br />for terminal# f - david</h2>
       <table class="product-list-table" style="width: 100%">
         <thead>
-          <tr>
-            <th style="text-align: left">category information</th>
-            <th></th>
-            <th></th>
-          </tr>
+          <tr><th style="text-align: left">category information</th><th></th><th></th></tr>
         </thead>
         <tbody>
           <tr>
-            <td style="text-align: left">
-              <span>(1)</span> <span>spirits</span>
-            </td>
+            <td style="text-align: left"><span>(1)</span> <span>spirits</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <span>(2)</span> <span>cordials</span>
-            </td>
+            <td style="text-align: left"><span>(2)</span> <span>cordials</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
@@ -164,37 +171,27 @@
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <span>(7)</span> <span>tobacco</span>
-            </td>
+            <td style="text-align: left"><span>(7)</span> <span>tobacco</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <span>(8)</span> <span>soft drinks</span>
-            </td>
+            <td style="text-align: left"><span>(8)</span> <span>soft drinks</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <span>(9)</span> <span>mixers</span>
-            </td>
+            <td style="text-align: left"><span>(9)</span> <span>mixers</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <span>(10)</span> <span>energy drinks</span>
-            </td>
+            <td style="text-align: left"><span>(10)</span> <span>energy drinks</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <span>(100)</span> <span>mixers</span>
-            </td>
+            <td style="text-align: left"><span>(100)</span> <span>mixers</span></td>
             <td></td>
             <td style="text-align: right">0.00</td>
           </tr>
@@ -218,9 +215,7 @@
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left; padding: 20px 0 5px">
-              register information
-            </td>
+            <td style="text-align: left; padding: 20px 0 5px">register information</td>
             <td></td>
             <td></td>
           </tr>
@@ -230,9 +225,7 @@
             <td style="text-align: right; font-weight: 300">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left; font-weight: 300">
-              total discount (0)
-            </td>
+            <td style="text-align: left; font-weight: 300">total discount (0)</td>
             <td></td>
             <td style="text-align: right; font-weight: 300">0.00</td>
           </tr>
@@ -262,16 +255,12 @@
             <td style="text-align: right">0.00</td>
           </tr>
           <tr>
-            <td style="text-align: left; padding: 20px 0 5px">
-              accumulated sales
-            </td>
+            <td style="text-align: left; padding: 20px 0 5px">accumulated sales</td>
             <td></td>
             <td style="text-align: right">4,330.44</td>
           </tr>
           <tr>
-            <td style="text-align: left; padding-bottom: 20px">
-              no-sale drawer open
-            </td>
+            <td style="text-align: left; padding-bottom: 20px">no-sale drawer open</td>
             <td></td>
             <td style="text-align: right; padding-bottom: 20px">0</td>
           </tr>
@@ -280,131 +269,59 @@
       <table style="width: 100%">
         <tbody>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $100.00</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $100.00</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span> (1) change bag</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span> (1) change bag</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $50.00</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $50.00</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span
-                >(2) drawer total <br />
-                (from left)</span
-              >
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(2) drawer total <br />(from left)</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $20.00</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $20.00</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(3) starting cash</span>
-              <span>125.00</span>
-            </td>
+            <td style="text-align: left"><span>(3) starting cash</span><span>125.00</span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $10.00</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $10.00</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(4) #2 - #3</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(4) #2 - #3</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $5.00</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $5.00</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(5) total checks</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(5) total checks</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $1.00</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $1.00</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(6) total charges</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(6) total charges</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $.25</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $.25</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(7) #4 + #5 + #6</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(7) #4 + #5 + #6</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $.10</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $.10</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span
-                >(8) register total <br />
-                (from above)</span
-              >
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(8) register total <br />(from above)</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">total $.05</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">total $.05</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(9) gift crd redeem</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(9) gift crd redeem</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span">shift payouts</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span">shift payouts</span><span class="empty"></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(10) #7 + #9 - #8 <br />(over/under)</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(10) #7 + #9 - #8 <br />(over/under)</span><span class="empty"></span></td>
           </tr>
           <tr class="blank-td-wrapper">
-            <td style="text-align: left">
-              <span class="first-td-span"></span>
-              <span class=""></span>
-            </td>
+            <td style="text-align: left"><span class="first-td-span"></span><span class=""></span></td>
             <td></td>
-            <td style="text-align: left">
-              <span>(11) shift deposit</span>
-              <span class="empty"></span>
-            </td>
+            <td style="text-align: left"><span>(11) shift deposit</span><span class="empty"></span></td>
           </tr>
         </tbody>
       </table>

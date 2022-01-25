@@ -80,15 +80,25 @@
       .tax-table td {
         font-weight: 600;
       }
+      .print-btn {
+        background: transparent;
+        color: #000;
+        min-width: 130px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        margin: 5px;
+        border: 2px solid #000;
+        font-size: 12px;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
     </style>
   </head>
   <body>
     <section class="print-out-section">
-      <h2 class="title">
-        sales receipt for grand liquor <br />
-        as of 12-16-2021 at 17:41 <br />
-        from main registar
-      </h2>
+      <button class="print-btn">Print (Ctrl + P)</button>
+      <h2 class="title">sales receipt for grand liquor <br />as of 12-16-2021 at 17:41 <br />from main registar</h2>
       <table class="product-list-table" style="width: 100%">
         <thead>
           <tr>
@@ -107,9 +117,7 @@
           </tr>
           <tr>
             <td style="text-align: left">5</td>
-            <td style="text-align: left">
-              $martin city rev dragon 16 oz 4 pack cans
-            </td>
+            <td style="text-align: left">$martin city rev dragon 16 oz 4 pack cans</td>
             <td>9.03</td>
             <td style="text-align: right">9.03</td>
           </tr>
@@ -121,9 +129,7 @@
           </tr>
           <tr>
             <td style="text-align: left">5</td>
-            <td style="text-align: left">
-              $martin city rev dragon 16 oz 4 pack cans
-            </td>
+            <td style="text-align: left">$martin city rev dragon 16 oz 4 pack cans</td>
             <td>9.03</td>
             <td style="text-align: right">9.03</td>
           </tr>
@@ -135,9 +141,7 @@
           </tr>
           <tr>
             <td style="text-align: left">5</td>
-            <td style="text-align: left">
-              $martin city rev dragon 16 oz 4 pack cans
-            </td>
+            <td style="text-align: left">$martin city rev dragon 16 oz 4 pack cans</td>
             <td>9.03</td>
             <td style="text-align: right">9.03</td>
           </tr>
@@ -149,9 +153,7 @@
           </tr>
           <tr>
             <td style="text-align: left">5</td>
-            <td style="text-align: left">
-              $martin city rev dragon 16 oz 4 pack cans
-            </td>
+            <td style="text-align: left">$martin city rev dragon 16 oz 4 pack cans</td>
             <td>9.03</td>
             <td style="text-align: right">9.03</td>
           </tr>
@@ -159,31 +161,11 @@
       </table>
       <table class="tax-table">
         <tbody>
-          <tr>
-            <td style="text-align: left">liquor tax</td>
-            <td></td>
-            <td style="text-align: right">4.05</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">total amount due</td>
-            <td></td>
-            <td style="text-align: right">54.73</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">paid with cash</td>
-            <td></td>
-            <td style="text-align: right">54.73</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">tendered</td>
-            <td></td>
-            <td style="text-align: right">54.73</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">cashback</td>
-            <td></td>
-            <td style="text-align: right">0.00</td>
-          </tr>
+          <tr><td style="text-align: left">liquor tax</td><td></td><td style="text-align: right">4.05</td></tr>
+          <tr><td style="text-align: left">total amount due</td><td></td><td style="text-align: right">54.73</td></tr>
+          <tr><td style="text-align: left">paid with cash</td><td></td><td style="text-align: right">54.73</td></tr>
+          <tr><td style="text-align: left">tendered</td><td></td><td style="text-align: right">54.73</td></tr>
+          <tr><td style="text-align: left">cashback</td><td></td><td style="text-align: right">0.00</td></tr>
         </tbody>
       </table>
     </section>

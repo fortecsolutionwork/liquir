@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquir</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../responsive.css" />
+    <link rel="stylesheet" href="../fonts/stylesheet.css" />
+
+<style>
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
+  * {
+    font-family: "Merchant Copy Doublesize";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  section.print-out-section {
+    /* min-height: 90vh; */
+    width: 297mm;
+    text-align: center;
+    padding: 50px;
+    margin: 20px auto;
+  }
+  section.print-out-section .title {
+    text-transform: uppercase;
+
+    line-height: 1.6;
+    margin-bottom: 4vh;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  th,td {
+    text-transform: uppercase;
+  }
+  td {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+  th {
+    padding-bottom: 10px;
+    font-size: 12.5px;
+    letter-spacing: 1px;
+  }
+  .tax-table {
+    width: 100%;
+  }
+  .tax-table tr:first-child td {
+    border-top: 1px dashed;
+    padding-top: 8px;
+  }
+  .product-list-table tr:last-child td {
+    padding-bottom: 50px;
+  }
+  .tax-table td {
+    font-weight: 600;
+  }
+  td span:first-child {
+    min-width: 55px;
+    display: inline-block;
+    text-align: center;
+  }
+  .blank-td-wrapper span.empty {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    margin-bottom: -8px;
+  }
+  .blank-td-wrapper td {
+    padding: 10px 0;
+  }
+  .blank-td-wrapper td span {
+    display: inline-block;
+    width: 57%;
+    margin: 0;
+  }
+
+  .blank-td-wrapper td span:first-child {
+    text-align: left;
+    font-weight: 600;
+  }
+  .sales-by-hours *{
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .sales-by-hours {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.sales-by-hours .left-side {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-top: 50px;
+}
+
+.sales-by-hours  .right-side {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+.sales-by-hours .left-side .empty {
+    border-bottom: 1px solid;
+    display: inline-block;
+    min-width: 160px;
+}
+
+.sales-by-hours .left-side .group {
+    margin-bottom: 15px;
+    display: flex;
+}
+.sales-by-hours .left-side .group span:first-child {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: right;
+    margin-right: 10px;
+}
+.discount-tracking ,.employee-discount-report,.hold-log-report,.price-check-report,.daily-timecard-review-report{
+    padding-top: 50px;
+}
+.monthly-payroll-total-wrapper .group {
+    display: flex;
+}
+
+.monthly-payroll-total-wrapper .group p {
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.monthly-payroll-total-wrapper .group p:first-child {
+    flex: 0 0 30%;
+    max-width: 30%;
+    text-align: left;
+}
+
+.monthly-payroll-total-wrapper {
+    padding-top: 30px;
+}
+.on-hand-section td,.on-hand-section th{
+    font-weight: 600;
+}
+.on-hand-section p{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    
+}
+.on-hand-section td p span:first-child{
+    flex: 0 0 80%;
+    max-width: 80%;
+    text-align: left;
+}
+.print-btn {
+        background: transparent;
+        color: #000;
+        min-width: 130px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        margin: 5px;
+        border: 2px solid #000;
+        font-size: 12px;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+    @media print {
+        .print-btn {
+          display: none;
+        }
+      }
+</style>
+  </head>
+  <body>
+    <button class="print-btn">Print (Ctrl + P)</button>
+    <section class="print-out-section">
+      <h2 class="title"> final monthly worksheet for grand liquor <br> as of 12-01-2021 at 10:01 <br> for november -- 11-01-2021 thru 11-30-2021</h2>
+      <table class="product-list-table" style="width: 100%">
+        <thead>
+          <tr>
+            <th style="text-align: left">category information</th>
+            <th style="text-align: right">cog</th>
+            <th style="text-align: right">totals</th>
+            <th style="text-align: right">percent</th>
+            <th style="text-align: right">profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left"><span>(1)</span> <span>spirits</span></td>
+            <td style="text-align: right">1,061.64</td>
+            <td style="text-align: right">1,336.17</td>
+            <td style="text-align: right">31.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(2)</span> <span>CORDIALS</span></td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(3)</span> <span>BEER</span></td>
+            <td style="text-align: right">494.60</td>
+            <td style="text-align: right">632.60</td>
+            <td style="text-align: right">15.00</td>
+            <td style="text-align: right">21.79</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(4)</span> <span>WINE</span></td>
+            <td style="text-align: right">1,588.89</td>
+            <td style="text-align: right">2,209</td>
+            <td style="text-align: right">51.00</td>
+            <td style="text-align: right">28.09</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(5)</span> <span>MISC</span></td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(6)</span> <span>ICE</span></td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(7)</span> <span>TOBACCO</span></td>
+            <td style="text-align: right">70.00</td>
+            <td style="text-align: right">100.60</td>
+            <td style="text-align: right">2.00</td>
+            <td style="text-align: right">30.42</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(8)</span> <span>soft drinks</span></td>
+            <td style="text-align: right">5.79</td>
+            <td style="text-align: right">10.35</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">44.46</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(9)</span> <span>mixers</span></td>
+            <td style="text-align: right">6.67</td>
+            <td style="text-align: right">10.96</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">39.14</td>
+          </tr>
+          <tr>
+            <td style="text-align: left"><span>(10)</span> <span>energy drinks</span></td>
+            <td style="text-align: right">4.08</td>
+            <td style="text-align: right">7.00</td>
+            <td style="text-align: right">0.00</td>
+            <td style="text-align: right">41.71</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="tax-table">
+        <tbody>
+          <tr>
+            <td style="text-align: left">category totals</td>
+            <td style="text-align: right"><span style="margin-right: 10px">3,231.67</span><span>4,307.16</span></td>
+            <td style="text-align: right">25.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">customer count</td>
+            <td style="text-align: right">183</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left">average sale</td>
+            <td style="text-align: right">23.54</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; padding: 20px 0 5px"> register information</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total pay outs</td>
+            <td style="text-align: right; font-weight: 300">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total discounts</td>
+            <td style="text-align: right; font-weight: 300">-288.10</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total liquor tax</td>
+            <td style="text-align: right; font-weight: 300">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; padding: 20px 0">register total</td>
+            <td style="text-align: right">4,330.44</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 88%;" class="payment-information">
+        <tbody>
+          <tr>
+            <td style="text-align: left; padding: 20px 0 20px;font-weight: 600;"> payment type information</td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total cash</td><td style="text-align: right; font-weight: 300">18,611.30</td><td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total checks</td>
+            <td style="text-align: right; font-weight: 300">-288.10</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; font-weight: 300">total charges</td>
+            <td style="text-align: right; font-weight: 300">439.61</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="text-align: left; padding: 20px 0;font-weight: 600;">cash register total</td>
+            <td style="text-align: right;font-weight: 600;">9,131,641.00</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 88%">
+        <tbody>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left"><span class="first-td-span">difference(+ or -)</span></td>
+            <td><span class="empty"></span></td>
+          </tr>
+          <tr class="blank-td-wrapper">
+            <td style="text-align: left;padding-top: 40px;"><span class="first-td-span">gross sale</span></td>
+            <td style="padding-top: 40px;font-weight: 600;text-align: right;">138,314.28</td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 33%">
+        <thead>
+          <tr>
+            <th width="50"style="padding-bottom: 3px; padding-top: 30px; text-align: right">
+              <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">liquor sales</span>
+            </th>
+            <th width="50" style="padding-bottom: 3px; padding-top: 30px; text-align: right">
+              <span style="border-bottom: 2px dashed; padding-bottom: 5px">liquor tax</span>
+            </th >
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td width="50" style="padding-top: 10px; text-align: right">133,789.20</td>
+            <td width="50" style="padding-top: 10px; text-align: right">10,710.68</td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 100%;">
+        <thead>
+          <th style="text-align: left;"><span style="border-bottom: 2px dashed;margin-top: 20px;display: inline-block;padding-bottom: 5px;">category name</span> </th>
+          <th><span style="border-bottom: 2px dashed;margin-top: 20px;display: inline-block;padding-bottom: 5px;">non liq <br> sales</span></th>
+          <th><span style="border-bottom: 2px dashed;margin-top: 20px;display: inline-block;padding-bottom: 5px;">non liq <br> tax</span></th>
+        </thead>
+        <tbody>
+          <tr><td style="text-align: left;">ice</td><td>0.00</td><td>0.00</td></tr>
+          <tr><td style="text-align: left;">TOBACCO</td><td>91.77</td><td>8.83</td></tr>
+          <tr><td style="text-align: left;">soft drinks</td><td>9.44</td><td>0.91</td></tr>
+          <tr><td style="text-align: left;">energy drinks</td><td>10.00</td><td>0.69</td></tr>
+          <tr><td style="text-align: left;">ice</td><td>6.39</td><td>0.61</td></tr>
+          <tr>
+            <td style="text-align: left;padding-top: 20px;font-weight: 600;">period totals</td>
+            <td style="padding-top: 20px;font-weight: 600;">117.60</td>
+            <td style="padding-top: 20px;font-weight: 600;">11.31</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="padding-top: 70px;" class="monthly-report">
+        <h2 class="title"> monthly payroll report for grand liquor <br> for the month of november 2021 as of 12-01-2021 at 10:01</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th width="300" style="padding-bottom: 20px; padding-top: 10px;text-align: left;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">employee  ss # </span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 10px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">gross</span>
+              </th>
+              <th style="padding-bottom: 20px;padding-top: 10px;">
+                <span style="text-align: left;border-bottom: 2px dashed;padding-bottom: 5px;">fica</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 10px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">fed</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 10px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">state</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 10px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">city</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 10px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">med</span>
+              </th>
+              <th style="padding-bottom: 20px; padding-top: 10px">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">net</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width="300" style="text-align: left;">sujan j kelly</td>
+              <td>2396.74</td>
+              <td>148.60</td>
+              <td>284.00</td>
+              <td>91.00</td>
+              <td>0.00</td>
+              <td>34.76</td>
+              <td>1838.38</td>
+            </tr>
+            <tr>
+                <td width="300" style="text-align: left;">sujan j kelly</td>
+                <td>2396.74</td>
+                <td>148.60</td>
+                <td>284.00</td>
+                <td>91.00</td>
+                <td>0.00</td>
+                <td>34.76</td>
+                <td>1838.38</td>
+              </tr>
+              <tr>
+                <td width="300" style="text-align: left;">sujan j kelly</td>
+                <td>2396.74</td>
+                <td>148.60</td>
+                <td>284.00</td>
+                <td>91.00</td>
+                <td>0.00</td>
+                <td>34.76</td>
+                <td>1838.38</td>
+              </tr>
+              <tr>
+                <td width="300" style="text-align: left;">sujan j kelly</td>
+                <td>2396.74</td>
+                <td>148.60</td>
+                <td>284.00</td>
+                <td>91.00</td>
+                <td>0.00</td>
+                <td>34.76</td>
+                <td>1838.38</td>
+              </tr>
+              <tr>
+                <td width="300" style="text-align: left;">sujan j kelly</td>
+                <td>2396.74</td>
+                <td>148.60</td>
+                <td>284.00</td>
+                <td>91.00</td>
+                <td>0.00</td>
+                <td>34.76</td>
+                <td>1838.38</td>
+              </tr>
+              <tr>
+                <td width="300" style="text-align: left;">sujan j kelly</td>
+                <td>2396.74</td>
+                <td>148.60</td>
+                <td>284.00</td>
+                <td>91.00</td>
+                <td>0.00</td>
+                <td>34.76</td>
+                <td>1838.38</td>
+              </tr>
+              <tr>
+                <td width="300" style="text-align: left;font-weight: 600;padding-top: 20px;">monthly totals</td>
+                <td style="font-weight: 600;padding-top: 20px;">4848.10</td>
+                <td style="font-weight: 600;padding-top: 20px;">300.58</td>
+                <td style="font-weight: 600;padding-top: 20px;">441.00</td>
+                <td style="font-weight: 600;padding-top: 20px;">151.00</td>
+                <td style="font-weight: 600;padding-top: 20px;">0.00</td>
+                <td style="font-weight: 600;padding-top: 20px;">70.31</td>
+                <td style="font-weight: 600;padding-top: 20px;">3885.21</td>
+              </tr>
+          </tbody>
+        </table>
+        <div class="monthly-payroll-total-wrapper">
+            <div style="padding-bottom:15px" class="group"><p>941 taxes due</p><p>1182.77</p></div>
+            <div class="group"><p>tp payroll taxes</p><p>441.19</p></div>
+            <div class="group"><p>to fed tax (accr)</p><p>441.00</p></div>
+        </div>
+      </div>
+
+      <div style="padding-top: 70px;" class="on-hand-section">
+        <h2 class="title"> on-hand valuation report for grand liquor <br> as of 12-01-2021 at 10:01</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+                <th width="400"></th>
+                <th style="padding-bottom: 30px; padding-top: 10px;text-align: right;">
+                  <span style="border-bottom: 2px dashed; padding-bottom: 5px">ext cost</span>
+                </th>
+                <th style="padding-bottom: 30px; padding-top: 10px;text-align: right;">
+                  <span style="border-bottom: 2px dashed; padding-bottom: 5px">ext retail</span>
+                </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px;"><span>spirits inventory values</span></p>
+                <p><span>avg markup percent</span><span>24.99</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">102,779.03</td>
+                <td style="padding-bottom: 40px;text-align: right;">128,461,.73</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                  <p style="margin-bottom: 25px"><span>cordials inventory values</span></p>
+                  <p><span>avg markup percent</span><span>0.00</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>beer inventory values</span></p>
+                <p><span>avg markup percent</span><span>27.01</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">31,381.58</td>
+                <td style="padding-bottom: 40px;text-align: right;">39,856.45</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>wine inventory values</span></p>
+                <p><span>avg markup percent</span><span>39.55</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">101,045.50</td>
+                <td style="padding-bottom: 40px;text-align: right;">141,009.50</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px;"><span>spirits inventory values</span></p>
+                <p><span>avg markup percent</span><span>24.99</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">102,779.03</td>
+                <td style="padding-bottom: 40px;text-align: right;">128,461,.73</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>cordials inventory values</span></p>
+                <p><span>avg markup percent</span><span>0.00</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>beer inventory values</span></p>
+                <p><span>avg markup percent</span><span>27.01</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">31,381.58</td>
+                <td style="padding-bottom: 40px;text-align: right;">39,856.45</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>wine inventory values</span></p>
+                <p><span>avg markup percent</span><span>39.55</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">101,045.50</td>
+                <td style="padding-bottom: 40px;text-align: right;">141,009.50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="padding-top: 70px;" class="on-hand-section recieved">
+        <h2 class="title"> received/sold valuation report for grand liquor <br> as of 12-01-2021 at 10:01</h2>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+                <th width="400"></th>
+              <th style="padding-bottom: 30px; padding-top: 10px;text-align: right;">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">rec x cst</span>
+              </th>
+              <th style="padding-bottom: 30px; padding-top: 10px;text-align: right;">
+                <span style="border-bottom: 2px dashed; padding-bottom: 5px">sld x ret</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px;"><span>spirits inventory values</span></p>
+                <p><span>avg markup percent</span><span>23.48</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">37,023.43</td>
+                <td style="padding-bottom: 40px;text-align: right;">42,865.14</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>cordials inventory values</span></p>
+                <p><span>avg markup percent</span><span>0.00</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>beer inventory values</span></p>
+                <p><span>avg markup percent</span><span>27.01</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">31,381.58</td>
+                <td style="padding-bottom: 40px;text-align: right;">39,856.45</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>wine inventory values</span></p>
+                <p><span>avg markup percent</span><span>39.55</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">101,045.50</td>
+                <td style="padding-bottom: 40px;text-align: right;">141,009.50</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px;"><span>spirits inventory values</span></p>
+                <p><span>avg markup percent</span><span>24.99</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">102,779.03</td>
+                <td style="padding-bottom: 40px;text-align: right;">128,461,.73</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>cordials inventory values</span></p>
+                <p><span>avg markup percent</span><span>0.00</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+                <td style="padding-bottom: 40px;text-align: right;">0.00</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>beer inventory values</span></p>
+                <p><span>avg markup percent</span><span>27.01</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">31,381.58</td>
+                <td style="padding-bottom: 40px;text-align: right;">39,856.45</td>
+            </tr>
+            <tr style="vertical-align: text-top;">
+                <td width="400" style="text-align: left;padding-bottom: 40px;">
+                <p style="margin-bottom: 25px"><span>wine inventory values</span></p>
+                <p><span>avg markup percent</span><span>39.55</span></p>
+                </td>
+                <td style="padding-bottom: 40px;text-align: right;">101,045.50</td>
+                <td style="padding-bottom: 40px;text-align: right;">141,009.50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
